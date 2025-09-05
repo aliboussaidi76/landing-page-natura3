@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>عسل الأطفال: طاقة وذكاء ونمو صحي</title>
+<meta name="description" content="احصل على أفضل عسل للأطفال لتعزيز الطاقة والمناعة والتركيز بطريقة طبيعية وصحية.">
+<meta name="keywords" content="عسل, أطفال, مناعة, طاقة, تركيز, صحة, حلو طبيعي, غذاء ملكات, لقاح النحل, فوائد العسل, شراء عسل">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+
+:root {
+    --primary-color: #ff914d;
+    --secondary-color: #ffb74d;
+    --dark-color: #1a4d29;
+    --light-color: #f0f8f0;
+    --button-dark-color: #4a6c4c;
+    --font-family: 'Cairo', sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    background-color: #FFF8E1;
+    color: var(--dark-color);
+}
+
+.container { max-width: 1100px; margin: auto; padding: 0 15px; }
+
+header {
+    background: linear-gradient(135deg, var(--dark-color), #2f693e);
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+}
+
+header h1 { font-size: 2.2rem; margin-bottom: 8px; }
+header p { font-size: 1rem; max-width: 700px; margin: auto; text-align: center; }
+
+.top-banner {
+    background-color: #D32F2F;
+    color: white;
+    padding: 8px 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    font-size: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 10000;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+
+.top-buttons a {
+    margin-left: 6px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 13px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+.top-buttons .phone-btn { background-color: #1976D2; }
+.top-buttons .whatsapp-btn { background-color: #25D366; }
+
+.offers-section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.offer-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: white;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+    cursor: pointer;
+    flex: 1 1 30%;
+    max-width: 350px;
+    border: 3px solid transparent;
+}
+.offer-item.selected { border: 3px solid var(--dark-color); }
+
+.offer-item img { width: 100%; max-width: 250px; border-radius: 10px; margin-bottom: 10px; }
+
+.offer-item h3 { color: var(--dark-color); font-size: 1.2rem; margin-bottom: 5px; }
+.offer-item p { font-size: 0.9rem; color: #555; }
+.offer-item p.highlight { font-weight: bold; color: var(--primary-color); margin-top: 5px; }
+
+.cta-container { text-align: center; margin: 20px 0; }
+.cta-button {
+    display: inline-block;
+    background: #2E7D32;
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    animation: dance 1s infinite;
+}
+.cta-button:hover { background: #1B5E20; transform: scale(1.1); }
+
+@keyframes dance {
+    0%, 100% { transform: translateX(-50%) rotate(0deg); }
+    25% { transform: translateX(-50%) rotate(-5deg); }
+    50% { transform: translateX(-50%) rotate(5deg); }
+    75% { transform: translateX(-50%) rotate(-5deg); }
+}
+
+section { padding: 30px 0; }
+
+.section-title {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: var(--dark-color);
+    position: relative;
+}
+.section-title::after {
+    content: '';
+    width: 60px;
+    height: 3px;
+    background: var(--primary-color);
+    display: block;
+    margin: 8px auto 0;
+    border-radius: 2px;
+}
+
+.hero-image { display: flex; justify-content: center; padding: 15px 0; }
+.hero-image img { width: 100%; height: auto; max-width: 400px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+
+.benefit-card, .ingredient-item, .testimonial-card {
+    background: #fff;
+    padding: 15px 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    margin-bottom: 15px;
+}
+.benefit-card:hover, .ingredient-item:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
+
+.ingredient-item { display: flex; flex-direction: row; align-items: center; gap: 15px; text-align: right; margin-bottom: 15px;}
+.ingredient-image { flex: 1; max-width: 100px; }
+.ingredient-text { flex: 2; }
+
+.testimonial-card { text-align: right; margin-bottom: 15px; }
+
+.order-form .form-box { background: white; color: var(--dark-color); padding: 20px; border-radius: 15px; max-width: 90%; margin: auto; box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
+.order-form form input, .order-form form select { width: 100%; padding: 10px; margin-bottom: 10px; border: 2px solid var(--dark-color); border-radius: 8px; font-size: 0.8rem; font-family: var(--font-family); color: var(--dark-color); }
+.order-form form button { background: var(--primary-color); color: white; border: none; padding: 12px 30px; font-size: 1.1rem; font-weight: bold; border-radius: 8px; cursor: pointer; transition: background 0.3s ease; }
+.order-summary { background: #f9f9f9; border-radius: 15px; padding: 15px; margin-top: 15px; text-align: right; border: 1px dashed #ccc; }
+
+footer { text-align: center; padding: 15px 0; background: var(--dark-color); color: white; font-size: 0.8rem; }
+
+.floating-btn {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #2E7D32;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  z-index: 9999;
+  animation: dance 1s infinite;
+}
+.floating-btn:hover { background-color: #1B5E20; transform: translateX(-50%) scale(1.1); }
+
+@media (max-width: 767px) {
+    .offers-section { flex-direction: column; }
+    .offer-item { width: 100%; max-width: none; }
+    .ingredient-item { flex-direction: column; }
+}
+</style>
+</head>
+<body>
+
+<div class="top-banner">
+  <marquee behavior="scroll" direction="right" scrollamount="6">
+    ⏰ العرض ينتهي هذا الأسبوع! 🚨 سارع بالطلب الآن قبل نفاد الكمية!
+  </marquee>
+  <div class="top-buttons">
+    <a href="tel:0555000000" class="phone-btn">📞 اتصل بنا</a>
+    <a href="https://wa.me/213555000000" class="whatsapp-btn">💬 واتساب</a>
+  </div>
+</div>
+
+<header>
+  <h1>عسل الأطفال: طاقة وذكاء ونمو صحي</h1>
+  <p>وداعاً للحلويات الضارة! امنح طفلك هدية الطبيعة... مذاق حلو وفوائد عظيمة.</p>
+</header>
+
+<section class="hero-image">
+  <img src="PLACEHOLDER_IMAGE_PRODUCT.png" alt="صورة المنتج">
+</section>
+
+<section class="offers">
+  <div class="container">
+    <h2 class="section-title">اختر العرض الذي يناسبك</h2>
+    <div class="offers-section">
+      <div class="offer-item selected" data-offer="single" data-price="215000">
+        <img src="PLACEHOLDER_IMAGE_SINGLE.png" alt="عبوة واحدة">
+        <h3>عبوة واحدة</h3>
+        <p>215 ألف دج</p>
+      </div>
+      <div class="offer-item" data-offer="double" data-price="430000">
+        <img src="PLACEHOLDER_IMAGE_DOUBLE.png" alt="عبوتان">
+        <h3>عبوتان + 125غ مجاناً</h3>
+        <p class="highlight">احصل على عبوة 125غ مجاناً</p>
+      </div>
+      <div class="offer-item" data-offer="triple" data-price="645000">
+        <img src="PLACEHOLDER_IMAGE_TRIPLE.png" alt="ثلاث عبوات">
+        <h3>ثلاث عبوات + الرابعة مجاناً</h3>
+        <p class="highlight">اشتر 3 واحصل على الرابعة مجاناً</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ingredients">
+  <div class="container">
+    <h2 class="section-title">مكونات طبيعية</h2>
+    <div class="ingredient-item">
+      <img class="ingredient-image" src="PLACEHOLDER_HONEY.png" alt="العسل">
+      <div class="ingredient-text">
+        <h4>العسل الطبيعي</h4>
+        <p>يقوي المناعة ويزيد الطاقة.</p>
+      </div>
+    </div>
+    <div class="ingredient-item">
+      <img class="ingredient-image" src="PLACEHOLDER_ROYAL_JELLY.png" alt="غذاء الملكات">
+      <div class="ingredient-text">
+        <h4>غذاء الملكات</h4>
+        <p>يزيد التركيز والنمو الصحي.</p>
+      </div>
+    </div>
+    <div class="ingredient-item">
+      <img class="ingredient-image" src="PLACEHOLDER_POLLEN.png" alt="حبوب اللقاح">
+      <div class="ingredient-text">
+        <h4>حبوب اللقاح</h4>
+        <p>تعزز المناعة وتقوي النشاط البدني والعقلي للأطفال.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="benefits">
+  <div class="container">
+    <h2 class="section-title">فوائد العسل للأطفال</h2>
+    <div class="benefit-card">✔ يزيد النشاط والطاقة.</div>
+    <div class="benefit-card">✔ يقوي المناعة ويقلل الأمراض.</div>
+    <div class="benefit-card">✔ يحسن التركيز والذاكرة.</div>
+  </div>
+</section>
+
+<section class="testimonials">
+  <div class="container">
+    <h2 class="section-title">آراء الزبائن</h2>
+    <div class="testimonial-card">"ولدي ولا يعرف التعب، يعطيه طاقة كبيرة!" - سمية</div>
+    <div class="testimonial-card">"العسل ممتاز، ركز ولدي في الدراسة." - فريد</div>
+    <div class="testimonial-card">"صراحة منتج طبيعي وراقي، أحببته العائلة كلها." - ياسمين</div>
+  </div>
+</section>
+
+<section class="order-form" id="order">
+  <div class="container">
+    <h2 class="section-title">اطلب الآن</h2>
+    <div class="form-box">
+      <form id="orderForm" action="thankyou.html" method="POST">
+        <label>الاسم الكامل:</label>
+        <input type="text" name="name" required>
+        <label>رقم الهاتف:</label>
+        <input type="tel" name="phone" required>
+        <label>العنوان:</label>
+        <input type="text" name="address" required>
+        <label>اختر الولاية:</label>
+        <select name="state" id="state-select" required>
+          <option value="">اختر</option>
+          <option value="العاصمة">العاصمة</option>
+          <option value="البليدة">البليدة</option>
+          <option value="تيبازة">تيبازة</option>
+          <option value="بومرداس">بومرداس</option>
+          <option value="تيزي وزو">تيزي وزو</option>
+          <option value="بجاية">بجاية</option>
+          <option value="الشلف">الشلف</option>
+          <option value="مستغانم">مستغانم</option>
+          <option value="وهران">وهران</option>
+          <option value="سيدي بلعباس">سيدي بلعباس</option>
+          <option value="قسنطينة">قسنطينة</option>
+          <option value="عنابة">عنابة</option>
+          <option value="المسيلة">المسيلة</option>
+          <option value="سطيف">سطيف</option>
+          <option value="برج بوعريريج">برج بوعريريج</option>
+        </select>
+        <label>العرض المختار:</label>
+        <input type="text" id="selectedOffer" value="عبوة واحدة" readonly>
+        <button type="submit">تأكيد الطلب</button>
+      </form>
+      <div class="order-summary" id="orderSummary"></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+جميع الحقوق محفوظة لشركة XYZ
+</footer>
+
+<a href="#order" class="floating-btn">اطلب الآن</a>
+
+<script>
+// اختيار العروض
+const offerItems = document.querySelectorAll('.offer-item');
+const offerInput = document.getElementById('selectedOffer');
+let selectedPrice = 215000;
+
+offerItems.forEach(item => {
+    item.addEventListener('click', () => {
+        offerItems.forEach(i => i.classList.remove('selected'));
+        item.classList.add('selected');
+        offerInput.value = item.querySelector('h3').textContent;
+        selectedPrice = parseInt(item.dataset.price);
+        updateSummary();
+    });
+});
+
+// ملخص الطلب
+const form = document.getElementById('orderForm');
+const summary = document.getElementById('orderSummary');
+const deliveryPrices = {
+    "العاصمة":400, "البليدة":400, "تيبازة":400, "بومرداس":500,
+    "تيزي وزو":500, "بجاية":600, "الشلف":600, "مستغانم":600, "وهران":700,
+    "سيدي بلعباس":700, "قسنطينة":700, "عنابة":700, "المسيلة":600, "سطيف":600, "برج بوعريريج":600
+};
+
+function updateSummary() {
+    const data = new FormData(form);
+    const state = data.get('state') || "";
+    let delivery = deliveryPrices[state] || 0;
+    let total = selectedPrice + delivery; // جمع سعر المنتج والتوصيل
+    summary.innerHTML = `
+        <p>العرض المختار: ${offerInput.value}</p>
+        <p>سعر المنتج: ${selectedPrice.toLocaleString()} دج</p>
+        <p>سعر التوصيل: ${delivery} دج</p>
+        <p><strong>المجموع الكلي: ${total.toLocaleString()} دج</strong></p>
+    `;
+}
+
+form.addEventListener('change', updateSummary);
+updateSummary();
+</script>
+
+</body>
+</html>
