@@ -228,7 +228,7 @@
     <form id="order-form" action="thankyou.html" method="get">
         <h2>للطلب اكتب معلوماتك في الخانات</h2>
         <input type="text" name="name" placeholder="الاسم الكامل" required>
-        <input type="tel" name="phone" placeholder="رقم الهاتف" required>
+        <input type="tel" name="phone" placeholder="رقم الهاتف" required pattern="\d{10}" title="يرجى إدخال رقم هاتف صحيح مكون من 10 أرقام">
         <select name="state" required>
             <option value="">اختر ولايتك</option>
             <option value="الجزائر">العاصمة</option>
@@ -237,7 +237,6 @@
             <option value="بومرداس">بومرداس</option>
             <option value="تيزي وزو">تيزي وزو</option>
             <option value="بجاية">بجاية</option>
-            <!-- أضف باقي الولايات حسب الحاجة -->
         </select>
         <button type="submit" id="order-btn">تأكيد الطلب</button>
     </form>
