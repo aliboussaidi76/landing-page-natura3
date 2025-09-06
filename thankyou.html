@@ -3,124 +3,116 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>شكراً على طلبك - مناحل آل بوسعيدي</title>
-
-  <!-- Meta Tags SEO -->
-  <meta name="description" content="شكراً على ثقتك في منتجات مناحل آل بوسعيدي. اكتشف منتجات إضافية مثل العكبر، البروبوليس، عسل السدر، عسل الأزهار، عسل السعال، عسل الإنفلونزا وخلطة القدرة.">
-  <meta name="keywords" content="عسل طبيعي, عكبر, بروبوليس, عسل السدر, عسل الأزهار, عسل الأطفال, مناحل آل بوسعيدي, منتجات طبيعية">
-  <meta name="author" content="مناحل آل بوسعيدي">
-
+  <title>شكرا لطلبك - مناحل آل بوسعيدي</title>
+  <meta name="description" content="شكرا لثقتك بمنتجات مناحل آل بوسعيدي. اكتشف عروض إضافية حصرية الآن.">
+  <meta name="keywords" content="عسل طبيعي, شراء عسل, عسل للأطفال, عسل الجزائر, مناحل آل بوسعيدي, عسل السدر, عسل الأزهار, بروبوليس, عكبر, جيلي رويال">
   <style>
-    body {font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; background: #fff; text-align: center;}
-    header {background: green; color: white; padding: 15px; font-size: 20px;}
-    .summary {max-width: 400px; margin: 20px auto; background: #f9f9f9; padding: 20px; border-radius: 10px; border: 2px solid #ddd;}
-    .summary h2 {margin-bottom: 15px;}
+    body {font-family: Tahoma, sans-serif; margin: 0; padding: 0; background: #fff; color: #333; line-height: 1.6;}
+    header {background: #28a745; color: #fff; padding: 15px; text-align: center; font-size: 20px; font-weight: bold;}
+    .container {max-width: 900px; margin: 20px auto; padding: 15px;}
+    .summary {background: #f9f9f9; border: 2px solid #ccc; border-radius: 10px; padding: 20px; margin-bottom: 20px;}
+    .summary h2 {margin-top: 0; color: #28a745;}
     .summary p {margin: 5px 0; font-size: 16px;}
-    .upsells {padding: 30px; background: #fafafa;}
-    .upsells h2 {margin-bottom: 20px;}
-    .products {display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;}
-    .product {border: 1px solid #ddd; border-radius: 10px; width: 220px; padding: 15px; background: #fff; transition: 0.3s;}
+    .upsells h2 {text-align: center; margin-bottom: 20px;}
+    .products {display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px;}
+    .product {border: 1px solid #ddd; border-radius: 10px; padding: 15px; text-align: center; transition: 0.3s;}
     .product:hover {box-shadow: 0 0 10px rgba(0,0,0,0.1);}
     .product img {max-width: 150px; margin-bottom: 10px;}
     .stars {color: gold; margin: 5px 0;}
-    .btn {display: block; background: orange; color: white; padding: 10px; border-radius: 5px; margin-top: 10px; text-decoration: none; font-weight: bold;}
-    .btn:hover {background: darkorange;}
-    footer {text-align: center; padding: 15px; background: #333; color: white; margin-top: 20px;}
+    .product button {background: #ff6600; color: white; border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer;}
+    .product button:hover {background: #e65c00;}
+    footer {background: #222; color: #fff; text-align: center; padding: 15px; margin-top: 20px; font-size: 14px;}
   </style>
 </head>
 <body>
 
-  <!-- الهيدر -->
-  <header>✅ شكراً على طلبك! فريق مناحل آل بوسعيدي سيتواصل معك لتأكيد الطلب</header>
+  <header>🎉 شكرا لك! طلبك تم بنجاح</header>
 
-  <!-- ملخص الطلب -->
-  <section class="summary">
-    <h2>ملخص الطلبية</h2>
-    <p><strong>مكونات الطلبية:</strong> <span id="orderOffer"></span></p>
-    <p><strong>الولاية:</strong> <span id="orderWilaya"></span></p>
-    <p><strong>سعر التوصيل:</strong> <span id="delivery"></span> دج</p>
-    <p><strong>سعر الطلبية:</strong> <span id="orderPrice"></span> دج</p>
-    <p><strong>المجموع الكلي:</strong> <span id="total"></span> دج</p>
-  </section>
-
-  <!-- الأبسلز -->
-  <section class="upsells">
-    <h2>منتجات أخرى قد تهمك</h2>
-    <div class="products">
-      <div class="product">
-        <img src="power-mix.jpg" alt="خلطة القدرة">
-        <h3>خلطة زيادة القدرة</h3>
-        <div class="stars">⭐⭐⭐⭐⭐</div>
-        <p>أخيراً المنتج الذي يسأل عنه الجميع!</p>
-        <a href="upsells.html" class="btn">اكتشف الآن</a>
-      </div>
-      <div class="product">
-        <img src="propolis.jpg" alt="البروبوليس">
-        <h3>البروبوليس</h3>
-        <div class="stars">⭐⭐⭐⭐⭐</div>
-        <p>مضاد طبيعي للبكتيريا والالتهابات.</p>
-        <a href="upsells.html" class="btn">اطلب الآن</a>
-      </div>
-      <div class="product">
-        <img src="sidr.jpg" alt="عسل السدر">
-        <h3>عسل السدر</h3>
-        <div class="stars">⭐⭐⭐⭐⭐</div>
-        <p>من أجود أنواع العسل، غني بالفوائد.</p>
-        <a href="upsells.html" class="btn">اطلب الآن</a>
-      </div>
-      <div class="product">
-        <img src="flowers.jpg" alt="عسل الأزهار">
-        <h3>عسل الأزهار</h3>
-        <div class="stars">⭐⭐⭐⭐</div>
-        <p>طاقة وحيوية من قلب الطبيعة.</p>
-        <a href="upsells.html" class="btn">اطلب الآن</a>
-      </div>
-      <div class="product">
-        <img src="cough.jpg" alt="عسل السعال">
-        <h3>عسل السعال</h3>
-        <div class="stars">⭐⭐⭐⭐⭐</div>
-        <p>فعال لتخفيف السعال والبلغم.</p>
-        <a href="upsells.html" class="btn">اطلب الآن</a>
-      </div>
-      <div class="product">
-        <img src="flu.jpg" alt="عسل الإنفلونزا">
-        <h3>عسل الإنفلونزا</h3>
-        <div class="stars">⭐⭐⭐⭐⭐</div>
-        <p>مقوي طبيعي ضد نزلات البرد.</p>
-        <a href="upsells.html" class="btn">اطلب الآن</a>
-      </div>
+  <div class="container">
+    <!-- ملخص الطلب -->
+    <div class="summary">
+      <h2>📦 ملخص طلبك</h2>
+      <p><b>مكونات الطلبية:</b> <span id="order-offer">عبوة واحدة</span></p>
+      <p><b>سعر الطلبية:</b> <span id="order-price">1500 دج</span></p>
+      <p><b>سعر التوصيل:</b> <span id="order-shipping">400 دج</span></p>
+      <p><b>المجموع الكلي:</b> <span id="order-total">1900 دج</span></p>
     </div>
-  </section>
 
-  <!-- الفوتر -->
-  <footer>© جميع الحقوق محفوظة - مناحل آل بوسعيدي 2025</footer>
+    <!-- منتجات إضافية -->
+    <section class="upsells">
+      <h2>🔥 منتجات أخرى قد تهمك</h2>
+      <div class="products">
+        <div class="product">
+          <img src="images/power-mix.png" alt="خلطة زيادة القدرة">
+          <h3>خلطة زيادة القدرة</h3>
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p>سعر: 3500 دج</p>
+          <button onclick="orderNow('خلطة زيادة القدرة',3500)">اطلب الآن</button>
+        </div>
+        <div class="product">
+          <img src="images/propolis.png" alt="العكبر بروبوليس">
+          <h3>العكبر (بروبوليس)</h3>
+          <div class="stars">⭐⭐⭐⭐</div>
+          <p>سعر: 2500 دج</p>
+          <button onclick="orderNow('العكبر (بروبوليس)',2500)">اطلب الآن</button>
+        </div>
+        <div class="product">
+          <img src="images/sidr-honey.png" alt="عسل السدر">
+          <h3>عسل السدر</h3>
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p>سعر: 3000 دج</p>
+          <button onclick="orderNow('عسل السدر',3000)">اطلب الآن</button>
+        </div>
+        <div class="product">
+          <img src="images/flower-honey.png" alt="عسل الأزهار">
+          <h3>عسل الأزهار</h3>
+          <div class="stars">⭐⭐⭐⭐</div>
+          <p>سعر: 2000 دج</p>
+          <button onclick="orderNow('عسل الأزهار',2000)">اطلب الآن</button>
+        </div>
+        <div class="product">
+          <img src="images/cough-honey.png" alt="عسل للسعال">
+          <h3>عسل للسعال</h3>
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p>سعر: 2800 دج</p>
+          <button onclick="orderNow('عسل للسعال',2800)">اطلب الآن</button>
+        </div>
+        <div class="product">
+          <img src="images/flu-honey.png" alt="عسل ضد الانفلونزا">
+          <h3>عسل ضد الانفلونزا</h3>
+          <div class="stars">⭐⭐⭐⭐</div>
+          <p>سعر: 2700 دج</p>
+          <button onclick="orderNow('عسل ضد الانفلونزا',2700)">اطلب الآن</button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    جميع الحقوق محفوظة © 2025 مناحل آل بوسعيدي
+  </footer>
 
   <script>
-    // جلب البيانات من الفورم
-    const offer = sessionStorage.getItem("offer") || "غير محدد";
-    const wilaya = sessionStorage.getItem("wilaya") || "غير محددة";
+    // جلب تفاصيل الطلب من التخزين المحلي
+    document.addEventListener("DOMContentLoaded", function() {
+      const offer = localStorage.getItem("offer") || "عبوة واحدة";
+      const price = localStorage.getItem("price") || "1500";
+      const shipping = localStorage.getItem("shipping") || "400";
 
-    let orderPrice = 0;
-    if (offer.includes("1500")) orderPrice = 1500;
-    else if (offer.includes("2800")) orderPrice = 2800;
-    else if (offer.includes("4500")) orderPrice = 4500;
+      document.getElementById("order-offer").textContent = offer;
+      document.getElementById("order-price").textContent = price + " دج";
+      document.getElementById("order-shipping").textContent = shipping + " دج";
+      document.getElementById("order-total").textContent = (parseInt(price) + parseInt(shipping)) + " دج";
+    });
 
-    // أسعار التوصيل حسب الولاية
-    let delivery = 700; 
-    if (wilaya.includes("الجزائر") || wilaya.includes("البليدة") || wilaya.includes("تيبازة"))
-      delivery = 400;
-    else if (wilaya.includes("بومرداس") || wilaya.includes("تيزيوزو"))
-      delivery = 500;
-    else if (wilaya.includes("بجاية") || wilaya.includes("الشلف") || wilaya.includes("مستغانم") || wilaya.includes("سطيف") || wilaya.includes("برج"))
-      delivery = 600;
-
-    const total = orderPrice + delivery;
-
-    document.getElementById("orderOffer").textContent = offer;
-    document.getElementById("orderWilaya").textContent = wilaya;
-    document.getElementById("orderPrice").textContent = orderPrice;
-    document.getElementById("delivery").textContent = delivery;
-    document.getElementById("total").textContent = total;
+    // دالة للأبسلز
+    function orderNow(product, price) {
+      localStorage.setItem("offer", product);
+      localStorage.setItem("price", price);
+      localStorage.setItem("shipping", "400"); // افتراضياً 400 دج
+      window.location.href = "index.html"; // يرجع للفورم للطلب
+    }
   </script>
+
 </body>
 </html>
