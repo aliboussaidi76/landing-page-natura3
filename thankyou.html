@@ -3,92 +3,48 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>شكرًا على طلبك - عسل الأطفال</title>
-<meta name="description" content="شكراً على طلبك! اكتشف منتجاتنا الطبيعية الأخرى مثل خلطة زيادة القدرة والعسل الطبيعي للأطفال.">
-<meta name="keywords" content="شكرًا, طلبك, عسل الأطفال, منتجات طبيعية, upsells, خلطة زيادة القدرة, العكبر, البروبوليس, عسل السدر, عسل الأزهار, عسل السعال, عسل الإنفلونزا">
+<title>شكراً لطلبك</title>
+<meta name="description" content="شكراً لطلبك، إليك ملخص طلبك. اكتشف عروضنا الأخرى لزيادة الاستفادة.">
+<meta name="keywords" content="عسل أطفال, شكر الطلب, ملخص الطلب, عروض العسل, منتجات إضافية">
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
-:root { --primary-color:#ff914d; --secondary-color:#ffb74d; --dark-color:#1a4d29; --light-color:#f0f8f0; --button-dark-color:#4a6c4c; --orange-color:#ff7f00; --font-family:'Cairo', sans-serif;}
-*{box-sizing:border-box;margin:0;padding:0;}
-body{font-family:var(--font-family);background:#FFF8E1;color:var(--dark-color);line-height:1.6;}
-.container{max-width:1100px;margin:auto;padding:15px;}
-h1,h2,h3{text-align:center;margin:15px 0;}
-.upsells-section{display:flex;flex-wrap:wrap;gap:15px;justify-content:center;margin:20px 0;}
-.upsell-item{background:white;padding:15px;border-radius:15px;box-shadow:0 5px 15px rgba(0,0,0,0.1);text-align:center;flex:1 1 30%;max-width:300px;}
-.upsell-item img{width:100%;border-radius:10px;margin-bottom:10px;}
-.order-summary{background:white;padding:15px;border-radius:15px;box-shadow:0 5px 15px rgba(0,0,0,0.1);text-align:center;margin:20px 0;max-width:400px;margin-left:auto;margin-right:auto;}
-.order-summary p{margin:8px 0;font-weight:bold;font-size:1.1rem;}
-.btn-buy{background:var(--orange-color);color:white;padding:12px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;transition:transform 0.3s ease;margin-top:10px;}
-.btn-buy:hover{transform:scale(1.05);}
-footer{text-align:center;padding:15px;background:var(--dark-color);color:white;margin-top:20px;font-size:0.9rem;}
+body{font-family:'Cairo',sans-serif;background:#FFF8E1;color:#1a4d29;text-align:center;padding:20px;}
+h1{color:#4CAF50;margin-bottom:15px;}
+.summary{background:#f0f8f0;padding:20px;border-radius:15px;box-shadow:0 5px 15px rgba(0,0,0,0.1);margin-bottom:20px;}
+.upsell{background:#ffebcc;padding:15px;margin:10px 0;border-radius:10px;box-shadow:0 3px 8px rgba(0,0,0,0.1);}
 </style>
 </head>
 <body>
+<h1>شكراً لطلبك!</h1>
 
-<header>
-<h1>شكراً على طلبك!</h1>
-<p>لقد تلقينا طلبك بنجاح. إليك ملخص طلبك وبعض منتجاتنا الأخرى التي قد تهمك:</p>
-</header>
-
-<div class="container">
-    <div class="order-summary">
-        <p id="summaryItems">مكونات الطلبية: عبوة واحدة</p>
-        <p id="summaryDelivery">سعر التوصيل: 400 دج</p>
-        <p id="summaryPrice">سعر الطلبية: 1500 دج</p>
-        <p id="summaryTotal">المجموع الكلي: 1900 دج</p>
-    </div>
-
-    <h2>اكتشف منتجاتنا الأخرى</h2>
-    <div class="upsells-section">
-        <div class="upsell-item">
-            <img src="power-mix.jpg" alt="خلطة زيادة القدرة">
-            <h3>أخيرًا المنتج الذي يسأل عنه الجميع</h3>
-            <button class="btn-buy">اطلب الآن</button>
-        </div>
-        <div class="upsell-item">
-            <img src="propolis.jpg" alt="البروبوليس">
-            <h3>البروبوليس الطبيعي</h3>
-            <button class="btn-buy">اطلب الآن</button>
-        </div>
-        <div class="upsell-item">
-            <img src="bees-pollen.jpg" alt="العكبر">
-            <h3>العكبر الطبيعي</h3>
-            <button class="btn-buy">اطلب الآن</button>
-        </div>
-        <div class="upsell-item">
-            <img src="sidr-honey.jpg" alt="عسل السدر">
-            <h3>عسل السدر</h3>
-            <button class="btn-buy">اطلب الآن</button>
-        </div>
-        <div class="upsell-item">
-            <img src="flower-honey.jpg" alt="عسل الأزهار">
-            <h3>عسل الأزهار</h3>
-            <button class="btn-buy">اطلب الآن</button>
-        </div>
-        <div class="upsell-item">
-            <img src="cough-honey.jpg" alt="عسل السعال">
-            <h3>عسل السعال</h3>
-            <button class="btn-buy">اطلب الآن</button>
-        </div>
-        <div class="upsell-item">
-            <img src="flu-honey.jpg" alt="عسل الانفلونزا">
-            <h3>عسل الإنفلونزا</h3>
-            <button class="btn-buy">اطلب الآن</button>
-        </div>
-    </div>
-
-    <p style="text-align:center;margin-top:20px;font-weight:bold;">لأي استفسار، تواصل معنا عبر <a href="https://wa.me/213XXXXXXXXX" target="_blank">واتساب</a></p>
+<div class="summary">
+    <p id="summaryItems"></p>
+    <p id="summaryDelivery"></p>
+    <p id="summaryPrice"></p>
+    <p id="summaryTotal"></p>
 </div>
 
-<footer>جميع الحقوق محفوظة لشركة مناحل آل بوسعيدي</footer>
+<h2>منتجات إضافية قد تهمك</h2>
+<div class="upsell">
+    <p>أخيرا المنتج الذي يسأل عنه الجميع: خلطة زيادة القدرة الجنسية للنساء والرجال!</p>
+    <img src="enhancer.jpg" alt="خلطة زيادة القدرة" width="200">
+</div>
+<div class="upsell">
+    <p>عسل السدر الطبيعي</p>
+    <img src="sidr_honey.jpg" alt="عسل السدر" width="150">
+</div>
+<div class="upsell">
+    <p>عسل الأزهار</p>
+    <img src="flower_honey.jpg" alt="عسل الأزهار" width="150">
+</div>
+
+<p style="margin-top:30px;">جميع الحقوق محفوظة لشركة مناحل آل بوسعيدي</p>
 
 <script>
-// استلام بيانات الطلب من index.html عبر localStorage
 document.addEventListener("DOMContentLoaded", function(){
     let items = localStorage.getItem('customerItems') || 'عبوة واحدة';
-    let delivery = localStorage.getItem('deliveryPrice') || 400;
-    let orderPrice = localStorage.getItem('productPrice') || 1500;
-    let total = parseInt(delivery) + parseInt(orderPrice);
+    let delivery = parseInt(localStorage.getItem('deliveryPrice')) || 400;
+    let orderPrice = parseInt(localStorage.getItem('orderPrice')) || 1500;
+    let total = delivery + orderPrice;
 
     document.getElementById('summaryItems').innerText = "مكونات الطلبية: " + items;
     document.getElementById('summaryDelivery').innerText = "سعر التوصيل: " + delivery + " دج";
@@ -96,6 +52,5 @@ document.addEventListener("DOMContentLoaded", function(){
     document.getElementById('summaryTotal').innerText = "المجموع الكلي: " + total + " دج";
 });
 </script>
-
 </body>
 </html>
