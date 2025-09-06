@@ -19,6 +19,10 @@
         }
         * { box-sizing: border-box; margin:0; padding:0; }
         body { font-family: var(--font-family); background-color: #FFF8E1; color: var(--dark-color); line-height:1.6; }
+        /* شريط الأخبار */
+        .news-bar { background:#e74c3c; color:white; padding:10px 0; text-align:center; font-weight:bold; overflow:hidden; position:relative; }
+        .news-bar p { display:inline-block; white-space:nowrap; position:relative; animation:scrollNews 15s linear infinite; }
+        @keyframes scrollNews { 0% { left:100%; } 100% { left:-100%; } }
         header { background: linear-gradient(135deg, var(--dark-color), #2f693e); color: white; padding: 30px 0; text-align: center; }
         header h1 { font-size: 2.2rem; margin-bottom: 8px; }
         header p { font-size: 1rem; max-width: 700px; margin: auto; }
@@ -41,6 +45,12 @@
     </style>
 </head>
 <body>
+
+<!-- شريط الأخبار -->
+<div class="news-bar">
+    <p>التوصيل إلى باب المنزل والدفع عند الاستلام</p>
+</div>
+
 <header>
     <h1>عسل الأطفال: طاقة وذكاء ونمو صحي</h1>
     <p>أفضل عسل طبيعي للأطفال لتعزيز الصحة والطاقة والتركيز والنمو</p>
@@ -152,7 +162,6 @@ function calculateTotal(){
     }
     const total = selectedOfferPrice + delivery;
     alert('سعر المنتج: ' + selectedOfferPrice + ' دج\nسعر التوصيل: ' + delivery + ' دج\nالمجموع الكلي: ' + total + ' دج\nتم إرسال الطلب!');
-    // هنا يمكن ربط الفورم مع صفحة thankyou.html
     window.location.href = 'thankyou.html';
     return false;
 }
