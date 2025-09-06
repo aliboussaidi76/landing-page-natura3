@@ -4,92 +4,145 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>شكراً لطلبك - عسل الأطفال</title>
-    <meta name="description" content="شكراً لطلبك! إليك ملخص طلبك واكتشف منتجاتنا الأخرى لزيادة الفوائد لطفلك.">
-    <meta name="keywords" content="عسل للأطفال, ملخص الطلب, upsells, عسل طبيعي, زيادة الطاقة, تحسين المناعة">
+    <meta name="description" content="شكراً على طلبك! اكتشف عروض العسل الأخرى والمنتجات الصحية للأطفال.">
+    <meta name="keywords" content="عسل أطفال, صحة الطفل, الطاقة, الذكاء, نمو صحي, منتجات طبيعية, شراء عسل">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
-        :root {
-            --primary-color: #ff914d;
-            --secondary-color: #ffb74d;
-            --dark-color: #1a4d29;
-            --light-color: #f0f8f0;
-            --button-color: #4a6c4c;
-            --font-family: 'Cairo', sans-serif;
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #FFF8E1;
+            color: #1a4d29;
+            margin: 0;
+            padding: 0;
+            text-align: center;
         }
-        * { box-sizing: border-box; margin:0; padding:0; }
-        body { font-family: var(--font-family); background:#FFF8E1; color: var(--dark-color); text-align:center; line-height:1.6; }
-        .container { max-width:1100px; margin:auto; padding:20px; }
-        h1 { font-size:2rem; margin-bottom:10px; }
-        .order-summary { background:white; padding:20px; border-radius:10px; margin:20px auto; max-width:500px; box-shadow:0 5px 15px rgba(0,0,0,0.1); text-align:right; }
-        .summary-item { margin:8px 0; font-weight:bold; }
-        .upsells { display:flex; flex-wrap:wrap; justify-content:center; gap:15px; margin:20px 0; }
-        .upsell-item { background:white; padding:15px; border-radius:10px; box-shadow:0 5px 15px rgba(0,0,0,0.1); max-width:200px; text-align:center; }
-        .upsell-item img { width:100%; border-radius:8px; }
-        .upsell-item h3 { font-size:1rem; margin:10px 0 5px; }
-        .stars { color:gold; margin-bottom:10px; }
-        .fixed-order { position:fixed; bottom:20px; left:50%; transform:translateX(-50%); background:var(--button-color); color:white; padding:15px 25px; border-radius:50px; font-size:1.2rem; cursor:pointer; animation:bounce 1s infinite; z-index:999; }
-        @keyframes bounce {0%,100%{transform:translateX(-50%) translateY(0);}50%{transform:translateX(-50%) translateY(-10px);}}
-        .all-rights { margin:20px 0; font-size:0.9rem; color:#555; }
+
+        h1 {
+            margin-top: 20px;
+            font-size: 2rem;
+        }
+
+        .summary {
+            margin: 20px auto;
+            max-width: 400px;
+            padding: 15px;
+            border: 2px solid #ff914d;
+            border-radius: 10px;
+            background-color: #fff;
+        }
+
+        .upsells {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+            max-width: 1000px;
+            margin: 30px auto;
+        }
+
+        .upsell-item {
+            background: white;
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .upsell-item img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .upsell-item h3 {
+            margin: 10px 0 5px 0;
+            font-size: 1rem;
+        }
+
+        .stars {
+            color: #ffb74d;
+            font-size: 1rem;
+        }
+
+        .fixed-order {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 50px;
+            font-weight: bold;
+            cursor: pointer;
+            animation: pulse 1s infinite alternate;
+            z-index: 1000;
+        }
+
+        @keyframes pulse {
+            0% { transform: translateX(-50%) scale(1); }
+            50% { transform: translateX(-50%) scale(1.1); }
+            100% { transform: translateX(-50%) scale(1); }
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>شكراً لطلبك!</h1>
-        <p>ملخص الطلبية الخاصة بك:</p>
-        <div class="order-summary" id="order-summary">
-            <div class="summary-item">مكونات الطلبية: <span id="summary-product">عبوة واحدة</span></div>
-            <div class="summary-item">سعر التوصيل: <span id="summary-delivery">400 دج</span></div>
-            <div class="summary-item">سعر الطلبية: <span id="summary-price">1500 دج</span></div>
-            <div class="summary-item">المجموع الكلي: <span id="summary-total">1900 دج</span></div>
-        </div>
 
-        <h2>اكتشف منتجاتنا الأخرى!</h2>
-        <div class="upsells">
-            <div class="upsell-item">
-                <img src="boost-sexual.jpg" alt="خلطة زيادة القدرة الجنسية">
-                <h3>أخيراً المنتج الذي يسأل عنه الجميع</h3>
-                <div class="stars">★★★★★</div>
-            </div>
-            <div class="upsell-item">
-                <img src="propolis.jpg" alt="العكبر">
-                <h3>العكبر الطبيعي</h3>
-                <div class="stars">★★★★☆</div>
-            </div>
-            <div class="upsell-item">
-                <img src="propolis-honey.jpg" alt="البروبوليس">
-                <h3>البروبوليس</h3>
-                <div class="stars">★★★★☆</div>
-            </div>
-            <div class="upsell-item">
-                <img src="sidr-honey.jpg" alt="عسل السدر">
-                <h3>عسل السدر</h3>
-                <div class="stars">★★★★★</div>
-            </div>
-            <div class="upsell-item">
-                <img src="flower-honey.jpg" alt="عسل الأزهار">
-                <h3>عسل الأزهار</h3>
-                <div class="stars">★★★★☆</div>
-            </div>
-            <div class="upsell-item">
-                <img src="cough-honey.jpg" alt="عسل السعال">
-                <h3>عسل السعال</h3>
-                <div class="stars">★★★★☆</div>
-            </div>
-            <div class="upsell-item">
-                <img src="flu-honey.jpg" alt="عسل الانفلونزا">
-                <h3>عسل الإنفلونزا</h3>
-                <div class="stars">★★★★☆</div>
-            </div>
-        </div>
+<h1>شكراً على طلبك!</h1>
+<p>ملخص طلبك:</p>
+
+<div class="summary">
+    <p>مكونات الطلبية: عبوة واحدة</p>
+    <p>سعر التوصيل: 400 دج</p>
+    <p>سعر الطلبية: 1500 دج</p>
+    <p>المجموع الكلي: 1900 دج</p>
+</div>
+
+<h2>اكتشف المزيد من منتجاتنا</h2>
+<div class="upsells">
+    <div class="upsell-item">
+        <img src="images/sexual-boost.jpg" alt="خلطة زيادة القدرة">
+        <h3>خلطة زيادة القدرة الجنسية</h3>
+        <div class="stars">★★★★★</div>
     </div>
+    <div class="upsell-item">
+        <img src="images/propolis.jpg" alt="العكبر والبروبوليس">
+        <h3>العكبر والبروبوليس</h3>
+        <div class="stars">★★★★☆</div>
+    </div>
+    <div class="upsell-item">
+        <img src="images/sidr.jpg" alt="عسل السدر">
+        <h3>عسل السدر</h3>
+        <div class="stars">★★★★☆</div>
+    </div>
+    <div class="upsell-item">
+        <img src="images/flowers.jpg" alt="عسل الأزهار">
+        <h3>عسل الأزهار</h3>
+        <div class="stars">★★★★☆</div>
+    </div>
+    <div class="upsell-item">
+        <img src="images/cough.jpg" alt="عسل السعال">
+        <h3>عسل السعال</h3>
+        <div class="stars">★★★★☆</div>
+    </div>
+    <div class="upsell-item">
+        <img src="images/flu.jpg" alt="عسل الإنفلونزا">
+        <h3>عسل الإنفلونزا</h3>
+        <div class="stars">★★★★☆</div>
+    </div>
+    <div class="upsell-item">
+        <img src="images/mix.jpg" alt="خلطة متنوعة">
+        <h3>خلطة متنوعة صحية</h3>
+        <div class="stars">★★★★☆</div>
+    </div>
+    <div class="upsell-item">
+        <img src="images/natural.jpg" alt="منتجات طبيعية">
+        <h3>منتجات طبيعية متنوعة</h3>
+        <div class="stars">★★★★☆</div>
+    </div>
+</div>
 
-    <div class="fixed-order" onclick="window.location.href='index.html'">اطلب الآن</div>
-    <div class="all-rights">جميع الحقوق محفوظة لشركة مناحل آل بوسعيدي</div>
+<div class="fixed-order" onclick="window.location.href='./index.html'">
+    اطلب الآن
+</div>
 
-    <script>
-        // يمكنك إضافة كود JS هنا لتحديث ملخص الطلبية ديناميكيًا إذا أردت ربطه مع localStorage
-        // مثال:
-        // document.getElementById('summary-product').textContent = localStorage.getItem('product') || 'عبوة واحدة';
-    </script>
 </body>
 </html>
