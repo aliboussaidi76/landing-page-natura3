@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>شكرًا على طلبك - عسل الأطفال</title>
-<meta name="description" content="شكرًا على طلبك! اكتشف منتجاتنا الطبيعية الأخرى مثل خلطة زيادة القدرة والعسل الطبيعي للأطفال.">
+<meta name="description" content="شكراً على طلبك! اكتشف منتجاتنا الطبيعية الأخرى مثل خلطة زيادة القدرة والعسل الطبيعي للأطفال.">
 <meta name="keywords" content="شكرًا, طلبك, عسل الأطفال, منتجات طبيعية, upsells, خلطة زيادة القدرة, العكبر, البروبوليس, عسل السدر, عسل الأزهار, عسل السعال, عسل الإنفلونزا">
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
@@ -13,10 +13,11 @@
 body{font-family:var(--font-family);background:#FFF8E1;color:var(--dark-color);line-height:1.6;}
 .container{max-width:1100px;margin:auto;padding:15px;}
 h1,h2,h3{text-align:center;margin:15px 0;}
-.upsells-section, .order-summary{display:flex;flex-wrap:wrap;gap:15px;justify-content:center;margin:20px 0;}
-.upsell-item, .summary-item{background:white;padding:15px;border-radius:15px;box-shadow:0 5px 15px rgba(0,0,0,0.1);text-align:center;flex:1 1 30%;max-width:300px;}
+.upsells-section{display:flex;flex-wrap:wrap;gap:15px;justify-content:center;margin:20px 0;}
+.upsell-item{background:white;padding:15px;border-radius:15px;box-shadow:0 5px 15px rgba(0,0,0,0.1);text-align:center;flex:1 1 30%;max-width:300px;}
 .upsell-item img{width:100%;border-radius:10px;margin-bottom:10px;}
-.summary-item{display:flex;flex-direction:column;gap:5px;}
+.order-summary{background:white;padding:15px;border-radius:15px;box-shadow:0 5px 15px rgba(0,0,0,0.1);text-align:center;margin:20px 0;max-width:400px;margin-left:auto;margin-right:auto;}
+.order-summary p{margin:8px 0;font-weight:bold;font-size:1.1rem;}
 .btn-buy{background:var(--orange-color);color:white;padding:12px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;transition:transform 0.3s ease;margin-top:10px;}
 .btn-buy:hover{transform:scale(1.05);}
 footer{text-align:center;padding:15px;background:var(--dark-color);color:white;margin-top:20px;font-size:0.9rem;}
@@ -30,15 +31,11 @@ footer{text-align:center;padding:15px;background:var(--dark-color);color:white;m
 </header>
 
 <div class="container">
-    <h2>ملخص الطلبية</h2>
     <div class="order-summary">
-        <div class="summary-item"><strong>الاسم:</strong> <span id="customerName"></span></div>
-        <div class="summary-item"><strong>رقم الهاتف:</strong> <span id="customerPhone"></span></div>
-        <div class="summary-item"><strong>الولاية:</strong> <span id="customerState"></span></div>
-        <div class="summary-item"><strong>العرض المختار:</strong> <span id="customerOffer"></span></div>
-        <div class="summary-item"><strong>سعر المنتج:</strong> <span id="productPrice"></span> دج</div>
-        <div class="summary-item"><strong>سعر التوصيل:</strong> <span id="deliveryPrice"></span> دج</div>
-        <div class="summary-item"><strong>المجموع الكلي:</strong> <span id="totalPrice"></span> دج</div>
+        <p id="summaryItems">مكونات الطلبية: عبوة واحدة</p>
+        <p id="summaryDelivery">سعر التوصيل: 400 دج</p>
+        <p id="summaryPrice">سعر الطلبية: 1500 دج</p>
+        <p id="summaryTotal">المجموع الكلي: 1900 دج</p>
     </div>
 
     <h2>اكتشف منتجاتنا الأخرى</h2>
@@ -86,23 +83,17 @@ footer{text-align:center;padding:15px;background:var(--dark-color);color:white;m
 <footer>جميع الحقوق محفوظة لشركة مناحل آل بوسعيدي</footer>
 
 <script>
-// استلام بيانات الطلب من index.html عبر localStorage أو sessionStorage
+// استلام بيانات الطلب من index.html عبر localStorage
 document.addEventListener("DOMContentLoaded", function(){
-    let name = localStorage.getItem('customerName') || 'غير محدد';
-    let phone = localStorage.getItem('customerPhone') || 'غير محدد';
-    let state = localStorage.getItem('customerState') || 'غير محدد';
-    let offer = localStorage.getItem('customerOffer') || 'غير محدد';
-    let productPrice = parseInt(localStorage.getItem('productPrice')) || 0;
-    let deliveryPrice = parseInt(localStorage.getItem('deliveryPrice')) || 0;
-    let totalPrice = productPrice + deliveryPrice;
+    let items = localStorage.getItem('customerItems') || 'عبوة واحدة';
+    let delivery = localStorage.getItem('deliveryPrice') || 400;
+    let orderPrice = localStorage.getItem('productPrice') || 1500;
+    let total = parseInt(delivery) + parseInt(orderPrice);
 
-    document.getElementById('customerName').innerText = name;
-    document.getElementById('customerPhone').innerText = phone;
-    document.getElementById('customerState').innerText = state;
-    document.getElementById('customerOffer').innerText = offer;
-    document.getElementById('productPrice').innerText = productPrice;
-    document.getElementById('deliveryPrice').innerText = deliveryPrice;
-    document.getElementById('totalPrice').innerText = totalPrice;
+    document.getElementById('summaryItems').innerText = "مكونات الطلبية: " + items;
+    document.getElementById('summaryDelivery').innerText = "سعر التوصيل: " + delivery + " دج";
+    document.getElementById('summaryPrice').innerText = "سعر الطلبية: " + orderPrice + " دج";
+    document.getElementById('summaryTotal').innerText = "المجموع الكلي: " + total + " دج";
 });
 </script>
 
