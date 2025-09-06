@@ -7,40 +7,42 @@
 <meta name="description" content="اشترِ عسل الأطفال الطبيعي لتعزيز الطاقة، التركيز والنمو الصحي. توصيل سريع والدفع عند الاستلام.">
 <meta name="keywords" content="عسل الأطفال, عسل طبيعي, صحة الأطفال, منتجات أبسلز, توصيل عسل">
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
-  *{box-sizing:border-box;margin:0;padding:0;}
-  body{font-family:'Cairo',sans-serif;background:#FFF8E1;color:#1a4d29;line-height:1.6;text-align:center;}
-  .container{max-width:1100px;margin:auto;overflow:hidden;padding:0 15px;}
-  header{background:linear-gradient(135deg,#1a4d29,#2f693e);color:white;padding:30px 0;text-align:center;position:relative;}
-  header h1{font-size:2.2rem;margin-bottom:8px;}
-  header p{font-size:1rem;max-width:700px;margin:auto;}
-  .news-bar{background:red;color:white;padding:8px;font-weight:bold;}
-  .news-bar span{display:block;font-size:0.9rem;margin-top:3px;color:#fff;}
-  .product-image{margin:20px 0;}
-  .product-image img{width:300px;border-radius:15px;}
-  .offers-section{display:flex;justify-content:center;flex-wrap:wrap;gap:15px;margin:20px 0;}
-  .offer-item{flex:1 1 30%;max-width:350px;background:white;padding:15px;border-radius:15px;box-shadow:0 5px 15px rgba(0,0,0,0.1);cursor:pointer;border:3px solid transparent;transition:all 0.3s;}
-  .offer-item.selected{border-color:#4CAF50;background:#e0f7e0;}
-  .offer-item img{width:100%;border-radius:10px;margin-bottom:10px;}
-  form{background:#f0f8f0;padding:20px;border-radius:15px;margin:20px auto;max-width:500px;text-align:right;}
-  form label{display:block;margin:10px 0 5px;}
-  form input, form select{width:100%;padding:10px;margin-bottom:10px;border:2px solid #1a4d29;border-radius:8px;font-size:1rem;}
-  form input:invalid{border-color:red;}
-  form button{background:orange;color:white;padding:15px 20px;border:none;border-radius:50px;font-size:1.2rem;font-weight:bold;cursor:pointer;margin-top:10px;}
-  .benefits, .ingredients, .reviews{margin:30px 0;}
-  .ingredients-item, .reviews-item{background:white;padding:15px;margin:10px auto;border-radius:10px;max-width:400px;box-shadow:0 3px 8px rgba(0,0,0,0.1);text-align:right;}
-  .ingredients-item img, .reviews-item img{width:50px;height:50px;border-radius:50%;margin-left:10px;vertical-align:middle;}
-  .fixed-btn{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#4CAF50;color:white;padding:15px 30px;border-radius:50px;font-size:1.2rem;font-weight:bold;cursor:pointer;animation:pulse 1s infinite;z-index:999;text-decoration:none;}
-  @keyframes pulse{0%{transform:translateX(-50%) scale(1);}50%{transform:translateX(-50%) scale(1.1);}100%{transform:translateX(-50%) scale(1);}}
-  .general-image img{width:100%;max-width:500px;border-radius:15px;margin:20px 0;}
-  footer{margin-top:30px;padding:20px;background:#1a4d29;color:white;}
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Cairo',sans-serif;background:#FFF8E1;color:#1a4d29;line-height:1.6;text-align:center;}
+.container{max-width:1100px;margin:auto;overflow:hidden;padding:0 15px;}
+header{background:linear-gradient(135deg,#1a4d29,#2f693e);color:white;padding:30px 0;text-align:center;position:relative;}
+header h1{font-size:2.2rem;margin-bottom:8px;}
+header p{font-size:1rem;max-width:700px;margin:auto;}
+.news-bar{background:red;color:white;padding:8px;font-weight:bold;position:relative;}
+.news-bar span{display:block;font-size:0.9rem;margin-top:3px;color:#fff;}
+.news-bar .phone{position:absolute;left:20px;top:8px;font-weight:bold;}
+.product-image{margin:20px 0;}
+.product-image img{width:300px;border-radius:15px;}
+.offers-section{display:flex;justify-content:center;flex-wrap:wrap;gap:15px;margin:20px 0;}
+.offer-item{flex:1 1 30%;max-width:350px;background:white;padding:15px;border-radius:15px;box-shadow:0 5px 15px rgba(0,0,0,0.1);cursor:pointer;border:3px solid transparent;transition:all 0.3s;}
+.offer-item.selected{border-color:#4CAF50;background:#e0f7e0;}
+.offer-item img{width:100%;border-radius:10px;margin-bottom:10px;}
+form{background:#f0f8f0;padding:20px;border-radius:15px;margin:20px auto;max-width:500px;text-align:right;position:relative;}
+form label{display:block;margin:10px 0 5px;}
+form input, form select{width:100%;padding:10px;margin-bottom:10px;border:2px solid #1a4d29;border-radius:8px;font-size:1rem;}
+form input:invalid{border-color:red;}
+form button{background:orange;color:white;padding:15px 20px;border:none;border-radius:50px;font-size:1.2rem;font-weight:bold;cursor:pointer;margin:20px auto;display:block;}
+.benefits, .ingredients, .reviews{margin:30px 0;}
+.benefits{background:#e0f7e0;padding:15px;border-radius:15px;max-width:700px;margin:auto;text-align:right;}
+.ingredients-item, .reviews-item{background:white;padding:15px;margin:10px auto;border-radius:10px;max-width:400px;box-shadow:0 3px 8px rgba(0,0,0,0.1);text-align:right;}
+.ingredients-item img, .reviews-item img{width:50px;height:50px;border-radius:50%;margin-left:10px;vertical-align:middle;}
+.fixed-btn{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#4CAF50;color:white;padding:15px 30px;border-radius:50px;font-size:1.2rem;font-weight:bold;cursor:pointer;animation:pulse 1s infinite;z-index:999;text-decoration:none;}
+@keyframes pulse{0%{transform:translateX(-50%) scale(1);}50%{transform:translateX(-50%) scale(1.1);}100%{transform:translateX(-50%) scale(1);}}
+.general-image img{width:100%;max-width:500px;border-radius:15px;margin:20px 0;}
+footer{margin-top:30px;padding:20px;background:#1a4d29;color:white;}
 </style>
 </head>
 <body>
 <div class="news-bar">
   <span>عرض ينتهي هذا الأسبوع!</span>
   <span>التوصيل إلى المنزل والدفع عند الاستلام</span>
-  <span style="position:absolute;left:20px;top:8px;font-weight:bold;">رقم الهاتف: 0662277555</span>
+  <span class="phone">رقم الهاتف: 0662277555</span>
 </div>
 
 <header>
@@ -75,12 +77,14 @@
   <img src="images/mother_child_honey.jpg" alt="أم تعطي طفلها العسل">
 </div>
 
+<button onclick="scrollToForm()" style="background:#FFA500;color:white;padding:15px 30px;border:none;border-radius:50px;font-weight:bold;font-size:1.2rem;margin:20px auto;display:block;">تأكيد الطلب</button>
+
 <form id="orderForm" onsubmit="return submitForm()">
   <label>الاسم الكامل</label>
   <input type="text" name="name" required placeholder="ادخل اسمك">
 
   <label>رقم الهاتف</label>
-  <input type="tel" name="phone" required pattern="[0-9]{10}" placeholder="0662277555">
+  <input type="tel" name="phone" required pattern="[0-9]{10}" placeholder="">
 
   <label>الولاية</label>
   <select name="state" required>
@@ -101,15 +105,18 @@
     <option value="سطيف">سطيف</option>
     <option value="برج بوعريريج">برج بوعريريج</option>
   </select>
-
-  <p style="text-align:right;font-weight:bold;">للطلب اكتب معلوماتك في الخانات</p>
-
-  <button type="submit">تأكيد الطلب</button>
 </form>
 
 <div class="benefits">
   <h2>فوائد العسل للأطفال</h2>
-  <p>تخفيف السعال الحاد | ضد الانفلونزا | زيادة الطاقة والنشاط | التركيز وسرعة الحفظ | النمو الجيد | فتح الشهية</p>
+  <ul style="text-align:right;">
+    <li>تخفيف السعال الحاد</li>
+    <li>ضد الانفلونزا</li>
+    <li>زيادة الطاقة والنشاط</li>
+    <li>التركيز وسرعة الحفظ</li>
+    <li>النمو الجيد</li>
+    <li>فتح الشهية</li>
+  </ul>
 </div>
 
 <div class="ingredients">
@@ -124,6 +131,10 @@
   <div class="reviews-item"><img src="images/user1.jpg" alt="">واو! طفلي أصبح أكثر نشاطاً</div>
   <div class="reviews-item"><img src="images/user2.jpg" alt="">العسل الطبيعي ممتاز وصحي</div>
   <div class="reviews-item"><img src="images/user3.jpg" alt="">أحببت سرعة التوصيل وخدمة الزبائن</div>
+  <div class="reviews-item"><img src="images/user4.jpg" alt="">طفلي يحبه كثيرًا كل صباح</div>
+  <div class="reviews-item"><img src="images/user5.jpg" alt="">الجودة رائعة والطعم ممتاز</div>
+  <div class="reviews-item"><img src="images/user6.jpg" alt="">سأعيد الشراء بالتأكيد</div>
+  <div class="reviews-item"><img src="images/user7.jpg" alt="">خدمة التوصيل سريعة وموثوقة</div>
 </div>
 
 <a href="#" class="fixed-btn" onclick="scrollToForm()">اطلب الآن</a>
@@ -149,8 +160,10 @@ function scrollToForm(){
 
 function submitForm(){
   const form = document.getElementById('orderForm');
-  const state = form.state.value;
-  const url = `thankyou.html?offer=${selectedOffer}&state=${encodeURIComponent(state)}`;
+  const name = encodeURIComponent(form.name.value);
+  const phone = encodeURIComponent(form.phone.value);
+  const state = encodeURIComponent(form.state.value);
+  const url = `thankyou.html?offer=${selectedOffer}&name=${name}&phone=${phone}&state=${state}`;
   window.location.href = url;
   return false;
 }
