@@ -5,39 +5,68 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>شكراً لطلبك!</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+
     body {
       font-family: 'Cairo', sans-serif;
-      background-color: #f8fff5;
+      background-color: #f9fff9;
+      color: #1a4d29;
       text-align: center;
-      padding: 50px;
-      color: #2e7d32;
+      padding: 50px 15px;
     }
+
+    .thankyou-container {
+      max-width: 600px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    }
+
     h1 {
-      font-size: 2.5rem;
+      color: #2f693e;
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 1.1rem;
       margin-bottom: 20px;
     }
-    p {
-      font-size: 1.2rem;
-      margin-bottom: 30px;
-    }
-    a {
+
+    .btn {
       display: inline-block;
-      padding: 12px 25px;
-      background-color: #2e7d32;
+      background-color: #28a745;
       color: white;
+      padding: 12px 25px;
+      border-radius: 30px;
       text-decoration: none;
-      border-radius: 8px;
-      font-size: 1rem;
-      transition: background 0.3s;
+      font-weight: bold;
+      transition: background 0.3s ease;
     }
-    a:hover {
-      background-color: #1b5e20;
+
+    .btn:hover {
+      background-color: #218838;
+    }
+
+    .illustration {
+      margin: 20px 0;
+    }
+
+    .illustration img {
+      width: 180px;
     }
   </style>
 </head>
 <body>
-  <h1>🎉 شكراً لطلبك!</h1>
-  <p>لقد استلمنا معلوماتك وسنتواصل معك قريباً لتأكيد الطلب.</p>
-  <a href="index.html">⬅️ الرجوع إلى الصفحة الرئيسية</a>
+  <div class="thankyou-container">
+    <div class="illustration">
+      <img src="https://i.imgur.com/Yp6wRjv.png" alt="شكراً">
+    </div>
+    <h1>🎉 شكراً لك على طلبك!</h1>
+    <p>لقد استلمنا معلوماتك بنجاح، وسيتواصل معك فريقنا لتأكيد الطلبية والتوصيل.</p>
+    <a href="index.html" class="btn">⬅️ الرجوع إلى الصفحة الرئيسية</a>
+  </div>
 </body>
 </html>
