@@ -3,89 +3,118 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>شكرًا لك على طلبك - عسل الأطفال</title>
-<meta name="description" content="شكراً لطلبك! إليك ملخص الطلبية وبعض المنتجات الأخرى التي قد تعجبك. التوصيل سريع والدفع عند الاستلام.">
-<meta name="keywords" content="عسل الأطفال, منتجات أبسلز, شكرًا على الطلب, توصيل سريع, الدفع عند الاستلام">
+<title>شكرًا لطلبك</title>
+<meta name="description" content="شكرًا لطلبك عسل الأطفال الطبيعي، يمكنك الآن مشاهدة ملخص طلبك والاستفادة من منتجاتنا الأخرى.">
+<meta name="keywords" content="عسل للأطفال, شكرًا, ملخص الطلب, توصيل سريع, الدفع عند الاستلام">
 <style>
 body{font-family:'Cairo',sans-serif;background:#FFF8E1;color:#1a4d29;text-align:center;margin:0;padding:0;}
-.container{max-width:900px;margin:auto;padding:20px;}
-h1,h2{margin:20px 0;}
-.summary, .upsells{background:#f0f8f0;padding:20px;border-radius:15px;margin:20px auto;text-align:right;}
-.summary p{margin:8px 0;font-size:1.1rem;}
-.upsells-section{display:flex;flex-wrap:wrap;justify-content:center;gap:15px;margin-top:15px;}
-.upsell-item{background:white;padding:15px;border-radius:10px;max-width:200px;box-shadow:0 3px 8px rgba(0,0,0,0.1);text-align:center;}
+.container{max-width:800px;margin:auto;padding:20px;}
+h1{color:#4CAF50;}
+.summary{background:#f0f8f0;padding:20px;border-radius:15px;margin:20px 0;}
+.summary p{margin:10px 0;font-size:1.2rem;}
+.upsells{display:flex;flex-wrap:wrap;gap:15px;justify-content:center;margin-top:30px;}
+.upsell-item{flex:1 1 30%;max-width:220px;background:white;padding:10px;border-radius:15px;box-shadow:0 5px 10px rgba(0,0,0,0.1);cursor:pointer;transition:transform 0.3s;}
 .upsell-item img{width:100%;border-radius:10px;margin-bottom:10px;}
-.upsell-item h3{margin:5px 0;}
+.upsell-item:hover{transform:scale(1.05);}
 .fixed-btn{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#4CAF50;color:white;padding:15px 30px;border-radius:50px;font-size:1.2rem;font-weight:bold;cursor:pointer;animation:pulse 1s infinite;text-decoration:none;z-index:999;}
 @keyframes pulse{0%{transform:translateX(-50%) scale(1);}50%{transform:translateX(-50%) scale(1.1);}100%{transform:translateX(-50%) scale(1);}}
 </style>
 </head>
 <body>
+
 <div class="container">
-<h1>شكراً لك على طلبك!</h1>
+<h1>شكرًا لطلبك!</h1>
+<p>ملخص طلبك أدناه:</p>
 
 <div class="summary" id="orderSummary">
-<h2>ملخص الطلبية</h2>
-<p id="summaryItems">...</p>
-<p id="summaryDelivery">...</p>
-<p id="summaryTotal">...</p>
+<p>مكونات الطلبية: <span id="orderProduct"></span></p>
+<p>سعر التوصيل: <span id="deliveryPrice"></span> دج</p>
+<p>سعر الطلبية: <span id="productPrice"></span> دج</p>
+<p>المجموع الكلي: <span id="totalPrice"></span> دج</p>
 </div>
 
-<h2>منتجات قد تعجبك</h2>
-<div class="upsells-section">
-  <div class="upsell-item">
-    <img src="images/sexual_boost.jpg" alt="خلطة زيادة القدرة">
-    <h3>أخيرا المنتج الذي يسأل عنه الجميع!</h3>
-    <p>خلطة زيادة القدرة الجنسية</p>
-  </div>
-  <div class="upsell-item">
-    <img src="images/propolis.jpg" alt="البروبوليس">
-    <h3>البروبوليس</h3>
-    <p>مقوي للمناعة</p>
-  </div>
-  <div class="upsell-item">
-    <img src="images/bee_honey.jpg" alt="عسل السدر">
-    <h3>عسل السدر</h3>
-    <p>عضوي ونقي</p>
-  </div>
-  <div class="upsell-item">
-    <img src="images/flower_honey.jpg" alt="عسل الأزهار">
-    <h3>عسل الأزهار</h3>
-    <p>لطاقة يومية</p>
-  </div>
+<h2>منتجات أخرى قد تهمك</h2>
+<div class="upsells">
+<div class="upsell-item">
+<img src="images/sexual_boost.jpg" alt="خلطة زيادة القدرة">
+<h3>خلطة زيادة القدرة الجنسية</h3>
+<p>للاستخدام للرجال والنساء</p>
+</div>
+<div class="upsell-item">
+<img src="images/propolis.jpg" alt="عسل البروبوليس">
+<h3>عسل البروبوليس</h3>
+</div>
+<div class="upsell-item">
+<img src="images/sidr.jpg" alt="عسل السدر">
+<h3>عسل السدر</h3>
+</div>
+<div class="upsell-item">
+<img src="images/flowers.jpg" alt="عسل الأزهار">
+<h3>عسل الأزهار</h3>
+</div>
+<div class="upsell-item">
+<img src="images/cough.jpg" alt="عسل السعال">
+<h3>عسل السعال</h3>
+</div>
+<div class="upsell-item">
+<img src="images/flu.jpg" alt="عسل الإنفلونزا">
+<h3>عسل الإنفلونزا</h3>
+</div>
+<div class="upsell-item">
+<img src="images/pollen.jpg" alt="حبوب اللقاح">
+<h3>حبوب اللقاح</h3>
+</div>
+<div class="upsell-item">
+<img src="images/royal_jelly.jpg" alt="جيلي روايال">
+<h3>جيلي روايال</h3>
+</div>
 </div>
 
-<a href="index.html" class="fixed-btn">رجوع للصفحة الرئيسية</a>
 </div>
+
+<a href="index.html" class="fixed-btn">اطلب الآن</a>
 
 <script>
-// قراءة البيانات من URL
-function getQueryParams() {
-  const params = {};
-  window.location.search.substring(1).split("&").forEach(pair => {
-    const [key,value] = pair.split("=");
-    params[key] = decodeURIComponent(value || "");
-  });
-  return params;
+// استلام بيانات الفورم من URL
+const params = new URLSearchParams(window.location.search);
+const offer = params.get('offer');
+const state = params.get('state');
+
+let productName = '';
+let productPrice = 0;
+
+// تحديد المنتج والسعر حسب العرض
+if(offer==='1'){productName='عبوة واحدة';productPrice=1500;}
+else if(offer==='2'){productName='عبوتان';productPrice=2900;}
+else if(offer==='3'){productName='ثلاث عبوات + عبوة مجانية';productPrice=4300;}
+else{productName='غير محدد';productPrice=0;}
+
+// تحديد سعر التوصيل حسب الولاية
+let deliveryPrice = 0;
+switch(state){
+case 'العاصمة':
+case 'البليدة':
+case 'تيبازة': deliveryPrice=400; break;
+case 'بومرداس':
+case 'تيزي وزو': deliveryPrice=500; break;
+case 'بجاية':
+case 'الشلف':
+case 'مستغانم':
+case 'سطيف':
+case 'برج بوعريريج': deliveryPrice=600; break;
+case 'وهران':
+case 'سيدي باعباس':
+case 'قسنطينة':
+case 'عنابة': deliveryPrice=700; break;
+default: deliveryPrice=0;
 }
 
-// تحديث ملخص الطلبية
-const params = getQueryParams();
-const offerPrices = { "1":1500, "2":2900, "3":4300 };
-const deliveryPrices = {
-  "العاصمة":400,"البليدة":400,"تيبازة":400,"بومرداس":500,"تيزي وزو":500,
-  "بجاية":600,"الشلف":600,"مستغانم":600,"وهران":700,"سيدي باعباس":700,
-  "قسنطينة":700,"عنابة":700,"المسيلة":600,"سطيف":600,"برج بوعريريج":600
-};
-
-const quantityText = { "1":"عبوة واحدة", "2":"عبوتان", "3":"ثلاث عبوات" };
-const offerPrice = offerPrices[params.offer] || 0;
-const deliveryPrice = deliveryPrices[params.state] || 0;
-const total = offerPrice + deliveryPrice;
-
-document.getElementById("summaryItems").textContent = `مكونات الطلبية: ${quantityText[params.offer] || "غير محدد"}`;
-document.getElementById("summaryDelivery").textContent = `سعر التوصيل: ${deliveryPrice} دج`;
-document.getElementById("summaryTotal").textContent = `سعر الطلبية: ${offerPrice} دج | المجموع الكلي: ${total} دج`;
+// تحديث ملخص الطلب
+document.getElementById('orderProduct').textContent=productName;
+document.getElementById('productPrice').textContent=productPrice;
+document.getElementById('deliveryPrice').textContent=deliveryPrice;
+document.getElementById('totalPrice').textContent=productPrice+deliveryPrice;
 </script>
+
 </body>
 </html>
