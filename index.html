@@ -3,232 +3,216 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>عسل الأطفال - مناحل آل بوسعيدي</title>
-  <meta name="description" content="عسل طبيعي مخصص للأطفال، يقوي المناعة، يزيد النشاط، ويساعد على النمو والتركيز. التوصيل مجاني والدفع عند الاستلام.">
-  <meta name="keywords" content="عسل للأطفال, عسل طبيعي, مناعة الأطفال, عسل جبلي, جيلي رويال, حبوب اللقاح, شراء عسل الجزائر">
-
+  <title>عسل الأطفال: طاقة وذكاء ونمو صحي</title>
+  <meta name="description" content="عسل طبيعي للأطفال مع حبوب اللقاح وجيلي رويال لتقوية المناعة، زيادة التركيز، النمو الصحي، والطاقة. اطلب الآن والدفع عند الاستلام.">
+  <meta name="keywords" content="عسل للأطفال, عسل طبيعي, مقوي مناعة, حبوب اللقاح, جيلي رويال, نمو صحي, ذكاء الأطفال, علاج السعال, ضد الأنفلونزا, طاقة ونشاط, فتح الشهية">
   <style>
     body {
-      font-family: 'Tahoma', sans-serif;
+      font-family: 'Cairo', sans-serif;
       margin: 0;
       padding: 0;
-      background: #fffaf4;
+      background: #FFF8E1;
       color: #333;
-      text-align: center;
     }
     header {
-      background: red;
+      background: linear-gradient(135deg, #b71c1c, #e53935);
       color: white;
       padding: 10px;
+      text-align: center;
+      position: relative;
+    }
+    header .phone {
+      position: absolute;
+      left: 15px;
+      top: 10px;
       font-size: 14px;
     }
-    .ticker {
-      overflow: hidden;
+    .marquee {
+      background: #c62828;
+      color: #fff;
+      padding: 5px 0;
+      font-size: 14px;
       white-space: nowrap;
+      overflow: hidden;
     }
-    .ticker span {
+    .marquee span {
       display: inline-block;
       padding-left: 100%;
-      animation: ticker 12s linear infinite;
+      animation: marquee 15s linear infinite;
     }
-    @keyframes ticker {
-      0% { transform: translateX(0%); }
+    @keyframes marquee {
+      0% { transform: translateX(0); }
       100% { transform: translateX(-100%); }
     }
-    .hero img {
-      width: 100%;
-      max-width: 500px;
+    h1, h2, h3 {
+      text-align: center;
+      margin: 20px 0;
+    }
+    .offers-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin: 20px;
+    }
+    .offer-item {
+      border: 2px solid #ccc;
       border-radius: 12px;
-      margin: 15px auto;
-      display: block;
+      padding: 15px;
+      background: #fff;
+      max-width: 250px;
+      text-align: center;
+      transition: border 0.3s;
+      cursor: pointer;
     }
-    .product-img {
-      width: 220px;
-      margin: 15px auto;
-      display: block;
+    .offer-item.selected {
+      border: 3px solid #388e3c;
+      background: #f1f8e9;
     }
-    .offers {
+    form {
+      background: #fff;
+      max-width: 400px;
       margin: 20px auto;
       padding: 20px;
-      background: #fff3cd;
       border-radius: 12px;
-      max-width: 500px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     }
-    .offers label {
+    form label {
       display: block;
-      padding: 10px;
-      background: white;
-      margin: 8px 0;
-      border-radius: 8px;
-      cursor: pointer;
-      border: 1px solid #ddd;
-    }
-    .form-section {
-      margin: 30px auto;
-      padding: 20px;
-      background: #f9f9f9;
-      border-radius: 12px;
-      max-width: 500px;
+      margin: 10px 0 5px;
+      font-weight: bold;
     }
     form input, form select {
-      width: 90%;
+      width: 100%;
       padding: 10px;
-      margin: 8px 0;
-      border-radius: 8px;
+      margin-bottom: 15px;
       border: 1px solid #ccc;
-      text-align: right;
-      font-size: 14px;
+      border-radius: 8px;
     }
     form button {
-      background: orange;
+      display: block;
+      width: 100%;
+      background: #ff9800;
       color: white;
       padding: 12px;
       border: none;
       border-radius: 8px;
-      cursor: pointer;
-      width: 60%;
-      margin: 10px auto;
-      display: block;
       font-size: 16px;
+      cursor: pointer;
     }
-    .section {
-      padding: 30px 15px;
+    form button:hover {
+      background: #e68900;
     }
-    .ingredients, .benefits, .reviews {
-      max-width: 700px;
-      margin: auto;
-      text-align: right;
-    }
-    .ingredient {
-      display: flex;
-      align-items: center;
-      margin: 15px 0;
-      background: #fff;
-      padding: 10px;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-    .ingredient img {
-      width: 60px;
-      height: 60px;
-      margin-left: 15px;
-      border-radius: 50%;
-    }
-    .benefit-box {
-      background: #e6ffe6;
-      margin: 10px 0;
-      padding: 12px;
-      border-radius: 8px;
-    }
-    .review {
-      background: #fff;
-      padding: 12px;
-      margin: 10px 0;
-      border-radius: 8px;
-      box-shadow: 0 1px 5px rgba(0,0,0,0.1);
-    }
-    .sticky-btn {
+    .fixed-button {
       position: fixed;
-      bottom: 15px;
+      bottom: 20px;
       left: 50%;
       transform: translateX(-50%);
-      background: green;
+      background: #388e3c;
       color: white;
-      padding: 15px 25px;
-      border-radius: 50px;
+      padding: 12px 25px;
+      border-radius: 25px;
       font-size: 16px;
-      font-weight: bold;
       cursor: pointer;
+      animation: pulse 2s infinite;
       z-index: 999;
+      border: none;
+    }
+    @keyframes pulse {
+      0% { transform: translateX(-50%) scale(1); }
+      50% { transform: translateX(-50%) scale(1.1); }
+      100% { transform: translateX(-50%) scale(1); }
     }
     footer {
-      background: #222;
-      color: white;
+      text-align: center;
       padding: 15px;
-      font-size: 14px;
+      background: #f1f1f1;
       margin-top: 30px;
+      font-size: 14px;
     }
   </style>
 </head>
 <body>
 
-  <!-- شريط الأخبار -->
+  <!-- الشريط العلوي -->
   <header>
-    <div class="ticker"><span>التوصيل الى باب المنزل والدفع عند الاستلام - عرض ينتهي هذا الأسبوع!</span></div>
-    <div>📞 0662 277 555</div>
+    <div class="phone">📞 0662 277 555</div>
+    <h1>عسل الأطفال: طاقة وذكاء ونمو صحي</h1>
   </header>
-
-  <!-- صورة الأم والطفل -->
-  <div class="hero">
-    <img src="https://i.ibb.co/vJk1D2L/mother-honey.jpg" alt="أم تطعم ابنها عسلا">
-  </div>
+  <div class="marquee"><span>🚚 التوصيل إلى باب المنزل والدفع عند الاستلام - عرض ينتهي هذا الأسبوع! 🚀</span></div>
 
   <!-- صورة المنتج -->
-  <img src="https://i.ibb.co/R2HT5rL/honey-jar.png" alt="عسل الأطفال" class="product-img">
+  <div style="text-align:center; margin:20px;">
+    <img src="https://via.placeholder.com/250x250.png?text=صورة+المنتج" alt="عسل الأطفال" style="max-width:250px;border-radius:15px;">
+  </div>
 
   <!-- العروض -->
-  <div class="offers">
-    <h2>اختر العرض المناسب لك</h2>
-    <form id="orderForm" action="https://formspree.io/f/xnnbljgo" method="POST">
-      <label><input type="radio" name="offer" value="علبة واحدة - 1500 دج" checked> علبة واحدة - 1500 دج</label>
-      <label><input type="radio" name="offer" value="علبتان - 2800 دج"> علبتان - 2800 دج</label>
-      <label><input type="radio" name="offer" value="3 علب + 1 مجانا - 4500 دج"> 3 علب + 1 مجانا - 4500 دج</label>
+  <h2>اختر العرض الذي يناسبك</h2>
+  <div class="offers-section">
+    <div class="offer-item selected" data-offer="عبوة واحدة - 1500 دج">
+      <img src="https://via.placeholder.com/150x150.png?text=1+عبوة" alt="عرض 1">
+      <p>عبوة واحدة</p>
+      <strong>1500 دج</strong>
+    </div>
+    <div class="offer-item" data-offer="عبوتان - 2800 دج">
+      <img src="https://via.placeholder.com/150x150.png?text=2+عبوات" alt="عرض 2">
+      <p>عبوتان</p>
+      <strong>2800 دج</strong>
+    </div>
+    <div class="offer-item" data-offer="3 عبوات + 1 مجانا - 4500 دج">
+      <img src="https://via.placeholder.com/150x150.png?text=3++1" alt="عرض 3">
+      <p>3 عبوات + 1 مجانا</p>
+      <strong>4500 دج</strong>
+    </div>
   </div>
 
   <!-- الفورم -->
-  <div class="form-section">
-    <h3>للطلب اكتب معلوماتك</h3>
-      <input type="text" name="name" placeholder="الاسم الكامل" required>
-      <input type="tel" name="phone" placeholder="رقم الهاتف" pattern="[0-9]{10}" required>
-      <select name="state" required>
-        <option value="">اختر ولايتك</option>
-        <option value="الجزائر">الجزائر</option>
-        <option value="وهران">وهران</option>
-        <option value="سطيف">سطيف</option>
-        <option value="قسنطينة">قسنطينة</option>
-      </select>
-      <input type="hidden" name="_redirect" value="thankyou.html">
-      <button type="submit">تأكيد الطلب</button>
-    </form>
-  </div>
+  <h3>للطلب اكتب معلوماتك</h3>
+  <form action="https://formspree.io/f/xnnbljgo" method="POST">
+    <!-- Redirect لصفحة الشكر -->
+    <input type="hidden" name="_redirect" value="https://asal-enfants.netlify.app/thankyou.html">
 
-  <!-- المكونات -->
-  <div class="section ingredients">
-    <h2>مكونات عسل الأطفال</h2>
-    <div class="ingredient"><img src="https://i.ibb.co/60RRP2c/mountain-honey.jpg"><p><strong>العسل الجبلي:</strong> مصدر طبيعي للطاقة يقوي المناعة.</p></div>
-    <div class="ingredient"><img src="https://i.ibb.co/8zD4RBF/pollen.jpg"><p><strong>حبوب اللقاح الطازجة:</strong> غنية بالبروتين والفيتامينات.</p></div>
-    <div class="ingredient"><img src="https://i.ibb.co/F7QxH2W/royal-jelly.jpg"><p><strong>جيلي رويال:</strong> يساعد على النمو والتطور الذهني.</p></div>
-  </div>
+    <input type="hidden" name="العرض المختار" id="selected-offer" value="عبوة واحدة - 1500 دج">
 
-  <!-- الفوائد -->
-  <div class="section benefits">
-    <h2>فوائد عسل الأطفال</h2>
-    <div class="benefit-box">🍯 تقوية المناعة ضد الأمراض</div>
-    <div class="benefit-box">💪 زيادة الطاقة والنشاط</div>
-    <div class="benefit-box">🧠 تحسين التركيز وسرعة الحفظ</div>
-    <div class="benefit-box">🥗 فتح الشهية وتعزيز النمو الجيد</div>
-    <div class="benefit-box">🤧 تخفيف السعال والوقاية من الإنفلونزا</div>
-  </div>
+    <label>الاسم الكامل</label>
+    <input type="text" name="name" required placeholder="اكتب اسمك الكامل">
 
-  <!-- آراء الزبائن -->
-  <div class="section reviews">
-    <h2>آراء الزبائن</h2>
-    <div class="review">⭐️⭐️⭐️⭐️⭐️ <br> "عسل ممتاز، بنتي ولات تاكل بنهم." <br> - فاطمة، الجزائر</div>
-    <div class="review">⭐️⭐️⭐️⭐️⭐️ <br> "زاد نشاط ولدي بزاف بعد ما بدا ياخذ العسل." <br> - أحمد، وهران</div>
-    <div class="review">⭐️⭐️⭐️⭐️⭐️ <br> "سعيدة بالخدمة والتوصيل كان سريع." <br> - نسرين، قسنطينة</div>
-    <div class="review">⭐️⭐️⭐️⭐️⭐️ <br> "ذوق رائع طبيعي وأولادي حبوه بزاف." <br> - سامية، سطيف</div>
-    <div class="review">⭐️⭐️⭐️⭐️⭐️ <br> "منتج رائع وأنصح به كل أم." <br> - ليلى، بجاية</div>
-  </div>
+    <label>رقم الهاتف</label>
+    <input type="tel" name="phone" required pattern="[0-9]{10}" placeholder="مثال: 0662277555">
+
+    <label>اختر ولايتك</label>
+    <select name="wilaya" required>
+      <option value="">اختر ولايتك</option>
+      <option value="الجزائر العاصمة">الجزائر العاصمة - 400 دج</option>
+      <option value="البليدة">البليدة - 400 دج</option>
+      <option value="وهران">وهران - 700 دج</option>
+      <option value="سطيف">سطيف - 600 دج</option>
+      <option value="قسنطينة">قسنطينة - 700 دج</option>
+      <option value="عنابة">عنابة - 700 دج</option>
+    </select>
+
+    <button type="submit">تأكيد الطلب</button>
+  </form>
 
   <!-- زر ثابت -->
-  <div class="sticky-btn" onclick="document.getElementById('orderForm').scrollIntoView({behavior:'smooth'})">
-    اطلب الآن
-  </div>
+  <button class="fixed-button" onclick="document.querySelector('form').scrollIntoView({behavior: 'smooth'});">اطلب الآن</button>
 
-  <!-- الفوتر -->
   <footer>
-    جميع الحقوق محفوظة © 2025 مناحل آل بوسعيدي
+    جميع الحقوق محفوظة © مناحل آل بوسعيدي
   </footer>
 
+  <script>
+    // اختيار العرض
+    const offers = document.querySelectorAll('.offer-item');
+    const offerInput = document.getElementById('selected-offer');
+
+    offers.forEach(offer => {
+      offer.addEventListener('click', () => {
+        offers.forEach(o => o.classList.remove('selected'));
+        offer.classList.add('selected');
+        offerInput.value = offer.dataset.offer;
+      });
+    });
+  </script>
 </body>
 </html>
