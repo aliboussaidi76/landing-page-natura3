@@ -3,152 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>شكراً لطلبك</title>
-    <meta name="description" content="شكراً لطلبك. تابع ملخص طلبك واستعرض منتجاتنا الأخرى لتحسين تجربتك.">
-    <meta name="keywords" content="عسل الأطفال, الطلب, ملخص الطلبية, منتجات إضافية, upsells, تجربة المستخدم">
+    <title>شكراً لطلبك - عسل الأطفال</title>
+    <meta name="description" content="شكراً لطلبك. اكتشف عروضنا الأخرى من منتجات العسل الطبيعية لتعزيز الصحة والطاقة.">
+    <meta name="keywords" content="عسل للأطفال, ملخص الطلبية, منتجات طبيعية, طلب إضافي, توصيل المنزل, الدفع عند الاستلام">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
-
-        body {
-            font-family: 'Cairo', sans-serif;
-            background-color: #FFF8E1;
-            color: #1a4d29;
-            text-align: center;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
+        :root {
+            --primary-color: #ff914d;
+            --secondary-color: #ffb74d;
+            --dark-color: #1a4d29;
+            --light-color: #f0f8f0;
+            --button-dark-color: #4a6c4c;
+            --font-family: 'Cairo', sans-serif;
         }
-
-        header {
-            background: linear-gradient(135deg, #1a4d29, #2f693e);
-            color: white;
-            padding: 30px 0;
-        }
-
-        header h1 {
-            font-size: 2rem;
-        }
-
-        .order-summary, .upsells {
-            max-width: 700px;
-            margin: 30px auto;
-            background: white;
-            padding: 20px;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-
-        .order-summary p {
-            font-size: 1.2rem;
-            margin: 10px 0;
-        }
-
-        .upsells h2 {
-            margin-bottom: 15px;
-        }
-
-        .upsell-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: 15px;
-            border: 2px solid #4CAF50;
-            padding: 10px;
-            border-radius: 15px;
-            transition: transform 0.3s ease;
-            cursor: pointer;
-        }
-
-        .upsell-item:hover {
-            transform: scale(1.05);
-        }
-
-        .upsell-item img {
-            max-width: 150px;
-            margin-bottom: 10px;
-        }
-
-        footer {
-            margin: 30px 0;
-        }
-
-        button {
-            background-color: #ff914d;
-            color: white;
-            padding: 12px 20px;
-            border: none;
-            border-radius: 10px;
-            cursor: pointer;
-            font-size: 1.1rem;
-        }
+        * { box-sizing:border-box; margin:0; padding:0; }
+        body { font-family: var(--font-family); line-height:1.6; background:#FFF8E1; color:var(--dark-color); text-align:center; }
+        .container { max-width:900px; margin:auto; padding:15px; }
+        h1 { color:var(--dark-color); margin:20px 0; }
+        .summary { background:white; padding:20px; border-radius:15px; margin:20px 0; box-shadow:0 5px 15px rgba(0,0,0,0.1); text-align:right; }
+        .summary p { margin:10px 0; font-size:1.1rem; }
+        .upsells { display:flex; flex-wrap:wrap; justify-content:center; gap:15px; margin:20px 0; }
+        .upsell-item { background:white; padding:15px; border-radius:15px; box-shadow:0 5px 15px rgba(0,0,0,0.1); max-width:200px; cursor:pointer; transition:all 0.3s; }
+        .upsell-item img { max-width:100px; margin-bottom:10px; }
+        .upsell-item button { background:var(--primary-color); color:white; border:none; padding:10px 15px; border-radius:10px; cursor:pointer; }
+        footer { margin:20px 0; font-size:0.9rem; color:#555; }
     </style>
 </head>
 <body>
-
-    <header>
+    <div class="container">
         <h1>شكراً لطلبك!</h1>
-        <p>تم استلام طلبك بنجاح. يمكنك مراجعة ملخص طلبك أدناه.</p>
-    </header>
 
-    <div class="order-summary" id="order-summary">
-        <p id="order-items">مكونات الطلبية: </p>
-        <p id="delivery-price">سعر التوصيل: </p>
-        <p id="product-price">سعر الطلبية: </p>
-        <p id="total-price"><strong>المجموع الكلي: </strong></p>
+        <div class="summary" id="orderSummary">
+            <p>مكونات الطلبية: <span id="orderItems">...</span></p>
+            <p>سعر التوصيل: <span id="orderDelivery">...</span> دج</p>
+            <p>سعر الطلبية: <span id="orderPrice">...</span> دج</p>
+            <p>المجموع الكلي: <span id="orderTotal">...</span> دج</p>
+        </div>
+
+        <div class="section-title">منتجاتنا الأخرى التي قد تهمك</div>
+        <div class="upsells">
+            <div class="upsell-item" data-name="خلطة زيادة القدرة الجنسية" data-price="2500">
+                <img src="boost.png" alt="خلطة القدرة الجنسية">
+                <p>أخيراً المنتج الذي يسأل عنه الجميع قد أصبح متوفراً!</p>
+                <button onclick="orderUpsell('خلطة زيادة القدرة الجنسية',2500)">اطلب الآن</button>
+            </div>
+            <div class="upsell-item" data-name="العكبر" data-price="1200">
+                <img src="propolis.png" alt="العكبر">
+                <button onclick="orderUpsell('العكبر',1200)">اطلب الآن</button>
+            </div>
+            <div class="upsell-item" data-name="البروبوليس" data-price="1300">
+                <img src="propolis2.png" alt="البروبوليس">
+                <button onclick="orderUpsell('البروبوليس',1300)">اطلب الآن</button>
+            </div>
+            <div class="upsell-item" data-name="عسل السدر" data-price="1500">
+                <img src="sidr.png" alt="عسل السدر">
+                <button onclick="orderUpsell('عسل السدر',1500)">اطلب الآن</button>
+            </div>
+            <div class="upsell-item" data-name="عسل الأزهار" data-price="1400">
+                <img src="flower.png" alt="عسل الأزهار">
+                <button onclick="orderUpsell('عسل الأزهار',1400)">اطلب الآن</button>
+            </div>
+            <div class="upsell-item" data-name="عسل السعال" data-price="1200">
+                <img src="cough.png" alt="عسل السعال">
+                <button onclick="orderUpsell('عسل السعال',1200)">اطلب الآن</button>
+            </div>
+            <div class="upsell-item" data-name="عسل الانفلونزا" data-price="1300">
+                <img src="flu.png" alt="عسل الانفلونزا">
+                <button onclick="orderUpsell('عسل الانفلونزا',1300)">اطلب الآن</button>
+            </div>
+        </div>
+
+        <footer>جميع الحقوق محفوظة لشركة مناحل آل بوسعيدي</footer>
     </div>
-
-    <div class="upsells">
-        <h2>منتجات إضافية قد تعجبك</h2>
-        <div class="upsell-item">
-            <img src="capacité-femmes-hommes.png" alt="خلطة زيادة القدرة الجنسية">
-            <p>أخيراً المنتج الذي يسأل عنه الجميع قد أصبح متوفراً: خلطة زيادة القدرة الجنسية للرجال والنساء</p>
-            <button onclick="window.location.href='upsell-product.html'">اطلب الآن</button>
-        </div>
-        <div class="upsell-item">
-            <img src="propolis.png" alt="عكبر البروبوليس">
-            <p>عكبر البروبوليس الطبيعي 100%</p>
-            <button onclick="window.location.href='upsell-product.html'">اطلب الآن</button>
-        </div>
-        <div class="upsell-item">
-            <img src="sider.png" alt="عسل السدر">
-            <p>عسل السدر الفاخر</p>
-            <button onclick="window.location.href='upsell-product.html'">اطلب الآن</button>
-        </div>
-        <div class="upsell-item">
-            <img src="flowers.png" alt="عسل الأزهار">
-            <p>عسل الأزهار الطبيعي</p>
-            <button onclick="window.location.href='upsell-product.html'">اطلب الآن</button>
-        </div>
-        <div class="upsell-item">
-            <img src="cough-honey.png" alt="عسل السعال">
-            <p>عسل السعال للأطفال</p>
-            <button onclick="window.location.href='upsell-product.html'">اطلب الآن</button>
-        </div>
-        <div class="upsell-item">
-            <img src="flu-honey.png" alt="عسل الإنفلونزا">
-            <p>عسل الإنفلونزا لتعزيز المناعة</p>
-            <button onclick="window.location.href='upsell-product.html'">اطلب الآن</button>
-        </div>
-    </div>
-
-    <footer>
-        جميع الحقوق محفوظة لشركة مناحل آل بوسعيدي
-    </footer>
 
     <script>
-        // ملخص الطلبية ديناميكي
-        const urlParams = new URLSearchParams(window.location.search);
-        const items = urlParams.get('items') || 'عبوة واحدة';
-        const delivery = urlParams.get('delivery') || '400 دج';
-        const productPrice = urlParams.get('productPrice') || '1500 دج';
+        function getParameterByName(name) {
+            const url = new URL(window.location.href);
+            return url.searchParams.get(name);
+        }
 
-        const total = parseInt(productPrice) + parseInt(delivery);
+        // ملخص الطلبية ديناميكياً
+        const items = getParameterByName('items') || 'عبوة واحدة';
+        const price = parseInt(getParameterByName('productPrice')) || 0;
+        const delivery = parseInt(getParameterByName('delivery')) || 0;
+        const total = price + delivery;
 
-        document.getElementById('order-items').textContent = 'مكونات الطلبية: ' + items;
-        document.getElementById('delivery-price').textContent = 'سعر التوصيل: ' + delivery;
-        document.getElementById('product-price').textContent = 'سعر الطلبية: ' + productPrice;
-        document.getElementById('total-price').textContent = 'المجموع الكلي: ' + total + ' دج';
+        document.getElementById('orderItems').innerText = items;
+        document.getElementById('orderPrice').innerText = price;
+        document.getElementById('orderDelivery').innerText = delivery;
+        document.getElementById('orderTotal').innerText = total;
+
+        function orderUpsell(name, price) {
+            const url = new URL('thankyou.html', window.location.href);
+            url.searchParams.set('items', name);
+            url.searchParams.set('productPrice', price);
+            url.searchParams.set('delivery', 400);
+            window.location.href = url.toString();
+        }
     </script>
-
 </body>
 </html>
