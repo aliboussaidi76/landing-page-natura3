@@ -1,206 +1,157 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>عسل الأطفال - مناحل آل بوسعيدي</title>
-  <meta name="description" content="عسل طبيعي للأطفال مع حبوب اللقاح والجيلي رويال لتعزيز المناعة والنمو.">
-  <meta name="keywords" content="عسل للأطفال, عسل طبيعي, حبوب اللقاح, جيلي رويال, مناعة الأطفال, عسل جبلي">
+  <title>شكراً على طلبك - مناحل آل بوسعيدي</title>
+  <meta name="description" content="شكراً لثقتك. طلبك قيد المعالجة وسيتم التواصل معك لتأكيده.">
+  <meta name="keywords" content="عسل, شراء عسل, مناحل آل بوسعيدي, مكملات طبيعية, الجزائر">
   <style>
     body {
-      font-family: 'Cairo', sans-serif;
+      font-family: Tahoma, sans-serif;
       margin: 0;
       padding: 0;
-      background: #FFF8E1;
-      color: #1a4d29;
+      background: #fffaf3;
+      direction: rtl;
       text-align: center;
     }
-
     header {
-      background: linear-gradient(135deg, #1a4d29, #2f693e);
+      background: #4CAF50;
       color: white;
-      padding: 20px;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 2rem;
-    }
-
-    section {
-      padding: 40px 20px;
-    }
-
-    .image-section img {
-      max-width: 100%;
-      border-radius: 20px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    }
-
-    /* المكونات */
-    .ingredients {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-      gap: 20px;
-      margin-top: 20px;
-    }
-
-    .ingredient {
-      background: white;
-      border-radius: 15px;
       padding: 15px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      font-size: 20px;
+      font-weight: bold;
     }
-
-    .ingredient img {
-      width: 80px;
-      height: 80px;
-      object-fit: cover;
-      margin-bottom: 10px;
-    }
-
-    /* الفوائد */
-    .benefits {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-      gap: 20px;
-    }
-
-    .benefit {
-      background: white;
+    .summary, .upsells {
+      margin: 20px auto;
+      max-width: 500px;
       padding: 15px;
-      border-radius: 15px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      font-size: 1rem;
-    }
-
-    /* آراء الزبائن */
-    .reviews {
       background: #fff;
-      border-radius: 15px;
-      padding: 30px 15px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      max-width: 900px;
-      margin: auto;
-    }
-
-    .review {
-      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
       text-align: right;
-      border-bottom: 1px solid #eee;
-      padding-bottom: 10px;
     }
-
-    .review strong {
-      display: block;
-      margin-top: 5px;
-      color: #2f693e;
+    .summary h2, .upsells h2 {
+      text-align: center;
+      color: #4d2600;
     }
-
+    .summary p {
+      margin: 8px 0;
+      font-size: 15px;
+    }
+    .product {
+      border: 1px solid #eee;
+      border-radius: 10px;
+      padding: 10px;
+      margin: 10px 0;
+      text-align: center;
+    }
+    .product img {
+      width: 120px;
+      border-radius: 8px;
+    }
     .stars {
       color: gold;
-      font-size: 1.2rem;
-      margin-top: 5px;
+      margin: 5px 0;
     }
-
-    footer {
-      background: #1a4d29;
+    button {
+      background: orange;
+      border: none;
+      padding: 10px 20px;
       color: white;
-      padding: 15px;
-      margin-top: 40px;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: darkorange;
+    }
+    footer {
+      margin: 20px 0;
+      font-size: 13px;
+      color: #666;
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>🍯 عسل طبيعي للأطفال</h1>
-    <p>من مناحل آل بوسعيدي - لتعزيز مناعة ونمو أطفالكم</p>
-  </header>
+  <header>✅ شكراً على طلبك!</header>
 
-  <!-- صورة عامة -->
-  <section class="image-section">
-    <h2>لحظات الصحة والسعادة</h2>
-    <p>أم تعتني بطفلها وتطعمه العسل في مكان طبيعي خلاب 🌿</p>
-    <img src="images/mother-child-honey.jpg" alt="أم تطعم طفلها العسل">
+  <section class="summary">
+    <h2>📦 ملخص الطلبية</h2>
+    <p id="summary-qty"></p>
+    <p id="summary-product"></p>
+    <p id="summary-delivery"></p>
+    <p><strong id="summary-total"></strong></p>
   </section>
 
-  <!-- المكونات -->
-  <section>
-    <h2>مكونات طبيعية 100%</h2>
-    <div class="ingredients">
-      <div class="ingredient">
-        <img src="images/honey.jpg" alt="العسل الجبلي">
-        <h3>العسل الجبلي</h3>
-        <p>مصدر طاقة طبيعي ومقوي للمناعة.</p>
-      </div>
-      <div class="ingredient">
-        <img src="images/pollen.jpg" alt="حبوب اللقاح">
-        <h3>حبوب اللقاح الطازجة</h3>
-        <p>تزيد النشاط وتفتح الشهية للنمو الصحي.</p>
-      </div>
-      <div class="ingredient">
-        <img src="images/royal-jelly.jpg" alt="جيلي رويال">
-        <h3>جيلي رويال</h3>
-        <p>يقوي الدماغ ويحسن التركيز والذاكرة.</p>
-      </div>
+  <section class="upsells">
+    <h2>✨ منتجات قد تهمك أيضاً</h2>
+
+    <div class="product">
+      <h3>خلطة زيادة القدرة (رجال & نساء)</h3>
+      <img src="images/power-mix.jpg" alt="خلطة القدرة">
+      <div class="stars">★★★★★</div>
+      <p>تركيبة طبيعية لتعزيز القوة والطاقة.</p>
+      <button>اطلب الآن</button>
     </div>
-  </section>
 
-  <!-- الفوائد -->
-  <section>
-    <h2>فوائد العسل للأطفال</h2>
-    <div class="benefits">
-      <div class="benefit">🍯 يقوي المناعة ويحمي من الأمراض.</div>
-      <div class="benefit">🤧 يخفف السعال والإنفلونزا.</div>
-      <div class="benefit">⚡ يمنح طاقة ونشاط يومي.</div>
-      <div class="benefit">🧠 يساعد على التركيز وسرعة الحفظ.</div>
-      <div class="benefit">📈 يدعم النمو الجيد والصحي.</div>
-      <div class="benefit">🍽️ يفتح الشهية بشكل طبيعي.</div>
+    <div class="product">
+      <h3>العكبر (Propolis)</h3>
+      <img src="images/propolis.jpg" alt="العكبر">
+      <div class="stars">★★★★☆</div>
+      <p>مضاد طبيعي للبكتيريا والفيروسات.</p>
+      <button>اطلب الآن</button>
     </div>
-  </section>
 
-  <!-- آراء الزبائن -->
-  <section>
-    <h2>آراء زبائننا</h2>
-    <div class="reviews">
-      <div class="review">
-        ⭐⭐⭐⭐⭐
-        <div class="stars">★★★★★</div>
-        "ابني كان يعاني من فقدان الشهية، وبعد استعمال هذا العسل تحسنت حالته بشكل كبير."  
-        <strong>خديجة - الجزائر</strong>
-      </div>
-      <div class="review">
-        <div class="stars">★★★★★</div>
-        "منتج رائع طبيعي 100% وأضمنه لكل الأمهات."  
-        <strong>سمية - وهران</strong>
-      </div>
-      <div class="review">
-        <div class="stars">★★★★★</div>
-        "بنتي صارت أكثر نشاطًا وحيويًا، شكرا مناحل آل بوسعيدي."  
-        <strong>ليلى - قسنطينة</strong>
-      </div>
-      <div class="review">
-        <div class="stars">★★★★★</div>
-        "عسل ممتاز ساعد أطفالي على تقوية مناعتهم ضد الزكام."  
-        <strong>سليم - الجزائر</strong>
-      </div>
-      <div class="review">
-        <div class="stars">★★★★★</div>
-        "أحسن عسل جربتو لولادي، والتوصيل كان سريع."  
-        <strong>مريم - تلمسان</strong>
-      </div>
-      <div class="review">
-        <div class="stars">★★★★★</div>
-        "العسل لذيذ وأطفالي يحبوه كل صباح."  
-        <strong>يوسف - باتنة</strong>
-      </div>
+    <div class="product">
+      <h3>عسل السدر</h3>
+      <img src="images/sidr.jpg" alt="عسل السدر">
+      <div class="stars">★★★★★</div>
+      <p>من أجود أنواع العسل للشفاء والمناعة.</p>
+      <button>اطلب الآن</button>
+    </div>
+
+    <div class="product">
+      <h3>عسل الأزهار</h3>
+      <img src="images/flowers-honey.jpg" alt="عسل الأزهار">
+      <div class="stars">★★★★☆</div>
+      <p>طاقة وحيوية يومية للأطفال والكبار.</p>
+      <button>اطلب الآن</button>
+    </div>
+
+    <div class="product">
+      <h3>عسل للسعال</h3>
+      <img src="images/cough-honey.jpg" alt="عسل للسعال">
+      <div class="stars">★★★★★</div>
+      <p>مهدئ طبيعي للسعال والحنجرة.</p>
+      <button>اطلب الآن</button>
+    </div>
+
+    <div class="product">
+      <h3>عسل ضد الإنفلونزا</h3>
+      <img src="images/flu-honey.jpg" alt="عسل ضد الإنفلونزا">
+      <div class="stars">★★★★☆</div>
+      <p>يقوي المناعة ويساعد في محاربة الإنفلونزا.</p>
+      <button>اطلب الآن</button>
     </div>
   </section>
 
   <footer>
-    جميع الحقوق محفوظة © مناحل آل بوسعيدي 2025
+    جميع الحقوق محفوظة © 2025 مناحل آل بوسعيدي
   </footer>
 
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const qty = params.get("qty") || "1";
+    const productPrice = params.get("productPrice") || "0";
+    const delivery = params.get("delivery") || "0";
+    const total = params.get("total") || "0";
+
+    document.getElementById("summary-qty").textContent = "مكونات الطلبية: " + qty + " عبوة";
+    document.getElementById("summary-product").textContent = "سعر الطلبية: " + productPrice + " دج";
+    document.getElementById("summary-delivery").textContent = "سعر التوصيل: " + delivery + " دج";
+    document.getElementById("summary-total").textContent = "✅ المجموع الكلي: " + total + " دج";
+  </script>
 </body>
 </html>
