@@ -17,24 +17,27 @@
     --font-family: 'Cairo', sans-serif;
 }
 * {box-sizing:border-box;margin:0;padding:0;}
-body {font-family: var(--font-family); line-height: 1.6; background-color: #FFF8E1; color: var(--dark-color);}
-header {background: linear-gradient(135deg, var(--dark-color), #2f693e); color:white; padding: 30px 0; text-align:center;}
+body {font-family: var(--font-family); line-height: 1.6; background-color: #FFF8E1; color: var(--dark-color); text-align:center;}
+header {background: linear-gradient(135deg, var(--dark-color), #2f693e); color:white; padding:30px 0;}
 header h1 {font-size:2.2rem;margin-bottom:8px;}
 header p {font-size:1rem; max-width:700px;margin:auto;text-align:center;}
 .newsbar {background:red;color:white;text-align:center;padding:5px;font-weight:bold;}
 .newsbar span {display:block;font-size:0.9rem;}
 .container{max-width:1100px;margin:auto;overflow:hidden;padding:0 15px;}
-.offer-item {display:flex;flex-direction:column;align-items:center;text-align:center;background:white;padding:15px;border-radius:15px;box-shadow:0 5px 15px rgba(0,0,0,0.1);transition:transform 0.3s ease, box-shadow 0.3s ease;cursor:pointer;flex:1 1 30%;max-width:350px;border:3px solid transparent;margin-bottom:15px;}
+.offers-section {display:flex;justify-content:center;align-items:flex-start;flex-wrap:wrap;gap:15px;margin:20px 0;}
+.offer-item {display:flex;flex-direction:column;align-items:center;text-align:center;background:white;padding:15px;border-radius:15px;box-shadow:0 5px 15px rgba(0,0,0,0.1);transition:transform 0.3s ease, box-shadow 0.3s ease;cursor:pointer;flex:1 1 30%;max-width:250px;border:3px solid transparent;margin-bottom:15px;}
 .offer-item.selected {border-color:#4a6c4c;background:#e6f4e6;}
 .offer-item img {max-width:100%;border-radius:10px;margin-bottom:10px;}
 button.fixed-order {position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#4CAF50;color:white;border:none;padding:15px 25px;font-size:1.2rem;border-radius:10px;cursor:pointer;animation: bounce 1s infinite;}
 @keyframes bounce {0%,100%{transform:translateX(-50%) translateY(0);}50%{transform:translateX(-50%) translateY(-10px);}}
-.form-section {background:#fff8dc;padding:20px;margin:20px 0;border-radius:15px;box-shadow:0 5px 15px rgba(0,0,0,0.1);}
+.form-section {background:#fff8dc;padding:20px;margin:20px auto;border-radius:15px;box-shadow:0 5px 15px rgba(0,0,0,0.1);max-width:500px;}
 .form-section input, .form-section select {width:100%;padding:10px;margin:10px 0;border-radius:10px;border:1px solid #ccc;}
 .confirm-btn {background:orange;color:white;padding:12px;font-weight:bold;border:none;border-radius:10px;cursor:pointer;width:100%;margin-top:10px;}
 .section-title{font-size:1.5rem;font-weight:bold;margin:20px 0;text-align:center;}
-.customer-review {background:#f0f8f0;padding:15px;margin:10px 0;border-radius:10px;box-shadow:0 3px 8px rgba(0,0,0,0.1);}
+.customer-review {background:#f0f8f0;padding:15px;margin:10px auto;border-radius:10px;box-shadow:0 3px 8px rgba(0,0,0,0.1);max-width:600px;text-align:center;}
 .product-image {text-align:center;margin:20px 0;}
+ul {list-style:none;padding:0;}
+ul li {margin:10px 0;}
 </style>
 </head>
 <body>
@@ -73,7 +76,7 @@ button.fixed-order {position:fixed;bottom:20px;left:50%;transform:translateX(-50
         <img src="mother_child.jpg" alt="أم تعطي طفلها العسل في الطبيعة" />
     </div>
 
-    <div class="form-section">
+    <div class="form-section" id="orderForm">
         <p>للطلب اكتب معلوماتك في الخانات:</p>
         <input type="text" id="customerName" placeholder="الاسم">
         <input type="tel" id="customerPhone" placeholder="رقم الهاتف">
@@ -133,6 +136,11 @@ offers.forEach(o => {
         offers.forEach(x => x.classList.remove('selected'));
         o.classList.add('selected');
     });
+});
+
+// الزر الثابت ينقل للفورم
+document.getElementById("fixedOrderBtn").addEventListener("click", function(){
+    document.getElementById("orderForm").scrollIntoView({behavior:"smooth"});
 });
 
 // تخزين الطلب
