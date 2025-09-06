@@ -1,58 +1,120 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title> شكراً لطلبك سيقوم أحد أفراد طاقمنا بالاتصال بكم لتأكيد طلبكم ولمعلومات أخرى وبعدها سنقوم بشحن المنتج الى باب منزلكم</title>
-<meta name="description" content="شكراً لطلبك، إليك ملخص طلبك. اكتشف عروضنا الأخرى لزيادة الاستفادة.">
-<meta name="keywords" content="عسل أطفال, شكر الطلب, ملخص الطلب, عروض العسل, منتجات إضافية">
-<style>
-body{font-family:'Cairo',sans-serif;background:#FFF8E1;color:#1a4d29;text-align:center;padding:20px;}
-h1{color:#4CAF50;margin-bottom:15px;}
-.summary{background:#f0f8f0;padding:20px;border-radius:15px;box-shadow:0 5px 15px rgba(0,0,0,0.1);margin-bottom:20px;}
-.upsell{background:#ffebcc;padding:15px;margin:10px 0;border-radius:10px;box-shadow:0 3px 8px rgba(0,0,0,0.1);}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>شكراً لطلبك - عسل الأطفال</title>
+  <meta name="description" content="شكراً لطلبك! استلم عبوتك من عسل الأطفال مع توصيل سريع. اكتشف عروضنا الأخرى واطلب المزيد.">
+  <meta name="keywords" content="عسل الأطفال, طلب عسل, توصيل عسل, فوائد العسل, منتجات أبسلز">
+  <style>
+    body { font-family: 'Cairo', sans-serif; background: #FFF8E1; color: #1a4d29; text-align: center; padding: 20px; }
+    h1 { color: #ff914d; margin-bottom: 10px; }
+    .order-summary { background: #f0f8f0; border: 2px solid #1a4d29; border-radius: 10px; padding: 20px; margin: 20px auto; max-width: 400px; font-size: 1.1rem; }
+    .upsells { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin-top: 30px; }
+    .upsell-item { background: white; border-radius: 10px; box-shadow: 0 3px 8px rgba(0,0,0,0.1); width: 200px; padding: 15px; text-align: center; }
+    .upsell-item img { width: 100%; border-radius: 8px; }
+    .upsell-item h3 { font-size: 1rem; margin: 10px 0; }
+    .upsell-item p { font-size: 0.9rem; margin: 5px 0; }
+    .fixed-btn { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); background: #4CAF50; color: white; padding: 15px 30px; border-radius: 50px; font-size: 1.2rem; font-weight: bold; cursor: pointer; animation: pulse 1s infinite; z-index: 999; text-decoration: none; }
+    @keyframes pulse { 0% { transform: translateX(-50%) scale(1); } 50% { transform: translateX(-50%) scale(1.1); } 100% { transform: translateX(-50%) scale(1); } }
+  </style>
 </head>
 <body>
-<h1>شكراً لطلبك!</h1>
 
-<div class="summary">
-    <p id="summaryItems"></p>
-    <p id="summaryDelivery"></p>
-    <p id="summaryPrice"></p>
-    <p id="summaryTotal"></p>
-</div>
+  <h1>شكراً لطلبك!</h1>
+  <p>طلبك تم تسجيله بنجاح، وسيتم التوصيل في أقرب وقت.</p>
 
-<h2>منتجات إضافية قد تهمك</h2>
-<div class="upsell">
-    <p>أخيرا المنتج الذي يسأل عنه الجميع: خلطة زيادة القدرة الجنسية للنساء والرجال!</p>
-    <img src="enhancer.jpg" alt="خلطة زيادة القدرة الجنسية وتحسين الانتصاب" width="200">
-</div>
-<div class="upsell">
-    <p>عسل السدر الطبيعي</p>
-    <img src="sidr_honey.jpg" alt="عسل السدر" width="150">
-</div>
-<div class="upsell">
-    <p>عسل الأزهار</p>
-    <img src="flower_honey.jpg" alt="عسل الأزهار" width="150">
-</div>
+  <div class="order-summary" id="order-summary">
+    <!-- الملخص سيتغير ديناميكيًا عبر JS -->
+  </div>
 
-<p style="margin-top:30px;">جميع الحقوق محفوظة لشركة مناحل آل بوسعيدي</p>
+  <h2>منتجات إضافية قد تهمك</h2>
+  <div class="upsells">
+    <div class="upsell-item">
+      <img src="images/sexual_boost.jpg" alt="خلطة زيادة القدرة">
+      <h3>خلطة زيادة القدرة الجنسية</h3>
+      <p>المنتج الذي يسأل عنه الجميع الآن متوفر!</p>
+    </div>
+    <div class="upsell-item">
+      <img src="images/propolis.jpg" alt="العكبر">
+      <h3>العكبر</h3>
+      <p>مكمل طبيعي لتعزيز المناعة.</p>
+    </div>
+    <div class="upsell-item">
+      <img src="images/sidr_honey.jpg" alt="عسل السدر">
+      <h3>عسل السدر</h3>
+      <p>عسل طبيعي غني بالفوائد الصحية.</p>
+    </div>
+    <div class="upsell-item">
+      <img src="images/flower_honey.jpg" alt="عسل الأزهار">
+      <h3>عسل الأزهار</h3>
+      <p>عسل متوازن الطعم لفائدة الأطفال.</p>
+    </div>
+    <div class="upsell-item">
+      <img src="images/cough_honey.jpg" alt="عسل السعال">
+      <h3>عسل السعال</h3>
+      <p>مخفف للسعال ومقوي للمناعة.</p>
+    </div>
+    <div class="upsell-item">
+      <img src="images/flu_honey.jpg" alt="عسل الإنفلونزا">
+      <h3>عسل الإنفلونزا</h3>
+      <p>وقاية من الإنفلونزا ونشاط يومي.</p>
+    </div>
+    <div class="upsell-item">
+      <img src="images/royal_jelly.jpg" alt="جيلي رويال">
+      <h3>جيلي رويال</h3>
+      <p>يقوي الجسم ويزيد النشاط والحيوية.</p>
+    </div>
+    <div class="upsell-item">
+      <img src="images/pollen.jpg" alt="حبوب اللقاح">
+      <h3>حبوب اللقاح</h3>
+      <p>تعزيز المناعة والنمو الصحي للأطفال.</p>
+    </div>
+  </div>
+
+  <a href="index.html" class="fixed-btn">اطلب المزيد</a>
 
 <script>
-document.addEventListener("DOMContentLoaded", function(){
-    let items = localStorage.getItem('customerItems') || 'عبوة واحدة';
-    let delivery = parseInt(localStorage.getItem('deliveryPrice')) || 400;
-    let orderPrice = parseInt(localStorage.getItem('orderPrice')) || 1500;
-    let total = delivery + orderPrice;
+  // قراءة البيانات من الرابط
+  const params = new URLSearchParams(window.location.search);
+  const offer = params.get('offer'); // رقم العرض
+  const state = params.get('state'); // الولاية
 
-    document.getElementById('summaryItems').innerText = "مكونات الطلبية: " + items;
-    document.getElementById('summaryDelivery').innerText = "سعر التوصيل: " + delivery + " دج";
-    document.getElementById('summaryPrice').innerText = "سعر الطلبية: " + orderPrice + " دج";
-    document.getElementById('summaryTotal').innerText = "المجموع الكلي: " + total + " دج";
-});
+  // تحديد نص العرض والسعر
+  let offerText = "";
+  let offerPrice = 0;
+  if (offer === "1") { offerText = "عبوة واحدة"; offerPrice = 1500; }
+  else if (offer === "2") { offerText = "عبوتان"; offerPrice = 2900; }
+  else if (offer === "3") { offerText = "ثلاث عبوات"; offerPrice = 4300; }
+
+  // تحديد سعر التوصيل حسب الولاية
+  const deliveryPrices = {
+    "العاصمة": 400,
+    "البليدة": 400,
+    "تيبازة": 400,
+    "بومرداس": 500,
+    "تيزي وزو": 500,
+    "بجاية": 600,
+    "الشلف": 600,
+    "مستغانم": 600,
+    "وهران": 700,
+    "سيدي باعباس": 700,
+    "قسنطينة": 700,
+    "عنابة": 700,
+    "المسيلة": 600,
+    "سطيف": 600,
+    "برج بوعريريج": 600
+  };
+  const deliveryPrice = deliveryPrices[state] || 400;
+  const total = offerPrice + deliveryPrice;
+
+  document.getElementById('order-summary').innerHTML = `
+    مكونات الطلبية: ${offerText}<br>
+    سعر التوصيل: ${deliveryPrice} دج<br>
+    سعر الطلبية: ${offerPrice} دج<br>
+    المجموع الكلي: ${total} دج
+  `;
 </script>
+
 </body>
 </html>
-
-
