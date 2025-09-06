@@ -3,178 +3,143 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>شكرا لطلبك - مناحل آل بوسعيدي</title>
-  <meta name="description" content="شكرا لطلبك! تم استلام طلبك بنجاح وسيتم التواصل معك لتأكيد التفاصيل.">
-  <meta name="keywords" content="عسل طبيعي, شراء عسل, مناحل آل بوسعيدي, Upsell, منتجات إضافية">
-
+  <title>شكراً لطلبك</title>
   <style>
     body {
-      font-family: 'Tahoma', sans-serif;
+      font-family: 'Cairo', sans-serif;
       margin: 0;
       padding: 0;
-      background: #fffaf4;
+      background: #fff8e1;
       color: #333;
       text-align: center;
     }
     header {
-      background: green;
+      background: linear-gradient(135deg, #388e3c, #4caf50);
       color: white;
       padding: 20px;
-      font-size: 20px;
-      font-weight: bold;
+    }
+    h1 {
+      margin: 0;
+      font-size: 26px;
     }
     .summary {
-      background: #f9f9f9;
+      background: #fff;
+      max-width: 400px;
+      margin: 25px auto;
       padding: 20px;
-      margin: 20px auto;
       border-radius: 12px;
-      max-width: 500px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
       text-align: right;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      line-height: 1.8;
     }
     .summary h2 {
       text-align: center;
       margin-bottom: 15px;
-    }
-    .summary p {
-      font-size: 16px;
-      margin: 6px 0;
+      color: #388e3c;
     }
     .upsells {
-      max-width: 900px;
-      margin: 30px auto;
-      padding: 20px;
+      margin: 40px 20px;
     }
     .upsells h2 {
       margin-bottom: 20px;
+      color: #b71c1c;
+    }
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
     }
     .product {
       background: #fff;
       border-radius: 12px;
       padding: 15px;
-      margin: 10px;
-      display: inline-block;
-      width: 250px;
-      vertical-align: top;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      width: 200px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      text-align: center;
     }
     .product img {
-      width: 100%;
-      border-radius: 8px;
+      max-width: 100%;
+      border-radius: 10px;
     }
     .stars {
-      color: gold;
-      font-size: 18px;
-      margin: 5px 0;
+      color: #ff9800;
+      margin: 8px 0;
     }
     .product button {
-      background: orange;
+      background: #ff9800;
       color: white;
-      padding: 10px;
       border: none;
+      padding: 10px;
       border-radius: 8px;
       cursor: pointer;
       width: 100%;
-      font-size: 14px;
+    }
+    .product button:hover {
+      background: #e68900;
     }
     footer {
-      background: #222;
-      color: white;
+      background: #f1f1f1;
       padding: 15px;
-      font-size: 14px;
       margin-top: 30px;
+      font-size: 14px;
     }
   </style>
 </head>
 <body>
 
-  <header>🎉 شكرا لطلبك! 🎉</header>
+  <header>
+    <h1>🎉 شكراً على ثقتك بمنتجاتنا 🎉</h1>
+    <p>تم استلام طلبك بنجاح وسنتواصل معك لتأكيد الطلبية قريباً</p>
+  </header>
 
   <!-- ملخص الطلبية -->
   <div class="summary">
-    <h2>ملخص طلبك</h2>
-    <p id="orderItem">مكونات الطلبية: -</p>
-    <p id="delivery">سعر التوصيل: 400 دج</p>
-    <p id="total">المجموع الكلي: -</p>
+    <h2>📦 ملخص طلبك</h2>
+    <p><strong>مكونات الطلبية:</strong> سيتم تأكيدها عبر الهاتف</p>
+    <p><strong>سعر التوصيل:</strong> يحدد حسب ولايتك</p>
+    <p><strong>سعر الطلبية:</strong> كما اخترت في الاستمارة</p>
+    <p><strong>المجموع الكلي:</strong> يتم إعلامك عند الاتصال</p>
   </div>
 
   <!-- منتجات إضافية (Upsells) -->
   <div class="upsells">
-    <h2>منتجات إضافية قد تهمك</h2>
-
-    <div class="product">
-      <img src="https://i.ibb.co/0Jx8HnD/royal-honey.jpg" alt="خلطة القدرة الجنسية">
-      <h3>أخيرا المنتج الذي يسأل عنه الجميع!</h3>
-      <p>خلطة طبيعية لزيادة القدرة للنساء والرجال.</p>
-      <div class="stars">★★★★★</div>
-      <button>اطلب الآن</button>
+    <h2>🔥 منتجات نقترحها عليك أيضاً</h2>
+    <div class="products">
+      <div class="product">
+        <img src="https://via.placeholder.com/200x200.png?text=منتج+1" alt="منتج 1">
+        <h3>مكمل الطاقة</h3>
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p>1200 دج</p>
+        <button>أضف للطلب</button>
+      </div>
+      <div class="product">
+        <img src="https://via.placeholder.com/200x200.png?text=منتج+2" alt="منتج 2">
+        <h3>مقوي المناعة</h3>
+        <div class="stars">⭐⭐⭐⭐☆</div>
+        <p>1500 دج</p>
+        <button>أضف للطلب</button>
+      </div>
+      <div class="product">
+        <img src="https://via.placeholder.com/200x200.png?text=منتج+3" alt="منتج 3">
+        <h3>عسل الطاقة</h3>
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p>2000 دج</p>
+        <button>أضف للطلب</button>
+      </div>
+      <div class="product">
+        <img src="https://via.placeholder.com/200x200.png?text=منتج+4" alt="منتج 4">
+        <h3>قدرة طبيعية</h3>
+        <div class="stars">⭐⭐⭐☆☆</div>
+        <p>2500 دج</p>
+        <button>أضف للطلب</button>
+      </div>
     </div>
-
-    <div class="product">
-      <img src="https://i.ibb.co/yW9z5DN/propolis.jpg" alt="العكبر">
-      <h3>العكبر (Propolis)</h3>
-      <p>يقوي المناعة ويحمي الجسم من الأمراض.</p>
-      <div class="stars">★★★★★</div>
-      <button>اطلب الآن</button>
-    </div>
-
-    <div class="product">
-      <img src="https://i.ibb.co/8Bjqg4p/sidr-honey.jpg" alt="عسل السدر">
-      <h3>عسل السدر</h3>
-      <p>من أجود أنواع العسل وأكثرها فائدة.</p>
-      <div class="stars">★★★★★</div>
-      <button>اطلب الآن</button>
-    </div>
-
-    <div class="product">
-      <img src="https://i.ibb.co/hgNRmQm/flower-honey.jpg" alt="عسل الأزهار">
-      <h3>عسل الأزهار</h3>
-      <p>طاقة ونشاط طبيعي لكل أفراد العائلة.</p>
-      <div class="stars">★★★★★</div>
-      <button>اطلب الآن</button>
-    </div>
-
-    <div class="product">
-      <img src="https://i.ibb.co/q0ZkJxp/cough-honey.jpg" alt="عسل السعال">
-      <h3>عسل السعال</h3>
-      <p>مهدئ طبيعي للسعال الحاد عند الكبار والصغار.</p>
-      <div class="stars">★★★★★</div>
-      <button>اطلب الآن</button>
-    </div>
-
-    <div class="product">
-      <img src="https://i.ibb.co/2N2M4PX/flu-honey.jpg" alt="عسل الإنفلونزا">
-      <h3>عسل الإنفلونزا</h3>
-      <p>يقوي المناعة ويحمي من نزلات البرد.</p>
-      <div class="stars">★★★★★</div>
-      <button>اطلب الآن</button>
-    </div>
-
   </div>
 
   <footer>
-    جميع الحقوق محفوظة © 2025 مناحل آل بوسعيدي
+    جميع الحقوق محفوظة © مناحل آل بوسعيدي
   </footer>
-
-  <script>
-    // استرجاع البيانات من Formspree
-    const params = new URLSearchParams(window.location.search);
-    const order = params.get("offer");
-
-    let price = 0;
-    if(order){
-      if(order.includes("علبة واحدة")) price = 1500;
-      else if(order.includes("علبتان")) price = 2800;
-      else if(order.includes("3 علب")) price = 4500;
-    }
-
-    const delivery = 400;
-    const total = price + delivery;
-
-    document.getElementById("orderItem").innerText = "مكونات الطلبية: " + (order ? order : "-");
-    document.getElementById("delivery").innerText = "سعر التوصيل: " + delivery + " دج";
-    document.getElementById("total").innerText = "المجموع الكلي: " + (price ? total + " دج" : "-");
-  </script>
 
 </body>
 </html>
