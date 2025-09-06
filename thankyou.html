@@ -4,133 +4,162 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>شكراً لطلبك - عسل الأطفال</title>
-    <meta name="description" content="شكراً لطلبك! أكمل تجربة الشراء مع عروض إضافية لعسل الأطفال ومنتجات طبيعية أخرى.">
-    <meta name="keywords" content="عسل الأطفال, العكبر, البروبوليس, عسل السدر, عسل الأزهار, عسل السعال, عسل الإنفلونزا, زيادة القدرة الجنسية, شراء العسل, upsells">
+    <meta name="description" content="شكراً لطلبك! اكتشف منتجاتنا الأخرى من العسل الطبيعي لتعزيز الصحة والطاقة.">
+    <meta name="keywords" content="عسل طبيعي, منتجات العسل, خلطة زيادة القدرة الجنسية, العكبر, البروبوليس, عسل السدر, عسل الأزهار, عسل السعال, عسل الإنفلونزا">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+
         :root {
             --primary-color: #ff914d;
             --secondary-color: #ffb74d;
             --dark-color: #1a4d29;
             --light-color: #f0f8f0;
-            --button-color: #4a6c4c;
+            --button-dark-color: #4a6c4c;
+            --orange-color: #ff7f00;
             --font-family: 'Cairo', sans-serif;
         }
-        * { box-sizing:border-box; margin:0; padding:0; }
-        body { font-family:var(--font-family); line-height:1.6; background:#FFF8E1; color:var(--dark-color);}
-        .container { max-width:1100px; margin:auto; padding:15px;}
-        header { background:linear-gradient(135deg,var(--dark-color),#2f693e); color:white; padding:30px 0; text-align:center;}
-        header h1 { font-size:2rem; margin-bottom:8px;}
-        header p { font-size:1rem; max-width:700px; margin:auto; }
-        .section { margin:30px 0; }
-        .section h2 { text-align:center; margin-bottom:20px; color:var(--dark-color);}
-        .upsell-section { display:flex; flex-wrap:wrap; gap:15px; justify-content:center;}
-        .upsell-item { background:white; padding:15px; border-radius:15px; box-shadow:0 5px 15px rgba(0,0,0,0.1); text-align:center; cursor:pointer; flex:1 1 30%; max-width:300px; transition:all 0.3s;}
-        .upsell-item img { max-width:100%; border-radius:10px; margin-bottom:10px;}
-        .upsell-item h3 { margin-bottom:8px; }
-        .upsell-item p { margin-bottom:10px; }
-        .summary { background:#f0f8f0; padding:15px; border-radius:10px; margin:20px 0; text-align:center; }
-        .summary p { margin:8px 0; font-size:1.1rem;}
-        .btn-order { background:var(--button-color); color:white; border:none; padding:15px 30px; border-radius:10px; font-size:1.2rem; cursor:pointer; animation:pulse 1s infinite; margin:auto; display:block; text-align:center; }
-        @keyframes pulse { 0%{transform:scale(1);}50%{transform:scale(1.05);}100%{transform:scale(1);} }
-        footer { text-align:center; padding:20px 0; background:#2f693e; color:white; margin-top:30px;}
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-family);
+            line-height: 1.6;
+            background-color: #FFF8E1;
+            color: var(--dark-color);
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--dark-color), #2f693e);
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2rem;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 15px;
+        }
+
+        .message {
+            text-align: center;
+            font-size: 1.2rem;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+
+        .upsells-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .upsell-item {
+            background: white;
+            padding: 15px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            width: 250px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .upsell-item img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .btn-buy {
+            padding: 10px 15px;
+            margin-top: 10px;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        .btn-buy:hover {
+            background-color: var(--secondary-color);
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: var(--dark-color);
+            color: white;
+            margin-top: 20px;
+            font-size: 0.9rem;
+        }
+
     </style>
 </head>
 <body>
 <header>
     <h1>شكراً لطلبك!</h1>
-    <p>طلبك تم استلامه بنجاح. أكمل تجربة الشراء مع عروض إضافية لمنتجاتنا الطبيعية.</p>
 </header>
 
-<section class="container summary">
-    <h2>ملخص طلبك</h2>
-    <p>سعر المنتج: <span id="productPrice">0</span> دج</p>
-    <p>سعر التوصيل: <span id="deliveryPrice">0</span> دج</p>
-    <p>المجموع الكلي: <span id="totalPrice">0</span> دج</p>
-</section>
+<div class="container">
+    <p class="message">تم استلام طلبك بنجاح، سيتواصل معك فريقنا قريباً.</p>
 
-<section class="container section upsell-section">
-    <h2>عروض إضافية قد تهمك</h2>
+    <h2 style="text-align:center; margin-bottom:10px;">منتجات أخرى قد تهمك</h2>
 
-    <div class="upsell-item" data-price="2500">
-        <img src="product7.jpg" alt="زيادة القدرة الجنسية">
-        <h3>خلطة زيادة القدرة الجنسية للرجال والنساء</h3>
-        <p>أخيراً المنتج الذي يسأل عنه الجميع قد أصبح متوفراً</p>
-        <p>سعر: 2500 دج</p>
-        <button class="btn-order">اطلب الآن</button>
+    <div class="upsells-section">
+        <div class="upsell-item">
+            <img src="sexual-boost.jpg" alt="خلطة زيادة القدرة">
+            <h3>أخيراً المنتج الذي يسأل عنه الجميع!</h3>
+            <p>خلطة زيادة القدرة الجنسية للرجال والنساء</p>
+            <button class="btn-buy" onclick="location.href='index.html'">اطلب الآن</button>
+        </div>
+        <div class="upsell-item">
+            <img src="propolis.jpg" alt="العكبر">
+            <h3>العكبر</h3>
+            <p>منتج طبيعي لتعزيز المناعة</p>
+            <button class="btn-buy" onclick="location.href='index.html'">اطلب الآن</button>
+        </div>
+        <div class="upsell-item">
+            <img src="bee-honey.jpg" alt="عسل السدر">
+            <h3>عسل السدر</h3>
+            <p>مفيد للأطفال وللصحة العامة</p>
+            <button class="btn-buy" onclick="location.href='index.html'">اطلب الآن</button>
+        </div>
+        <div class="upsell-item">
+            <img src="flower-honey.jpg" alt="عسل الأزهار">
+            <h3>عسل الأزهار</h3>
+            <p>تعزيز الطاقة والنشاط اليومي</p>
+            <button class="btn-buy" onclick="location.href='index.html'">اطلب الآن</button>
+        </div>
+        <div class="upsell-item">
+            <img src="cough-honey.jpg" alt="عسل السعال">
+            <h3>عسل السعال</h3>
+            <p>تخفيف السعال الحاد للأطفال والكبار</p>
+            <button class="btn-buy" onclick="location.href='index.html'">اطلب الآن</button>
+        </div>
+        <div class="upsell-item">
+            <img src="flu-honey.jpg" alt="عسل الإنفلونزا">
+            <h3>عسل الإنفلونزا</h3>
+            <p>دعم الجسم ضد الأمراض الموسمية</p>
+            <button class="btn-buy" onclick="location.href='index.html'">اطلب الآن</button>
+        </div>
     </div>
-
-    <div class="upsell-item" data-price="1500">
-        <img src="product1.jpg" alt="العكبر">
-        <h3>العكبر</h3>
-        <p>سعر: 1500 دج</p>
-        <button class="btn-order">اطلب الآن</button>
-    </div>
-
-    <div class="upsell-item" data-price="1800">
-        <img src="product2.jpg" alt="البروبوليس">
-        <h3>البروبوليس</h3>
-        <p>سعر: 1800 دج</p>
-        <button class="btn-order">اطلب الآن</button>
-    </div>
-
-    <div class="upsell-item" data-price="2000">
-        <img src="product3.jpg" alt="عسل السدر">
-        <h3>عسل السدر</h3>
-        <p>سعر: 2000 دج</p>
-        <button class="btn-order">اطلب الآن</button>
-    </div>
-
-    <div class="upsell-item" data-price="1700">
-        <img src="product4.jpg" alt="عسل الأزهار">
-        <h3>عسل الأزهار</h3>
-        <p>سعر: 1700 دج</p>
-        <button class="btn-order">اطلب الآن</button>
-    </div>
-
-    <div class="upsell-item" data-price="1600">
-        <img src="product5.jpg" alt="عسل السعال">
-        <h3>عسل السعال</h3>
-        <p>سعر: 1600 دج</p>
-        <button class="btn-order">اطلب الآن</button>
-    </div>
-
-    <div class="upsell-item" data-price="1800">
-        <img src="product6.jpg" alt="عسل الإنفلونزا">
-        <h3>عسل الإنفلونزا</h3>
-        <p>سعر: 1800 دج</p>
-        <button class="btn-order">اطلب الآن</button>
-    </div>
-
-</section>
+</div>
 
 <footer>
-    جميع الحقوق محفوظة لشركة عسل الأطفال © 2025
+    جميع الحقوق محفوظة لشركة مناحل آل بوسعيدي
 </footer>
 
-<script>
-    const urlParams = new URLSearchParams(window.location.search);
-    const productPriceEl = document.getElementById('productPrice');
-    const deliveryPriceEl = document.getElementById('deliveryPrice');
-    const totalPriceEl = document.getElementById('totalPrice');
-
-    let productPrice = parseInt(urlParams.get('productPrice')) || 0;
-    let deliveryPrice = parseInt(urlParams.get('deliveryPrice')) || 0;
-    let totalPrice = productPrice + deliveryPrice;
-
-    productPriceEl.textContent = productPrice;
-    deliveryPriceEl.textContent = deliveryPrice;
-    totalPriceEl.textContent = totalPrice;
-
-    const upsells = document.querySelectorAll('.upsell-item');
-    upsells.forEach(item => {
-        item.addEventListener('click', () => {
-            const price = parseInt(item.getAttribute('data-price')) || 0;
-            totalPrice += price;
-            totalPriceEl.textContent = totalPrice;
-            alert("تم إضافة العرض إلى طلبك! المجموع الكلي الآن: " + totalPrice + " دج");
-        });
-    });
-</script>
 </body>
 </html>
