@@ -1,165 +1,110 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>شكراً لطلبك - عسل الأطفال</title>
-    <meta name="description" content="شكراً لطلبك! اكتشف منتجاتنا الأخرى من العسل الطبيعي لتعزيز الصحة والطاقة.">
-    <meta name="keywords" content="عسل طبيعي, منتجات العسل, خلطة زيادة القدرة الجنسية, العكبر, البروبوليس, عسل السدر, عسل الأزهار, عسل السعال, عسل الإنفلونزا">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
-
-        :root {
-            --primary-color: #ff914d;
-            --secondary-color: #ffb74d;
-            --dark-color: #1a4d29;
-            --light-color: #f0f8f0;
-            --button-dark-color: #4a6c4c;
-            --orange-color: #ff7f00;
-            --font-family: 'Cairo', sans-serif;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: var(--font-family);
-            line-height: 1.6;
-            background-color: #FFF8E1;
-            color: var(--dark-color);
-        }
-
-        header {
-            background: linear-gradient(135deg, var(--dark-color), #2f693e);
-            color: white;
-            padding: 30px 0;
-            text-align: center;
-        }
-
-        header h1 {
-            font-size: 2rem;
-        }
-
-        .container {
-            max-width: 1100px;
-            margin: auto;
-            padding: 15px;
-        }
-
-        .message {
-            text-align: center;
-            font-size: 1.2rem;
-            margin: 20px 0;
-            font-weight: bold;
-        }
-
-        .upsells-section {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            justify-content: center;
-            margin: 20px 0;
-        }
-
-        .upsell-item {
-            background: white;
-            padding: 15px;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            text-align: center;
-            width: 250px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .upsell-item img {
-            width: 100%;
-            border-radius: 10px;
-            margin-bottom: 10px;
-        }
-
-        .btn-buy {
-            padding: 10px 15px;
-            margin-top: 10px;
-            background-color: var(--primary-color);
-            color: white;
-            border: none;
-            border-radius: 10px;
-            cursor: pointer;
-            font-weight: bold;
-            transition: background 0.3s ease;
-        }
-
-        .btn-buy:hover {
-            background-color: var(--secondary-color);
-        }
-
-        footer {
-            text-align: center;
-            padding: 15px;
-            background: var(--dark-color);
-            color: white;
-            margin-top: 20px;
-            font-size: 0.9rem;
-        }
-
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>شكرًا على طلبك - عسل الأطفال</title>
+<meta name="description" content="شكرًا على طلبك! اكتشف منتجاتنا الطبيعية الأخرى مثل خلطة زيادة القدرة والعسل الطبيعي للأطفال.">
+<meta name="keywords" content="شكرًا, طلبك, عسل الأطفال, منتجات طبيعية, upsells, خلطة زيادة القدرة, العكبر, البروبوليس, عسل السدر, عسل الأزهار, عسل السعال, عسل الإنفلونزا">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+:root { --primary-color:#ff914d; --secondary-color:#ffb74d; --dark-color:#1a4d29; --light-color:#f0f8f0; --button-dark-color:#4a6c4c; --orange-color:#ff7f00; --font-family:'Cairo', sans-serif;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:var(--font-family);background:#FFF8E1;color:var(--dark-color);line-height:1.6;}
+.container{max-width:1100px;margin:auto;padding:15px;}
+h1,h2,h3{text-align:center;margin:15px 0;}
+.upsells-section, .order-summary{display:flex;flex-wrap:wrap;gap:15px;justify-content:center;margin:20px 0;}
+.upsell-item, .summary-item{background:white;padding:15px;border-radius:15px;box-shadow:0 5px 15px rgba(0,0,0,0.1);text-align:center;flex:1 1 30%;max-width:300px;}
+.upsell-item img{width:100%;border-radius:10px;margin-bottom:10px;}
+.summary-item{display:flex;flex-direction:column;gap:5px;}
+.btn-buy{background:var(--orange-color);color:white;padding:12px;border:none;border-radius:10px;cursor:pointer;font-weight:bold;transition:transform 0.3s ease;margin-top:10px;}
+.btn-buy:hover{transform:scale(1.05);}
+footer{text-align:center;padding:15px;background:var(--dark-color);color:white;margin-top:20px;font-size:0.9rem;}
+</style>
 </head>
 <body>
+
 <header>
-    <h1>شكراً لطلبك!</h1>
+<h1>شكراً على طلبك!</h1>
+<p>لقد تلقينا طلبك بنجاح. إليك ملخص طلبك وبعض منتجاتنا الأخرى التي قد تهمك:</p>
 </header>
 
 <div class="container">
-    <p class="message">تم استلام طلبك بنجاح، سيتواصل معك فريقنا قريباً.</p>
+    <h2>ملخص الطلبية</h2>
+    <div class="order-summary">
+        <div class="summary-item"><strong>الاسم:</strong> <span id="customerName"></span></div>
+        <div class="summary-item"><strong>رقم الهاتف:</strong> <span id="customerPhone"></span></div>
+        <div class="summary-item"><strong>الولاية:</strong> <span id="customerState"></span></div>
+        <div class="summary-item"><strong>العرض المختار:</strong> <span id="customerOffer"></span></div>
+        <div class="summary-item"><strong>سعر المنتج:</strong> <span id="productPrice"></span> دج</div>
+        <div class="summary-item"><strong>سعر التوصيل:</strong> <span id="deliveryPrice"></span> دج</div>
+        <div class="summary-item"><strong>المجموع الكلي:</strong> <span id="totalPrice"></span> دج</div>
+    </div>
 
-    <h2 style="text-align:center; margin-bottom:10px;">منتجات أخرى قد تهمك</h2>
-
+    <h2>اكتشف منتجاتنا الأخرى</h2>
     <div class="upsells-section">
         <div class="upsell-item">
-            <img src="sexual-boost.jpg" alt="خلطة زيادة القدرة">
-            <h3>أخيراً المنتج الذي يسأل عنه الجميع!</h3>
-            <p>خلطة زيادة القدرة الجنسية للرجال والنساء</p>
-            <button class="btn-buy" onclick="location.href='index.html'">اطلب الآن</button>
+            <img src="power-mix.jpg" alt="خلطة زيادة القدرة">
+            <h3>أخيرًا المنتج الذي يسأل عنه الجميع</h3>
+            <button class="btn-buy">اطلب الآن</button>
         </div>
         <div class="upsell-item">
-            <img src="propolis.jpg" alt="العكبر">
-            <h3>العكبر</h3>
-            <p>منتج طبيعي لتعزيز المناعة</p>
-            <button class="btn-buy" onclick="location.href='index.html'">اطلب الآن</button>
+            <img src="propolis.jpg" alt="البروبوليس">
+            <h3>البروبوليس الطبيعي</h3>
+            <button class="btn-buy">اطلب الآن</button>
         </div>
         <div class="upsell-item">
-            <img src="bee-honey.jpg" alt="عسل السدر">
+            <img src="bees-pollen.jpg" alt="العكبر">
+            <h3>العكبر الطبيعي</h3>
+            <button class="btn-buy">اطلب الآن</button>
+        </div>
+        <div class="upsell-item">
+            <img src="sidr-honey.jpg" alt="عسل السدر">
             <h3>عسل السدر</h3>
-            <p>مفيد للأطفال وللصحة العامة</p>
-            <button class="btn-buy" onclick="location.href='index.html'">اطلب الآن</button>
+            <button class="btn-buy">اطلب الآن</button>
         </div>
         <div class="upsell-item">
             <img src="flower-honey.jpg" alt="عسل الأزهار">
             <h3>عسل الأزهار</h3>
-            <p>تعزيز الطاقة والنشاط اليومي</p>
-            <button class="btn-buy" onclick="location.href='index.html'">اطلب الآن</button>
+            <button class="btn-buy">اطلب الآن</button>
         </div>
         <div class="upsell-item">
             <img src="cough-honey.jpg" alt="عسل السعال">
             <h3>عسل السعال</h3>
-            <p>تخفيف السعال الحاد للأطفال والكبار</p>
-            <button class="btn-buy" onclick="location.href='index.html'">اطلب الآن</button>
+            <button class="btn-buy">اطلب الآن</button>
         </div>
         <div class="upsell-item">
-            <img src="flu-honey.jpg" alt="عسل الإنفلونزا">
+            <img src="flu-honey.jpg" alt="عسل الانفلونزا">
             <h3>عسل الإنفلونزا</h3>
-            <p>دعم الجسم ضد الأمراض الموسمية</p>
-            <button class="btn-buy" onclick="location.href='index.html'">اطلب الآن</button>
+            <button class="btn-buy">اطلب الآن</button>
         </div>
     </div>
+
+    <p style="text-align:center;margin-top:20px;font-weight:bold;">لأي استفسار، تواصل معنا عبر <a href="https://wa.me/213XXXXXXXXX" target="_blank">واتساب</a></p>
 </div>
 
-<footer>
-    جميع الحقوق محفوظة لشركة مناحل آل بوسعيدي
-</footer>
+<footer>جميع الحقوق محفوظة لشركة مناحل آل بوسعيدي</footer>
+
+<script>
+// استلام بيانات الطلب من index.html عبر localStorage أو sessionStorage
+document.addEventListener("DOMContentLoaded", function(){
+    let name = localStorage.getItem('customerName') || 'غير محدد';
+    let phone = localStorage.getItem('customerPhone') || 'غير محدد';
+    let state = localStorage.getItem('customerState') || 'غير محدد';
+    let offer = localStorage.getItem('customerOffer') || 'غير محدد';
+    let productPrice = parseInt(localStorage.getItem('productPrice')) || 0;
+    let deliveryPrice = parseInt(localStorage.getItem('deliveryPrice')) || 0;
+    let totalPrice = productPrice + deliveryPrice;
+
+    document.getElementById('customerName').innerText = name;
+    document.getElementById('customerPhone').innerText = phone;
+    document.getElementById('customerState').innerText = state;
+    document.getElementById('customerOffer').innerText = offer;
+    document.getElementById('productPrice').innerText = productPrice;
+    document.getElementById('deliveryPrice').innerText = deliveryPrice;
+    document.getElementById('totalPrice').innerText = totalPrice;
+});
+</script>
 
 </body>
 </html>
