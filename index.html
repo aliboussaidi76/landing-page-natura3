@@ -18,38 +18,50 @@
             --font-family: 'Cairo', sans-serif;
         }
         * { box-sizing: border-box; margin:0; padding:0; }
-        body { font-family: var(--font-family); background-color: #FFF8E1; color: var(--dark-color); line-height:1.6; }
+        body { font-family: var(--font-family); background-color: #FFF8E1; color: var(--dark-color); line-height:1.6; position:relative; }
+
         /* شريط الأخبار */
+        .top-news { background:#c0392b; color:white; padding:8px 0; text-align:center; font-weight:bold; }
         .news-bar { background:#e74c3c; color:white; padding:10px 0; text-align:center; font-weight:bold; overflow:hidden; position:relative; }
         .news-bar p { display:inline-block; white-space:nowrap; position:relative; animation:scrollNews 15s linear infinite; }
         @keyframes scrollNews { 0% { left:100%; } 100% { left:-100%; } }
+
         header { background: linear-gradient(135deg, var(--dark-color), #2f693e); color: white; padding: 30px 0; text-align: center; }
         header h1 { font-size: 2.2rem; margin-bottom: 8px; }
         header p { font-size: 1rem; max-width: 700px; margin: auto; }
+
         .container { max-width: 1100px; margin:auto; padding:0 15px; }
         .product-image { text-align:center; margin:20px 0; }
         .product-image img { width:300px; border-radius:15px; }
+
         .offers-section, .upsells-section { display:flex; flex-wrap:wrap; gap:15px; justify-content:center; margin:20px 0; }
         .offer-item, .upsell-item { background:white; padding:15px; border-radius:15px; box-shadow:0 5px 15px rgba(0,0,0,0.1); text-align:center; flex:1 1 30%; max-width:350px; transition:transform 0.3s ease, box-shadow 0.3s ease; cursor:pointer; border:3px solid transparent; }
         .offer-item.selected { border:3px solid var(--dark-color); }
         .offer-item img, .upsell-item img { width:100%; border-radius:10px; margin-bottom:10px; }
+
         h2 { text-align:center; margin:20px 0; }
+
         .benefits, .ingredients, .reviews { margin:20px 0; }
         .benefit-item, .ingredient-item, .review-item { background:white; padding:15px; border-radius:15px; margin-bottom:15px; box-shadow:0 5px 10px rgba(0,0,0,0.05); display:flex; align-items:center; gap:10px; }
         .ingredient-item img { width:60px; border-radius:10px; }
+
         form { background:white; padding:20px; border-radius:15px; box-shadow:0 5px 15px rgba(0,0,0,0.1); max-width:500px; margin:auto; display:flex; flex-direction:column; gap:15px; }
         input, select { padding:10px; border:1px solid #ccc; border-radius:10px; font-size:1rem; }
         .btn-submit { background:var(--orange-color); color:white; padding:12px; border:none; border-radius:10px; cursor:pointer; font-weight:bold; transition:transform 0.3s ease; }
         .btn-submit:hover { transform:scale(1.05); }
+
         footer { text-align:center; padding:15px; background:var(--dark-color); color:white; margin-top:20px; font-size:0.9rem; }
+
+        /* زر اطلب الآن ثابت */
+        .fixed-order-btn { position:fixed; bottom:20px; left:50%; transform:translateX(-50%); background:var(--dark-color); color:white; padding:15px 25px; border-radius:15px; font-weight:bold; cursor:pointer; z-index:999; animation:shake 1s infinite; }
+        @keyframes shake { 0%,100%{transform:translateX(-50%);} 25%{transform:translateX(-48%);} 50%{transform:translateX(-52%);} 75%{transform:translateX(-48%);} }
     </style>
 </head>
 <body>
 
-<!-- شريط الأخبار -->
-<div class="news-bar">
-    <p>التوصيل إلى باب المنزل والدفع عند الاستلام</p>
-</div>
+<!-- شريط الأخبار العلوي -->
+<div class="top-news">عرض ينتهي هذا الأسبوع</div>
+<div class="news-bar"><p>التوصيل إلى باب المنزل والدفع عند الاستلام</p></div>
 
 <header>
     <h1>عسل الأطفال: طاقة وذكاء ونمو صحي</h1>
@@ -64,7 +76,7 @@
 
     <h2>اختر العرض الذي يناسبك</h2>
     <div class="offers-section">
-        <div class="offer-item" onclick="selectOffer(this)">
+        <div class="offer-item selected" onclick="selectOffer(this)">
             <img src="single-pack.jpg" alt="عبوة واحدة">
             <h3>عبوة واحدة</h3>
             <p>سعر: 1500 دج</p>
@@ -79,6 +91,11 @@
             <h3>اشترِ 3 وخذ 1 مجاناً</h3>
             <p>سعر: 4200 دج</p>
         </div>
+    </div>
+
+    <!-- صورة عامة تحت العروض -->
+    <div class="product-image">
+        <img src="mother-child-honey.jpg" alt="أم تعطي طفلها العسل في الطبيعة">
     </div>
 
     <h2>فوائد العسل</h2>
@@ -127,17 +144,20 @@
             <option value="Setif">سطيف - 600 دج</option>
             <option value="Bordj Bou Arreridj">برج بوعريريج - 600 دج</option>
         </select>
-        <input type="hidden" name="selectedOffer" id="selectedOffer" value="">
+        <input type="hidden" name="selectedOffer" id="selectedOffer" value="عبوة واحدة">
         <input type="submit" class="btn-submit" value="تأكيد الطلب">
     </form>
 </div>
+
+<!-- زر اطلب الآن ثابت -->
+<div class="fixed-order-btn" onclick="scrollToForm()">اطلب الآن</div>
 
 <footer>
     جميع الحقوق محفوظة لشركة مناحل آل بوسعيدي
 </footer>
 
 <script>
-let selectedOfferPrice = 0;
+let selectedOfferPrice = 1500; // default offer
 function selectOffer(element){
     document.querySelectorAll('.offer-item').forEach(item=>item.classList.remove('selected'));
     element.classList.add('selected');
@@ -164,6 +184,10 @@ function calculateTotal(){
     alert('سعر المنتج: ' + selectedOfferPrice + ' دج\nسعر التوصيل: ' + delivery + ' دج\nالمجموع الكلي: ' + total + ' دج\nتم إرسال الطلب!');
     window.location.href = 'thankyou.html';
     return false;
+}
+
+function scrollToForm(){
+    document.getElementById('orderForm').scrollIntoView({behavior:'smooth'});
 }
 </script>
 
