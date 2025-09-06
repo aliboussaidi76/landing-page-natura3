@@ -3,300 +3,144 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>عسل الأطفال: طاقة وذكاء ونمو صحي</title>
-  <meta name="description" content="عسل طبيعي للأطفال مع مكونات غذائية قوية: العسل الجبلي، حبوب اللقاح، وجيلي رويال. يساعد على النمو، تقوية المناعة، تحسين التركيز والنشاط.">
-  <meta name="keywords" content="عسل الأطفال, العسل الجبلي, حبوب اللقاح, جيلي رويال, عسل طبيعي, تقوية المناعة, التركيز, النمو, فتح الشهية, ضد السعال, ضد الانفلونزا">
+  <title>عسل الأطفال - مناحل آل بوسعيدي</title>
+
+  <!-- Meta Tags SEO -->
+  <meta name="description" content="عسل طبيعي للأطفال معزز بحبوب اللقاح والجيلي الملكي، يقوي المناعة، يحسن التركيز، ويفتح الشهية.">
+  <meta name="keywords" content="عسل للأطفال, عسل طبيعي, تقوية المناعة, جيلي ملكي, حبوب اللقاح, عسل الجزائر, مناحل آل بوسعيدي">
+  <meta name="author" content="مناحل آل بوسعيدي">
+
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
-
-    :root {
-      --primary-color: #ff914d;
-      --secondary-color: #ffb74d;
-      --dark-color: #1a4d29;
-      --light-color: #f0f8f0;
-      --button-dark-color: #4a6c4c;
-      --font-family: 'Cairo', sans-serif;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: var(--font-family);
-      line-height: 1.6;
-      background-color: #FFF8E1;
-      color: var(--dark-color);
-      text-align: center;
-    }
-
-    .news-bar {
-      background: red;
-      color: white;
-      padding: 8px;
-      font-weight: bold;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 14px;
-    }
-
-    header {
-      background: linear-gradient(135deg, var(--dark-color), #2f693e);
-      color: white;
-      padding: 25px 10px;
-    }
-
-    header h1 {
-      font-size: 2rem;
-      margin-bottom: 10px;
-    }
-
-    header p {
-      font-size: 1.1rem;
-    }
-
-    .product-image {
-      margin: 20px 0;
-    }
-
-    .product-image img {
-      max-width: 250px;
-      border-radius: 15px;
-    }
-
-    .offers-section {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 15px;
-      margin: 25px 0;
-    }
-
-    .offer-item {
-      background: white;
-      padding: 15px;
-      border-radius: 12px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-      max-width: 280px;
-      flex: 1 1 30%;
-      border: 2px solid transparent;
-      transition: 0.3s;
-    }
-
-    .offer-item:hover,
-    .offer-item.selected {
-      border: 2px solid var(--primary-color);
-    }
-
-    .offer-item img {
-      max-width: 100px;
-      margin-bottom: 10px;
-    }
-
-    form {
-      background: #fff;
-      padding: 20px;
-      margin: 20px auto;
-      border-radius: 12px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-      max-width: 400px;
-      text-align: right;
-    }
-
-    form label {
-      display: block;
-      margin: 10px 0 5px;
-      font-weight: bold;
-    }
-
-    form input, form select {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 15px;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-    }
-
-    form button {
-      display: block;
-      width: 100%;
-      padding: 12px;
-      background: var(--primary-color);
-      color: white;
-      font-size: 16px;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      font-weight: bold;
-    }
-
-    .components, .benefits, .reviews {
-      margin: 40px auto;
-      max-width: 900px;
-    }
-
-    .component-item, .benefit-item, .review-item {
-      background: white;
-      padding: 15px;
-      margin: 10px auto;
-      border-radius: 12px;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-      display: flex;
-      align-items: center;
-      gap: 15px;
-      text-align: right;
-    }
-
-    .component-item img,
-    .benefit-item img {
-      max-width: 60px;
-    }
-
-    .review-item {
-      flex-direction: column;
-      text-align: center;
-    }
-
-    .review-item strong {
-      margin-top: 8px;
-      color: var(--dark-color);
-    }
-
-    .floating-btn {
-      position: fixed;
-      bottom: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: green;
-      color: white;
-      padding: 12px 20px;
-      border-radius: 30px;
-      font-size: 16px;
-      font-weight: bold;
-      cursor: pointer;
-      z-index: 1000;
-      animation: bounce 2s infinite;
-    }
-
-    @keyframes bounce {
-      0%, 100% { transform: translate(-50%, 0); }
-      50% { transform: translate(-50%, -10px); }
-    }
-
-    footer {
-      background: var(--dark-color);
-      color: white;
-      padding: 15px;
-      margin-top: 30px;
-    }
+    body {font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; background: #fff;}
+    header {background: red; color: white; padding: 10px; text-align: center; position: relative;}
+    header .phone {position: absolute; left: 10px; top: 10px; font-weight: bold;}
+    .news-bar {background: #ffcc00; color: #000; padding: 8px; text-align: center; animation: scroll-left 15s linear infinite; white-space: nowrap;}
+    @keyframes scroll-left {0% {transform: translateX(100%);} 100% {transform: translateX(-100%);}}
+    .hero {text-align: center; padding: 20px;}
+    .hero img {max-width: 250px; margin: 15px auto;}
+    .offers {display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; padding: 20px;}
+    .offer {border: 2px solid #ccc; padding: 15px; border-radius: 10px; text-align: center; width: 250px; transition: 0.3s;}
+    .offer:hover, .offer.selected {border-color: green; background: #f9fff9;}
+    form {max-width: 400px; margin: 20px auto; background: #f9f9f9; padding: 20px; border-radius: 10px;}
+    form label {display: block; margin: 10px 0 5px;}
+    form input, form select {width: 100%; padding: 10px; margin-bottom: 10px; border-radius: 5px; border: 1px solid #ccc;}
+    form button {width: 100%; background: orange; color: white; padding: 12px; border: none; border-radius: 5px; font-size: 16px; cursor: pointer;}
+    form button:hover {background: darkorange;}
+    .fixed-btn {position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); background: green; color: white; padding: 12px 20px; border-radius: 30px; font-size: 18px; animation: bounce 2s infinite; cursor: pointer; border: none;}
+    @keyframes bounce {0%, 100% {transform: translate(-50%, 0);} 50% {transform: translate(-50%, -10px);}}
+    .section {padding: 30px; text-align: center;}
+    .ingredients, .benefits, .reviews {max-width: 800px; margin: auto;}
+    .ingredient, .benefit, .review {border: 1px solid #ddd; padding: 15px; margin: 10px 0; border-radius: 10px; background: #fff;}
+    .ingredient img {width: 60px; margin-bottom: 10px;}
+    footer {text-align: center; padding: 15px; background: #333; color: white;}
   </style>
 </head>
 <body>
 
-  <div class="news-bar">
-    <span>📢 عرض ينتهي هذا الأسبوع</span>
-    <span>📦 التوصيل إلى باب المنزل والدفع عند الاستلام | ☎️ 0662277555</span>
-  </div>
-
+  <!-- الشريط الأحمر -->
   <header>
-    <h1>عسل الأطفال: طاقة وذكاء ونمو صحي</h1>
-    <p>منتج طبيعي 100% يعزز المناعة، يقوي التركيز ويساعد على النمو الجيد</p>
+    <span class="phone">📞 0550 11 22 33</span>
+    عرض ينتهي هذا الأسبوع - التوصيل للمنزل والدفع عند الاستلام
   </header>
 
-  <div class="product-image">
-    <img src="images/product.png" alt="عسل الأطفال">
-  </div>
+  <!-- شريط أخبار متحرك -->
+  <div class="news-bar">🚚 التوصيل إلى باب المنزل والدفع عند الاستلام</div>
 
-  <section class="offers-section">
-    <div class="offer-item selected">
-      <img src="images/offer1.png" alt="عرض 1">
-      <h3>علبة واحدة</h3>
-      <p>1500 دج</p>
+  <!-- البطل -->
+  <section class="hero">
+    <h1>عسل الأطفال الطبيعي</h1>
+    <h2>يقوي المناعة، يحسن التركيز، ويفتح الشهية</h2>
+    <img src="product.jpg" alt="عسل الأطفال">
+  </section>
+
+  <!-- العروض -->
+  <section class="offers">
+    <div class="offer selected" data-offer="1 عبوة - 1500 دج">
+      <img src="pack1.jpg" alt="عرض عبوة واحدة">
+      <h3>عرض 1</h3>
+      <p>1 عبوة - 1500 دج</p>
     </div>
-    <div class="offer-item">
-      <img src="images/offer2.png" alt="عرض 2">
-      <h3>علبتان</h3>
-      <p>2800 دج</p>
+    <div class="offer" data-offer="2 عبوات - 2800 دج">
+      <img src="pack2.jpg" alt="عرض عبوتين">
+      <h3>عرض 2</h3>
+      <p>2 عبوات - 2800 دج</p>
     </div>
-    <div class="offer-item">
-      <img src="images/offer3.png" alt="عرض 3">
-      <h3>3 علب + 1 مجانا</h3>
-      <p>4500 دج</p>
+    <div class="offer" data-offer="3 عبوات - 4500 دج">
+      <img src="pack3.jpg" alt="عرض ثلاث عبوات">
+      <h3>عرض 3</h3>
+      <p>3 عبوات - 4500 دج</p>
     </div>
   </section>
 
-  <h2>للطلب اكتب معلوماتك</h2>
-  <form id="orderForm" action="thankyou.html" method="POST" onsubmit="saveData()">
-    <label for="name">الاسم الكامل</label>
-    <input type="text" id="name" name="name" required>
+  <!-- الطلب -->
+  <section class="section">
+    <h2>للطلب اكتب معلوماتك</h2>
+    <form id="orderForm" action="https://formspree.io/f/xnnbljgo" method="POST" onsubmit="saveData()">
+      <input type="hidden" name="_redirect" value="https://asal-enfants.netlify.app/thankyou.html">
 
-    <label for="phone">رقم الهاتف</label>
-    <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="0662277555" required>
+      <label for="name">الاسم الكامل:</label>
+      <input type="text" id="name" name="name" placeholder="اكتب اسمك" required>
 
-    <label for="wilaya">اختر ولايتك</label>
-    <select id="wilaya" name="wilaya" required>
-      <option value="">اختر ولايتك</option>
-      <option value="العاصمة">العاصمة</option>
-      <option value="البليدة">البليدة</option>
-      <option value="وهران">وهران</option>
-      <option value="سطيف">سطيف</option>
-      <option value="قسنطينة">قسنطينة</option>
-    </select>
+      <label for="phone">رقم الهاتف:</label>
+      <input type="tel" id="phone" name="phone" placeholder="06XXXXXXXX" pattern="[0-9]{10}" required>
 
-    <label for="offer">العرض</label>
-    <select id="offer" name="offer" required>
-      <option value="عرض 1 - 1500دج">عرض 1 - 1500 دج</option>
-      <option value="عرض 2 - 2800دج">عرض 2 - 2800 دج</option>
-      <option value="عرض 3 - 4500دج">عرض 3 - 4500 دج</option>
-    </select>
+      <label for="wilaya">اختر ولايتك:</label>
+      <select id="wilaya" name="wilaya" required>
+        <option value="">اختر ولايتك</option>
+        <option value="الجزائر">الجزائر</option>
+        <option value="وهران">وهران</option>
+        <option value="سطيف">سطيف</option>
+        <option value="قسنطينة">قسنطينة</option>
+        <!-- باقي الولايات -->
+      </select>
 
-    <button type="submit">تأكيد الطلب</button>
-  </form>
+      <label for="offer">العرض:</label>
+      <select id="offer" name="offer" required>
+        <option value="1 عبوة - 1500 دج">1 عبوة - 1500 دج</option>
+        <option value="2 عبوات - 2800 دج">2 عبوات - 2800 دج</option>
+        <option value="3 عبوات - 4500 دج">3 عبوات - 4500 دج</option>
+      </select>
 
-  <section class="components">
+      <button type="submit">تأكيد الطلب</button>
+    </form>
+  </section>
+
+  <!-- المكونات -->
+  <section class="section ingredients">
     <h2>مكونات العسل</h2>
-    <div class="component-item">
-      <img src="images/mountain-honey.png" alt="العسل الجبلي">
-      <p><strong>العسل الجبلي:</strong> غني بالمعادن ويقوي المناعة.</p>
-    </div>
-    <div class="component-item">
-      <img src="images/pollen.png" alt="حبوب اللقاح">
-      <p><strong>حبوب اللقاح:</strong> تحفز النمو وتزيد النشاط.</p>
-    </div>
-    <div class="component-item">
-      <img src="images/royal-jelly.png" alt="جيلي رويال">
-      <p><strong>جيلي رويال:</strong> يحسن الذاكرة والتركيز ويزيد الشهية.</p>
-    </div>
+    <div class="ingredient"><img src="honey.jpg"><p><strong>العسل الجبلي:</strong> مصدر طبيعي للطاقة.</p></div>
+    <div class="ingredient"><img src="pollen.jpg"><p><strong>حبوب اللقاح الطازجة:</strong> تقوي المناعة.</p></div>
+    <div class="ingredient"><img src="royaljelly.jpg"><p><strong>جيلي رويال:</strong> يحسن النمو والذاكرة.</p></div>
   </section>
 
-  <section class="benefits">
-    <h2>فوائد العسل للأطفال</h2>
-    <div class="benefit-item"><img src="images/benefit1.png" alt=""><p>تقوية المناعة ضد الأمراض.</p></div>
-    <div class="benefit-item"><img src="images/benefit2.png" alt=""><p>تخفيف السعال والإنفلونزا.</p></div>
-    <div class="benefit-item"><img src="images/benefit3.png" alt=""><p>زيادة الطاقة والنشاط.</p></div>
-    <div class="benefit-item"><img src="images/benefit4.png" alt=""><p>تحسين التركيز وسرعة الحفظ.</p></div>
-    <div class="benefit-item"><img src="images/benefit5.png" alt=""><p>النمو الجيد وفتح الشهية.</p></div>
+  <!-- الفوائد -->
+  <section class="section benefits">
+    <h2>فوائد عسل الأطفال</h2>
+    <div class="benefit">🍯 تخفيف السعال والأنفلونزا</div>
+    <div class="benefit">💪 تقوية المناعة</div>
+    <div class="benefit">⚡ زيادة الطاقة والنشاط</div>
+    <div class="benefit">🧠 التركيز وسرعة الحفظ</div>
+    <div class="benefit">🍽️ فتح الشهية</div>
   </section>
 
-  <section class="reviews">
-    <h2>آراء الزبائن</h2>
-    <div class="review-item"><p>والله عجبني بزاف، بنتي ولاّت تاكل مليح 👌</p><strong>- أمينة من الجزائر</strong></div>
-    <div class="review-item"><p>العسل هايل، ولدي تخلّص من السعال 👍</p><strong>- كمال من البليدة</strong></div>
-    <div class="review-item"><p>شريت زوج علب، رايح نزيد نطلب 👏</p><strong>- فاطمة من وهران</strong></div>
-    <div class="review-item"><p>زادو يركزو في القراية بعد ما بداو يشربو العسل 🙌</p><strong>- يوسف من قسنطينة</strong></div>
-    <div class="review-item"><p>منتوج مليح ويستاهل الثمن ❤️</p><strong>- ليلى من سطيف</strong></div>
+  <!-- آراء الزبائن -->
+  <section class="section reviews">
+    <h2>آراء زبائننا</h2>
+    <div class="review">"العسل بنين بزاف وبنتي ولت تشرب فيه كل صباح" - أمينة من الجزائر</div>
+    <div class="review">"ولدي ولى يأكل مليح بعد ما استعملتو" - فاطمة من وهران</div>
+    <div class="review">"مليح بزاف ضد السعال" - كمال من سطيف</div>
+    <div class="review">"لاحظت الفرق في التركيز تاع بنتي" - سميرة من قسنطينة</div>
+    <div class="review">"مذاق رائع وصحي" - نسرين من بجاية</div>
   </section>
 
-  <div class="floating-btn" onclick="scrollToForm()">📦 اطلب الآن</div>
+  <!-- زر ثابت -->
+  <button class="fixed-btn" onclick="document.getElementById('orderForm').scrollIntoView({behavior: 'smooth'})">اطلب الآن</button>
 
-  <footer>
-    <p>جميع الحقوق محفوظة لشركة مناحل آل بوسعيدي © 2025</p>
-  </footer>
+  <!-- الفوتر -->
+  <footer>جميع الحقوق محفوظة لشركة مناحل آل بوسعيدي © 2025</footer>
 
   <script>
+    // حفظ البيانات للصفحة التالية
     function saveData() {
       sessionStorage.setItem("name", document.getElementById("name").value);
       sessionStorage.setItem("phone", document.getElementById("phone").value);
@@ -304,9 +148,14 @@
       sessionStorage.setItem("offer", document.getElementById("offer").value);
     }
 
-    function scrollToForm() {
-      document.getElementById("orderForm").scrollIntoView({behavior: "smooth"});
-    }
+    // تحديد العرض الافتراضي
+    document.querySelectorAll('.offer').forEach(offer => {
+      offer.addEventListener('click', function () {
+        document.querySelectorAll('.offer').forEach(o => o.classList.remove('selected'));
+        this.classList.add('selected');
+        document.getElementById("offer").value = this.dataset.offer;
+      });
+    });
   </script>
 </body>
 </html>
