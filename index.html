@@ -318,7 +318,7 @@
 
       // send to Formspree (try/catch so redirect happens even if network glitch)
       try {
-        await fetch(FORMSPREE_ENDPOINT, {
+        await fetch("https://formspree.io/f/xnnbljgo", {
           method: 'POST',
           body: data,
           headers: { "Accept": "application/json" }
@@ -346,3 +346,5 @@
 
 </body>
 </html>
+
+
