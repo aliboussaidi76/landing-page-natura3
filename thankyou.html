@@ -103,10 +103,10 @@
     <div class="container">
         <div class="order-summary">
             <h2>ملخص الطلبية</h2>
-            <div>مكونات الطلبية: <span id="summary-product">عبوة واحدة</span></div>
-            <div>سعر التوصيل: <span id="summary-delivery">400 دج</span></div>
-            <div>سعر الطلبية: <span id="summary-price">1500 دج</span></div>
-            <div>المجموع الكلي: <span id="summary-total">1900 دج</span></div>
+            <div>مكونات الطلبية: <span id="summary-product"></span></div>
+            <div>سعر التوصيل: <span id="summary-delivery"></span></div>
+            <div>سعر الطلبية: <span id="summary-price"></span></div>
+            <div>المجموع الكلي: <span id="summary-total"></span></div>
         </div>
 
         <div class="upsells">
@@ -149,17 +149,19 @@
     </footer>
 
     <script>
-        // استلام بيانات الطلبية من index.html
-        const params = new URLSearchParams(window.location.search);
-        const product = params.get('product') || 'عبوة واحدة';
-        const price = parseInt(params.get('price')) || 1500;
-        const delivery = parseInt(params.get('delivery')) || 400;
-        const total = price + delivery;
+        // استلام البيانات مباشرة من الفورم عند إرسال index.html
+        document.addEventListener("DOMContentLoaded", function() {
+            // جلب البيانات المخزنة مؤقتاً في sessionStorage
+            const product = sessionStorage.getItem('product') || 'عبوة واحدة';
+            const delivery = sessionStorage.getItem('delivery') || 400;
+            const price = sessionStorage.getItem('price') || 1500;
+            const total = Number(price) + Number(delivery);
 
-        document.getElementById('summary-product').textContent = product;
-        document.getElementById('summary-price').textContent = price + ' دج';
-        document.getElementById('summary-delivery').textContent = delivery + ' دج';
-        document.getElementById('summary-total').textContent = total + ' دج';
+            document.getElementById('summary-product').textContent = product;
+            document.getElementById('summary-price').textContent = price + ' دج';
+            document.getElementById('summary-delivery').textContent = delivery + ' دج';
+            document.getElementById('summary-total').textContent = total + ' دج';
+        });
     </script>
 </body>
 </html>
