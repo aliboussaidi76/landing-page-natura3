@@ -4,192 +4,220 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>عسل الأطفال: طاقة وذكاء ونمو صحي</title>
-    <meta name="description" content="اشترِ عسل الأطفال الأصلي لتعزيز الطاقة، التركيز، والنمو الصحي. توصيل سريع والدفع عند الاستلام.">
-    <meta name="keywords" content="عسل للأطفال, صحة, نمو صحي, طاقة, تركيز, شراء عسل, طلبية">
+    <meta name="description" content="اشترِ أفضل أنواع عسل الأطفال لتعزيز الطاقة والذكاء والنمو الصحي. التوصيل حتى باب المنزل والدفع عند الاستلام.">
+    <meta name="keywords" content="عسل الأطفال, طاقة, نمو صحي, ذكاء, التوصيل للمنزل, شراء عسل">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
-        :root{
-            --primary-color:#ff914d;
-            --secondary-color:#ffb74d;
-            --dark-color:#1a4d29;
-            --light-color:#f0f8f0;
-            --button-color:#4CAF50;
-            --button-hover:#45a049;
-            --orange:#FF7F50;
-            --font-family:'Cairo',sans-serif;
+
+        :root {
+            --primary-color: #ff914d;
+            --secondary-color: #ffb74d;
+            --dark-color: #1a4d29;
+            --light-color: #f0f8f0;
+            --button-dark-color: #4a6c4c;
+            --font-family: 'Cairo', sans-serif;
         }
-        *{box-sizing:border-box;margin:0;padding:0;}
-        body{font-family:var(--font-family);background:#FFF8E1;color:var(--dark-color);line-height:1.6;}
-        .container{max-width:1100px;margin:auto;padding:15px;text-align:center;}
-        header{background:linear-gradient(135deg,var(--dark-color),#2f693e);color:white;padding:30px 0;}
-        header h1{font-size:2.2rem;margin-bottom:8px;}
-        header p{font-size:1rem;margin-top:5px;}
-        .news-bar{background:#e53935;color:white;padding:10px;font-weight:bold;margin-bottom:10px;display:flex;justify-content:space-between;align-items:center;}
-        .offers-section{display:flex;flex-wrap:wrap;justify-content:center;gap:15px;margin:20px 0;}
-        .offer-item{background:white;padding:15px;border-radius:15px;box-shadow:0 5px 15px rgba(0,0,0,0.1);transition:transform 0.3s;cursor:pointer;flex:1 1 30%;max-width:300px;border:3px solid transparent;}
-        .offer-item.selected{border:3px solid var(--dark-color);}
-        .offer-item img{max-width:100%;border-radius:10px;margin-bottom:10px;}
-        .product-image{margin:20px 0;}
-        .section-title{font-size:1.5rem;font-weight:bold;margin:20px 0;}
-        .ingredients, .benefits, .reviews{background:white;padding:15px;border-radius:15px;box-shadow:0 5px 15px rgba(0,0,0,0.1);margin:15px auto;width:90%;max-width:500px;text-align:right;}
-        .ingredients div, .benefits div{margin-bottom:10px;}
-        .reviews div{margin-bottom:10px;border-bottom:1px solid #eee;padding-bottom:10px;}
-        form{background:white;padding:20px;border-radius:15px;box-shadow:0 5px 15px rgba(0,0,0,0.1);max-width:500px;margin:auto;}
-        input, select, button{width:100%;padding:10px;margin:5px 0;border-radius:8px;border:1px solid #ccc;font-size:1rem;}
-        button{background:var(--button-color);color:white;font-weight:bold;cursor:pointer;transition:0.3s;}
-        button:hover{background:var(--button-hover);}
-        .fixed-order{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:var(--button-color);color:white;padding:15px 25px;border-radius:50px;font-weight:bold;animation:shake 1s infinite;}
-        @keyframes shake{0%,100%{transform:translateX(-50%)}50%{transform:translateX(-45%) translateY(-2px)}}
-        footer{text-align:center;margin:20px 0;font-size:0.9rem;color:#555;}
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-family);
+            line-height: 1.6;
+            background-color: #FFF8E1;
+            color: var(--dark-color);
+            text-align: center;
+        }
+
+        .top-bar {
+            background-color: #c0392b;
+            color: white;
+            padding: 10px;
+            font-size: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--dark-color), #2f693e);
+            color: white;
+            padding: 20px 0;
+        }
+
+        header h1 { font-size: 2.2rem; margin-bottom: 8px; }
+        header p { font-size: 1rem; max-width: 700px; margin: auto; }
+
+        .container { max-width: 1100px; margin: auto; overflow: hidden; padding: 0 15px; }
+
+        .offers-section { display: flex; justify-content: center; flex-wrap: wrap; gap: 15px; margin: 20px 0; }
+        .offer-item {
+            display: flex; flex-direction: column; align-items: center; text-align: center;
+            background: white; padding: 15px; border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            cursor: pointer; flex: 1 1 30%; max-width: 300px; border: 3px solid transparent;
+            transition: 0.3s;
+        }
+        .offer-item.selected { border-color: var(--primary-color); }
+
+        .product-image { width: 150px; height: 150px; margin-bottom: 10px; }
+
+        .section { margin: 30px 0; }
+        .section img { max-width: 100%; border-radius: 10px; margin-bottom: 15px; }
+
+        .form-container { margin: 30px 0; display: flex; flex-direction: column; align-items: center; }
+        form { display: flex; flex-direction: column; gap: 10px; max-width: 400px; width: 100%; }
+        input, select { padding: 10px; font-size: 1rem; border-radius: 8px; border: 1px solid #ccc; }
+        button { background-color: #28a745; color: white; padding: 12px; font-size: 1rem; border: none; border-radius: 8px; cursor: pointer; }
+        button:hover { background-color: #218838; }
+
+        .fixed-order { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); z-index: 999; animation: pulse 1s infinite alternate; }
+        @keyframes pulse { 0%{transform: translateX(-50%) scale(1);} 50%{transform: translateX(-50%) scale(1.1);} 100%{transform: translateX(-50%) scale(1);} }
+
+        .customer-opinions, .benefits, .ingredients { display: flex; flex-direction: column; align-items: center; gap: 15px; }
+        .opinion-item, .benefit-item, .ingredient-item { background: #fff; padding: 10px; border-radius: 8px; box-shadow: 0 3px 10px rgba(0,0,0,0.1); width: 90%; max-width: 400px; text-align: center; }
+
+        footer { margin-top: 30px; font-size: 0.9rem; color: #555; }
     </style>
 </head>
 <body>
+    <div class="top-bar">
+        <span>التوصيل الى باب المنزل والدفع عند الاستلام</span>
+        <span>رقم الهاتف: 0662277555</span>
+    </div>
 
-<header>
-    <h1>عسل الأطفال: طاقة وذكاء ونمو صحي</h1>
-    <p>أفضل اختيار لصحة ونمو أطفالكم</p>
-</header>
+    <header>
+        <h1>عسل الأطفال: طاقة وذكاء ونمو صحي</h1>
+        <p>اشترِ أفضل أنواع عسل الأطفال لتعزيز الطاقة والذكاء والنمو الصحي.</p>
+    </header>
 
-<div class="news-bar">
-    <span>عرض ينتهي هذا الأسبوع!</span>
-    <span>التوصيل للمنزل والدفع عند الاستلام</span>
-    <span>الهاتف: 0662277555</span>
-</div>
+    <div class="container">
 
-<div class="container">
-    <!-- العروض -->
-    <div class="section-title">اختر العرض الذي يناسبك</div>
-    <div class="offers-section">
-        <div class="offer-item selected" data-price="1500" data-quantity="1">
-            <img src="img/honey1.jpg" alt="عبوة واحدة">
-            <div>عبوة واحدة - 1500 دج</div>
+        <div class="section">
+            <img src="mother-child-honey.jpg" alt="أم تطعم طفلها العسل في مكان طبيعي">
         </div>
-        <div class="offer-item" data-price="2800" data-quantity="2">
-            <img src="img/honey2.jpg" alt="عبوتان">
-            <div>عبوتان - 2800 دج</div>
+
+        <div class="offers-section">
+            <div class="offer-item selected" data-price="1500" data-quantity="1">
+                <img class="product-image" src="single-honey.jpg" alt="عبوة واحدة">
+                <h3>عبوة واحدة</h3>
+                <p>1500 دج</p>
+            </div>
+            <div class="offer-item" data-price="2900" data-quantity="2">
+                <img class="product-image" src="double-honey.jpg" alt="عبوتان">
+                <h3>عبوتان</h3>
+                <p>2900 دج</p>
+            </div>
+            <div class="offer-item" data-price="4000" data-quantity="3">
+                <img class="product-image" src="triple-honey.jpg" alt="ثلاث عبوات">
+                <h3>ثلاث عبوات</h3>
+                <p>4000 دج</p>
+            </div>
         </div>
-        <div class="offer-item" data-price="4200" data-quantity="3">
-            <img src="img/honey3.jpg" alt="ثلاث عبوات">
-            <div>ثلاث عبوات - 4200 دج</div>
+
+        <h2>للطلب اكتب معلوماتك</h2>
+        <div class="form-container">
+            <form id="orderForm" action="https://formspree.io/f/xnnbljgo" method="POST">
+                <input type="text" name="name" placeholder="الاسم الكامل" required>
+                <input type="tel" name="phone" placeholder="رقم الهاتف" pattern="[0-9]{10}" required>
+                <select name="state" required>
+                    <option value="">اختر ولايتك</option>
+                    <option value="الجزائر">الجزائر</option>
+                    <option value="البليدة">البليدة</option>
+                    <option value="تيبازة">تيبازة</option>
+                    <option value="بومرداس">بومرداس</option>
+                    <option value="تيزي وزو">تيزي وزو</option>
+                    <option value="بجاية">بجاية</option>
+                    <option value="الشلف">الشلف</option>
+                    <option value="مستغانم">مستغانم</option>
+                    <option value="وهران">وهران</option>
+                    <option value="سيدي بلعباس">سيدي بلعباس</option>
+                    <option value="قسنطينة">قسنطينة</option>
+                    <option value="عنابة">عنابة</option>
+                    <option value="المسيلة">المسيلة</option>
+                    <option value="سطيف">سطيف</option>
+                    <option value="برج بوعريريج">برج بوعريريج</option>
+                </select>
+                <input type="hidden" name="quantity" id="formQuantity" value="1">
+                <input type="hidden" name="price" id="formPrice" value="1500">
+                <input type="hidden" name="delivery" id="formDelivery" value="400">
+                <input type="hidden" name="total" id="formTotal" value="1900">
+                <button type="submit">تأكيد الطلب</button>
+            </form>
         </div>
+
+        <div class="section ingredients">
+            <h2>مكونات العسل</h2>
+            <div class="ingredient-item">
+                <img src="mountain-honey.jpg" alt="العسل الجبلي" width="60">
+                <p>العسل الجبلي: طبيعي 100%</p>
+            </div>
+            <div class="ingredient-item">
+                <img src="pollen.jpg" alt="حبوب اللقاح" width="60">
+                <p>حبوب اللقاح الطازجة: تعزز المناعة</p>
+            </div>
+            <div class="ingredient-item">
+                <img src="royal-jelly.jpg" alt="جيلي روايال" width="60">
+                <p>جيلي روايال: يدعم النمو الصحي</p>
+            </div>
+        </div>
+
+        <div class="section benefits">
+            <h2>فوائد العسل</h2>
+            <div class="benefit-item">تخفيف السعال الحاد</div>
+            <div class="benefit-item">ضد الإنفلونزا</div>
+            <div class="benefit-item">زيادة الطاقة والنشاط</div>
+            <div class="benefit-item">التركيز وسرعة الحفظ</div>
+            <div class="benefit-item">النمو الجيد</div>
+            <div class="benefit-item">فتح الشهية</div>
+        </div>
+
+        <div class="section customer-opinions">
+            <h2>آراء الزبائن</h2>
+            <div class="opinion-item">"ولدي تحسن صحته ونشاطه بعد أسبوعين!" - سميرة</div>
+            <div class="opinion-item">"العسل طبيعي ولذيذ، أوصي به بشدة." - أمين</div>
+            <div class="opinion-item">"أول مرة أجد منتج بهذه الجودة." - فاطمة</div>
+            <div class="opinion-item">"الطفل يحب طعمه جدًا!" - ياسين</div>
+            <div class="opinion-item">"خدمة ممتازة والتوصيل سريع." - ليلى</div>
+        </div>
+
     </div>
 
-    <!-- صورة عامة -->
-    <div class="product-image">
-        <img src="img/mother-child.jpg" alt="أم تعطي طفلها العسل" style="max-width:80%;border-radius:15px;">
-    </div>
+    <button class="fixed-order" onclick="document.getElementById('orderForm').scrollIntoView({behavior:'smooth'});">اطلب الآن</button>
 
-    <!-- المكونات -->
-    <div class="section-title">مكونات العسل</div>
-    <div class="ingredients">
-        <div>العسل الجبلي - جودة طبيعية عالية <img src="img/mountain-honey.jpg" alt="العسل الجبلي" style="width:50px;vertical-align:middle;margin-left:5px;"></div>
-        <div>حبوب اللقاح الطازجة - غذاء صحي للأطفال <img src="img/pollen.jpg" alt="حبوب اللقاح" style="width:50px;vertical-align:middle;margin-left:5px;"></div>
-        <div>جيلي رويال - منشط طبيعي للنمو <img src="img/royal-jelly.jpg" alt="جيلي رويال" style="width:50px;vertical-align:middle;margin-left:5px;"></div>
-    </div>
+    <footer>جميع الحقوق محفوظة لشركة مناحل آل بوسعيدي</footer>
 
-    <!-- الفوائد -->
-    <div class="section-title">فوائد العسل</div>
-    <div class="benefits">
-        <div>تخفيف السعال الحاد</div>
-        <div>ضد الإنفلونزا</div>
-        <div>زيادة الطاقة والنشاط</div>
-        <div>التركيز وسرعة الحفظ</div>
-        <div>النمو الجيد</div>
-        <div>فتح الشهية</div>
-    </div>
+    <script>
+        const offers = document.querySelectorAll('.offer-item');
+        const quantityInput = document.getElementById('formQuantity');
+        const priceInput = document.getElementById('formPrice');
+        const deliveryInput = document.getElementById('formDelivery');
+        const totalInput = document.getElementById('formTotal');
 
-    <!-- آراء الزبائن -->
-    <div class="section-title">آراء زبائننا</div>
-    <div class="reviews">
-        <div>منى: "العسل ساعد طفلي على التركيز أكثر في المدرسة."</div>
-        <div>أحمد: "توصيل سريع وخدمة ممتازة."</div>
-        <div>ليلى: "طفلي يحب العسل كثيراً."</div>
-        <div>سامي: "جودة ممتازة وطعم طبيعي."</div>
-        <div>فاطمة: "أنصح الجميع بهذا العسل."</div>
-        <div>هشام: "تحسن واضح في نشاط طفلي."</div>
-    </div>
-
-    <!-- تعليمات قبل الفورم -->
-    <div style="margin:20px 0;font-weight:bold;font-size:1.2rem;">للطلب اكتب معلوماتك</div>
-
-    <!-- الفورم -->
-    <form id="orderForm" action="https://formspree.io/f/xnnbljgo" method="POST">
-        <input type="text" name="name" placeholder="الاسم الكامل" required>
-        <input type="tel" name="phone" placeholder="رقم الهاتف" pattern="\d{10}" required title="أدخل رقم هاتف صحيح مكون من 10 أرقام">
-        <select name="state" required>
-            <option value="">اختر ولايتك</option>
-            <option value="الجزائر العاصمة">الجزائر العاصمة</option>
-            <option value="البليدة">البليدة</option>
-            <option value="تيبازة">تيبازة</option>
-            <option value="بومرداس">بومرداس</option>
-            <option value="تيزي وزو">تيزي وزو</option>
-            <option value="بجاية">بجاية</option>
-            <option value="الشلف">الشلف</option>
-            <option value="مستغانم">مستغانم</option>
-            <option value="وهران">وهران</option>
-            <option value="سيدي بلعباس">سيدي بلعباس</option>
-            <option value="قسنطينة">قسنطينة</option>
-            <option value="عنابة">عنابة</option>
-            <option value="المسيلة">المسيلة</option>
-            <option value="سطيف">سطيف</option>
-            <option value="برج بوعريريج">برج بوعريريج</option>
-        </select>
-        <input type="hidden" name="quantity" id="formQuantity">
-        <input type="hidden" name="price" id="formPrice">
-        <input type="hidden" name="delivery" id="formDelivery">
-        <input type="hidden" name="total" id="formTotal">
-        <button type="submit" style="background:var(--orange);margin-top:15px;">تأكيد الطلب</button>
-    </form>
-
-</div>
-
-<!-- زر ثابت -->
-<button class="fixed-order" onclick="document.getElementById('orderForm').scrollIntoView({behavior:'smooth'});">اطلب الآن</button>
-
-<footer>جميع الحقوق محفوظة لشركة مناحل آل بوسعيدي</footer>
-
-<script>
-    // تحديد العرض المحدد
-    const offers = document.querySelectorAll('.offer-item');
-    let selectedOffer = offers[0];
-    offers.forEach(offer=>{
-        offer.addEventListener('click',()=>{
-            offers.forEach(o=>o.classList.remove('selected'));
-            offer.classList.add('selected');
-            selectedOffer = offer;
+        offers.forEach(offer => {
+            offer.addEventListener('click', () => {
+                offers.forEach(o => o.classList.remove('selected'));
+                offer.classList.add('selected');
+                quantityInput.value = offer.dataset.quantity;
+                priceInput.value = offer.dataset.price;
+                const delivery = 400; // تعديل حسب الولاية يمكن لاحقًا
+                deliveryInput.value = delivery;
+                totalInput.value = parseInt(offer.dataset.price) + delivery;
+            });
         });
-    });
 
-    // تحديث hidden inputs عند الفورم submit
-    const form = document.getElementById('orderForm');
-    form.addEventListener('submit',(e)=>{
-        const price = parseInt(selectedOffer.dataset.price);
-        const quantity = parseInt(selectedOffer.dataset.quantity);
-        const delivery = (() => {
-            const state = form.state.value;
-            const map = {
-                "الجزائر العاصمة":400,"البليدة":400,"تيبازة":400,"بومرداس":500,"تيزي وزو":500,
-                "بجاية":600,"الشلف":600,"مستغانم":600,"وهران":700,"سيدي بلعباس":700,
-                "قسنطينة":700,"عنابة":700,"المسيلة":600,"سطيف":600,"برج بوعريريج":600
-            };
-            return map[state] || 0;
-        })();
-        const total = price + delivery;
-        document.getElementById('formQuantity').value = quantity;
-        document.getElementById('formPrice').value = price;
-        document.getElementById('formDelivery').value = delivery;
-        document.getElementById('formTotal').value = total;
-
-        // إعادة التوجيه لصفحة الشكر مع البيانات
-        const params = new URLSearchParams({
-            quantity: quantity,
-            price: price,
-            delivery: delivery,
-            total: total
+        document.getElementById('orderForm').addEventListener('submit', function(e) {
+            const phone = this.phone.value;
+            if(!/^\d{10}$/.test(phone)){
+                e.preventDefault();
+                alert('راجع رقم هاتفك! يجب أن يتكون من 10 أرقام.');
+            } else {
+                this.action = "thankyou.html"; // Redirect بعد الإرسال
+            }
         });
-        form.action = 'thankyou.html?' + params.toString();
-    });
-</script>
-
+    </script>
 </body>
 </html>
