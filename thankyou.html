@@ -1,103 +1,117 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>شكراً على طلبك - عسل الأطفال</title>
-    <meta name="description" content="شكراً لطلبك. إليك ملخص الطلبية مع إمكانية الاطلاع على منتجاتنا الإضافية.">
-    <meta name="keywords" content="عسل الأطفال, طلبية, ملخص الطلبية, منتجات إضافية, upsells">
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary-color: #ff914d;
-            --secondary-color: #ffb74d;
-            --dark-color: #1a4d29;
-            --light-color: #f0f8f0;
-            --button-color: #4CAF50;
-            --button-hover: #45a049;
-            --font-family: 'Cairo', sans-serif;
-        }
-
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: var(--font-family); background-color: #FFF8E1; color: var(--dark-color); line-height: 1.6; }
-        .container { max-width: 1100px; margin: auto; padding: 15px; text-align: center; }
-
-        header { background: linear-gradient(135deg, var(--dark-color), #2f693e); color: white; padding: 20px 0; }
-        header h1 { font-size: 2.2rem; margin-bottom: 8px; }
-        header p { font-size: 1rem; }
-
-        .summary { background-color: #fff8e1; border: 2px solid var(--primary-color); padding: 20px; border-radius: 10px; margin: 20px auto; max-width: 600px; text-align: right; font-weight: bold; }
-        .summary p { margin: 8px 0; font-size: 1.1rem; }
-
-        .upsells { margin: 30px 0; }
-        .upsell-item { display: inline-block; width: 220px; background: #fff; border-radius: 10px; margin: 10px; padding: 15px; text-align: center; box-shadow: 0 5px 10px rgba(0,0,0,0.1); }
-        .upsell-item img { width: 100%; border-radius: 10px; margin-bottom: 10px; }
-        .upsell-item h3 { margin: 10px 0; font-size: 1rem; }
-        .stars { color: gold; margin-top: 5px; }
-
-        footer { background-color: #2f693e; color: white; padding: 15px; margin-top: 30px; border-radius: 10px; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>شكراً لطلبك - عسل الأطفال</title>
+<meta name="description" content="شكراً لطلبك عسل الأطفال الطبيعي. اكتشف منتجاتنا الإضافية المميزة واحصل على أفضل الفوائد.">
+<meta name="keywords" content="عسل الأطفال, منتجات طبيعية, صحة الطفل, العسل الجبلي, البروبوليس, عسل السدر, عسل الأزهار, زيادة القدرة الجنسية">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root {
+    --primary-color: #ff914d;
+    --secondary-color: #ffb74d;
+    --dark-color: #1a4d29;
+    --light-color: #f0f8f0;
+    --button-color: #4CAF50;
+    --font-family: 'Cairo', sans-serif;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: var(--font-family); line-height:1.6; background:#FFF8E1; color:var(--dark-color); text-align:center; }
+.container { max-width:1100px; margin:auto; padding:15px; }
+h1, h2 { margin-bottom:15px; }
+.order-summary { background:white; padding:20px; border-radius:15px; margin:20px auto; max-width:600px; text-align:right; box-shadow:0 5px 10px rgba(0,0,0,0.1);}
+.order-summary p { margin:10px 0; font-size:1.1rem; }
+.upsells { display:flex; flex-wrap:wrap; justify-content:center; gap:15px; margin:30px 0; }
+.upsell-item { background:white; padding:15px; border-radius:15px; width:200px; text-align:center; box-shadow:0 5px 10px rgba(0,0,0,0.1); }
+.upsell-item img { width:100%; border-radius:10px; margin-bottom:10px; }
+.stars { color:#FFD700; margin-top:5px; }
+footer { margin-top:30px; padding:15px; background:#2f693e; color:white; border-radius:10px; }
+@media (max-width:768px) { .upsells { flex-direction:column; align-items:center; } .upsell-item { width:90%; } }
+</style>
 </head>
 <body>
-    <header>
-        <h1>شكراً على طلبك!</h1>
-        <p>لقد تم تسجيل طلبك بنجاح. إليك ملخص الطلبية.</p>
-    </header>
+<div class="container">
+    <h1>شكراً لطلبك!</h1>
+    <p>تم استلام طلبك بنجاح. سنتواصل معك قريباً لتأكيد التوصيل.</p>
 
-    <div class="container">
-        <div class="summary">
-            <p>مكونات الطلبية: عبوة واحدة</p>
-            <p>سعر التوصيل: 400 دج</p>
-            <p>سعر الطلبية: 1500 دج</p>
-            <p>المجموع الكلي: 1900 دج</p>
-        </div>
-
-        <h2>اكتشف منتجاتنا الإضافية</h2>
-        <div class="upsells">
-            <div class="upsell-item">
-                <img src="images/sexual_power_mix.jpg" alt="خلطة زيادة القدرة">
-                <h3>خلطة زيادة القدرة الجنسية</h3>
-                <div class="stars">★★★★★</div>
-            </div>
-            <div class="upsell-item">
-                <img src="images/propolis.jpg" alt="البروبوليس">
-                <h3>عسل البروبوليس</h3>
-                <div class="stars">★★★★☆</div>
-            </div>
-            <div class="upsell-item">
-                <img src="images/sidr_honey.jpg" alt="عسل السدر">
-                <h3>عسل السدر</h3>
-                <div class="stars">★★★★★</div>
-            </div>
-            <div class="upsell-item">
-                <img src="images/flower_honey.jpg" alt="عسل الأزهار">
-                <h3>عسل الأزهار</h3>
-                <div class="stars">★★★★☆</div>
-            </div>
-            <div class="upsell-item">
-                <img src="images/cough_honey.jpg" alt="عسل السعال">
-                <h3>عسل السعال</h3>
-                <div class="stars">★★★★☆</div>
-            </div>
-            <div class="upsell-item">
-                <img src="images/flu_honey.jpg" alt="عسل الإنفلونزا">
-                <h3>عسل الإنفلونزا</h3>
-                <div class="stars">★★★★★</div>
-            </div>
-        </div>
+    <!-- ملخص الطلبية -->
+    <div class="order-summary" id="orderSummary">
+        <p>مكونات الطلبية: </p>
+        <p>سعر التوصيل: </p>
+        <p>سعر الطلبية: </p>
+        <p>المجموع الكلي: </p>
     </div>
 
-    <footer>
-        جميع الحقوق محفوظة لشركة مناحل آل بوسعيدي
-    </footer>
+    <!-- منتجات Upsells -->
+    <h2>منتجات إضافية قد تعجبك</h2>
+    <div class="upsells">
+        <div class="upsell-item">
+            <img src="images/sexual_boost.jpg" alt="خلطة زيادة القدرة">
+            <p>خلطة زيادة القدرة</p>
+            <div class="stars">★★★★★</div>
+        </div>
+        <div class="upsell-item">
+            <img src="images/propolis.jpg" alt="العكبر - البروبوليس">
+            <p>العكبر - البروبوليس</p>
+            <div class="stars">★★★★★</div>
+        </div>
+        <div class="upsell-item">
+            <img src="images/sidr_honey.jpg" alt="عسل السدر">
+            <p>عسل السدر</p>
+            <div class="stars">★★★★★</div>
+        </div>
+        <div class="upsell-item">
+            <img src="images/flower_honey.jpg" alt="عسل الأزهار">
+            <p>عسل الأزهار</p>
+            <div class="stars">★★★★★</div>
+        </div>
+        <div class="upsell-item">
+            <img src="images/cough_honey.jpg" alt="عسل السعال">
+            <p>عسل السعال</p>
+            <div class="stars">★★★★★</div>
+        </div>
+        <div class="upsell-item">
+            <img src="images/flu_honey.jpg" alt="عسل الإنفلونزا">
+            <p>عسل الإنفلونزا</p>
+            <div class="stars">★★★★★</div>
+        </div>
+        <div class="upsell-item">
+            <img src="images/royal_jelly.jpg" alt="جيلي رويال">
+            <p>جيلي رويال</p>
+            <div class="stars">★★★★★</div>
+        </div>
+        <div class="upsell-item">
+            <img src="images/mountain_honey.jpg" alt="العسل الجبلي">
+            <p>العسل الجبلي</p>
+            <div class="stars">★★★★★</div>
+        </div>
+    </div>
+</div>
 
-    <!-- Formspree script -->
-    <form action="https://formspree.io/f/xnnbljgo" method="POST" id="thankyouForm">
-        <input type="hidden" name="product" value="طلب من صفحة الشكر">
-        <input type="hidden" name="_next" value="thankyou.html">
-    </form>
-    <script>
-        // يمكن إضافة أي تحسينات هنا للـ upsells أو ملخص الطلبية ديناميكي لاحقاً
-    </script>
+<footer>جميع الحقوق محفوظة لشركة مناحل آل بوسعيدي</footer>
+
+<script>
+// قراءة بيانات الطلب من URL Parameters
+function getQueryParam(param) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(param);
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    const components = getQueryParam('components') || 'غير محدد';
+    const delivery = getQueryParam('delivery') || '0 دج';
+    const price = getQueryParam('price') || '0 دج';
+    const total = getQueryParam('total') || '0 دج';
+
+    const summaryDiv = document.getElementById('orderSummary');
+    summaryDiv.innerHTML = `
+        <p>مكونات الطلبية: ${components}</p>
+        <p>سعر التوصيل: ${delivery}</p>
+        <p>سعر الطلبية: ${price}</p>
+        <p>المجموع الكلي: ${total}</p>
+    `;
+});
+</script>
 </body>
 </html>
