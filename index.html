@@ -118,19 +118,19 @@
       <div class="offer-card selected" data-offer="عبوة واحدة" data-price="1500" role="button" tabindex="0" aria-pressed="true">
         <img src="https://i.imgur.com/O3rJ2vh.png" alt="عبوة واحدة">
         <h3>عبوة واحدة</h3>
-        <p>سعر: <strong class="price">1500 دج</strong></p>
+        <p>سعر: <strong class="price">215 ألف</strong></p>
       </div>
 
-      <div class="offer-card" data-offer="عبوتان" data-price="2900" role="button" tabindex="0" aria-pressed="false">
+      <div class="offer-card" data-offer="عبوتان" data-price="430 ألف" role="button" tabindex="0" aria-pressed="false">
         <img src="https://i.imgur.com/VUMZiGu.png" alt="عبوتان">
         <h3>عبوتان</h3>
-        <p>عرض اقتصادي: <strong class="price">2900 دج</strong></p>
+        <p>عرض اقتصادي: <strong class="price"> دج</strong></p>
       </div>
 
       <div class="offer-card" data-offer="ثلاث عبوات" data-price="4500" role="button" tabindex="0" aria-pressed="false">
         <img src="https://i.imgur.com/1npb8BF.png" alt="ثلاث عبوات">
         <h3>ثلاث عبوات (احصل على واحدة مجاناً)</h3>
-        <p>سعر: <strong class="price">4500 دج</strong></p>
+        <p>سعر: <strong class="price"> دج</strong></p>
       </div>
     </section>
 
@@ -184,9 +184,9 @@
         <!-- ملخص مباشر -->
         <div class="summary-box" aria-live="polite" role="status">
           <div class="summary-row"><div>العرض المختار:</div><div id="summary-offer">عبوة واحدة</div></div>
-          <div class="summary-row"><div>سعر الطلبية:</div><div id="summary-product" class="currency">1,500 دج</div></div>
+          <div class="summary-row"><div>سعر الطلبية:</div><div id="summary-product" class="currency">2,150 دج</div></div>
           <div class="summary-row"><div>سعر التوصيل:</div><div id="summary-delivery" class="currency">- دج</div></div>
-          <div class="summary-row"><div>المجموع الكلي:</div><div id="summary-total" class="currency">1,500 دج</div></div>
+          <div class="summary-row"><div>المجموع الكلي:</div><div id="summary-total" class="currency">2,150 دج</div></div>
         </div>
 
         <!-- زر الإرسال -->
@@ -279,9 +279,9 @@
 
       // خرائط الأسعار
       const priceMap = {
-        "عبوة واحدة": 1500,
-        "عبوتان": 2900,
-        "ثلاث عبوات": 4500
+        "عبوة واحدة": 2150,
+        "عبوتان": 4300,
+        "ثلاث عبوات زائد الرابعه مجانا": 6450
       };
 
       const deliveryMap = {
@@ -374,7 +374,7 @@
         // تحقق رقم الهاتف
         const phoneVal = phoneInput.value.trim();
         if(!validPhone(phoneVal)){
-          alert("المرجو إدخال رقم هاتف صحيح مكوّن من 10 أرقام.\nمثال: 0662277555");
+          alert("المرجو إدخال رقم هاتف صحيح مكوّن من 10 أرقام.");
           phoneInput.focus();
           return;
         }
@@ -429,3 +429,5 @@
 
 </body>
 </html>
+
+
