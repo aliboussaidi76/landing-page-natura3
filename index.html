@@ -152,7 +152,7 @@
             localStorage.setItem('price', selectedOffer.dataset.price);
 
             // إرسال الفورم إلى Formspree
-            fetch("https://formspree.io/f/xnnbljgo", {
+            fetch(form.action, {
                 method: 'POST',
                 body: new FormData(form),
                 headers: { 'Accept': 'application/json' }
