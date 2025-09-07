@@ -3,40 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>شكراً لطلبك - عسل الأطفال</title>
-    <meta name="description" content="شكراً لطلبك عسل الأطفال. استمتع بالعسل الطبيعي وزد طاقة ونشاط طفلك. تعرف على منتجاتنا الأخرى.">
-    <meta name="keywords" content="عسل الأطفال, طلبية, شكر, أبسلز, حبوب اللقاح, جيلي روايال, العسل الجبلي">
+    <title>شكراً لك على طلبك</title>
+    <meta name="description" content="شكراً لتقديم طلبك، تحقق من ملخص الطلبية، واستكشف منتجاتنا الإضافية.">
+    <meta name="keywords" content="عسل أطفال, طلب, ملخص الطلبية, منتجات إضافية, شراء عسل">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
-        body { font-family: 'Cairo', sans-serif; margin:0; padding:0; background:#FFF8E1; color:#1a4d29; }
-        .container { max-width: 900px; margin:auto; padding:15px; text-align:center; }
-        h1, h2 { margin-bottom:15px; }
-        .order-summary { background:white; padding:20px; border-radius:15px; box-shadow:0 5px 15px rgba(0,0,0,0.1); margin-bottom:20px; display:inline-block; text-align:right; }
-        .order-summary div { margin-bottom:8px; }
-        .upsells { display:flex; flex-wrap:wrap; justify-content:center; gap:15px; margin-top:20px; }
-        .upsell-item { background:white; padding:15px; border-radius:15px; width:200px; box-shadow:0 5px 15px rgba(0,0,0,0.1); text-align:center; }
-        .upsell-item img { width:100px; height:100px; object-fit:cover; border-radius:8px; margin-bottom:10px; }
-        .stars { color:#FFD700; }
-        footer { text-align:center; margin-top:20px; font-size:0.9rem; color:#555; padding-bottom:20px; }
-        button { padding:10px 20px; background:#ff914d; color:white; border:none; border-radius:8px; cursor:pointer; margin-top:10px; }
+        :root {
+            --primary-color: #ff914d;
+            --secondary-color: #ffb74d;
+            --dark-color: #1a4d29;
+            --light-color: #f0f8f0;
+            --font-family: 'Cairo', sans-serif;
+        }
+        * { box-sizing: border-box; margin:0; padding:0; }
+        body { font-family: var(--font-family); background:#FFF8E1; color: var(--dark-color); line-height:1.6; }
+        .container { max-width:1100px; margin:80px auto; padding:0 15px; text-align:center; }
+        h1 { font-size:2rem; margin-bottom:15px; }
+        .summary { background:white; padding:20px; border-radius:10px; margin:20px auto; max-width:400px; box-shadow:0 5px 15px rgba(0,0,0,0.1); text-align:right; }
+        .summary p { margin:8px 0; font-size:1.1rem; }
+        .home-btn { display:inline-block; margin:15px 0; background: var(--primary-color); color:white; padding:10px 20px; border-radius:5px; text-decoration:none; font-weight:bold; }
+        .upsells { display:flex; flex-wrap:wrap; justify-content:center; gap:15px; margin-top:30px; }
+        .upsell-item { background:white; padding:15px; border-radius:10px; max-width:220px; text-align:center; box-shadow:0 5px 15px rgba(0,0,0,0.1); }
+        .upsell-item img { width:100%; border-radius:10px; }
+        .stars { color:#FFD700; margin-top:5px; }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>شكراً لطلبك!</h1>
-        <p>تم استلام طلبك وسيتم التواصل معك قريباً.</p>
-
-        <div class="order-summary" id="orderSummary">
-            <div>مكونات الطلبية: <span id="summaryItems">-</span></div>
-            <div>سعر التوصيل: <span id="summaryDelivery">-</span></div>
-            <div>سعر الطلبية: <span id="summaryPrice">-</span></div>
-            <div>المجموع الكلي: <span id="summaryTotal">-</span></div>
+        <h1>شكراً لتقديم طلبك!</h1>
+        <div class="summary" id="orderSummary">
+            <p>مكونات الطلبية: ...</p>
+            <p>سعر التوصيل: ...</p>
+            <p>سعر الطلبية: ...</p>
+            <p>المجموع الكلي: ...</p>
         </div>
+        <a href="index.html" class="home-btn">العودة إلى الصفحة الرئيسية</a>
 
-        <h2>اكتشف منتجاتنا الأخرى</h2>
+        <h2>منتجات إضافية</h2>
         <div class="upsells">
             <div class="upsell-item">
-                <img src="sexual-enhancement.jpg" alt="خلطة زيادة القدرة">
+                <img src="sexual_boost_mix.jpg" alt="خلطة زيادة القدرة">
                 <h4>خلطة زيادة القدرة</h4>
                 <div class="stars">★★★★★</div>
             </div>
@@ -46,46 +52,53 @@
                 <div class="stars">★★★★☆</div>
             </div>
             <div class="upsell-item">
-                <img src="sidr-honey.jpg" alt="عسل السدر">
+                <img src="sidr_honey.jpg" alt="عسل السدر">
                 <h4>عسل السدر</h4>
                 <div class="stars">★★★★★</div>
             </div>
             <div class="upsell-item">
-                <img src="flowers-honey.jpg" alt="عسل الأزهار">
+                <img src="flower_honey.jpg" alt="عسل الأزهار">
                 <h4>عسل الأزهار</h4>
                 <div class="stars">★★★★☆</div>
             </div>
             <div class="upsell-item">
-                <img src="cough-honey.jpg" alt="عسل السعال">
+                <img src="cough_honey.jpg" alt="عسل السعال">
                 <h4>عسل السعال</h4>
                 <div class="stars">★★★★☆</div>
             </div>
             <div class="upsell-item">
-                <img src="flu-honey.jpg" alt="عسل الانفلونزا">
+                <img src="flu_honey.jpg" alt="عسل الإنفلونزا">
                 <h4>عسل الإنفلونزا</h4>
                 <div class="stars">★★★★☆</div>
             </div>
         </div>
-
-        <footer>جميع الحقوق محفوظة لشركة مناحل آل بوسعيدي</footer>
     </div>
 
     <script>
-        // جلب البيانات من query params للفورم
-        function getQueryParam(param) {
-            const urlParams = new URLSearchParams(window.location.search);
-            return urlParams.get(param);
-        }
+        // جلب البيانات من localStorage (تم تخزينها من index.html)
+        const name = localStorage.getItem('name') || '';
+        const phone = localStorage.getItem('phone') || '';
+        const state = localStorage.getItem('state') || '';
+        const address = localStorage.getItem('address') || '';
+        const offer = localStorage.getItem('offer') || '';
+        const price = localStorage.getItem('price') || '0';
 
-        const items = getQueryParam('items') || 'عبوة واحدة';
-        const price = getQueryParam('price') || '1500 دج';
-        const delivery = getQueryParam('delivery') || '400 دج';
-        const total = getQueryParam('total') || '1900 دج';
+        // حساب التوصيل حسب الولاية
+        const deliveryPrices = {
+            "العاصمة":400, "البليدة":400, "تيبازة":400, "بومرداس":500, "تيزيوزو":500,
+            "بجاية":600, "الشلف":600, "مستغانم":600, "وهران":700, "سيدي باعباس":700,
+            "قسنطينة":700, "عنابة":700, "المسيلة":700, "سطيف":600, "برج بوعريريج":600
+        };
+        const delivery = deliveryPrices[state] || 500;
+        const total = parseInt(price) + delivery;
 
-        document.getElementById('summaryItems').textContent = items;
-        document.getElementById('summaryPrice').textContent = price;
-        document.getElementById('summaryDelivery').textContent = delivery;
-        document.getElementById('summaryTotal').textContent = total;
+        const summary = document.getElementById('orderSummary');
+        summary.innerHTML = `
+            <p>مكونات الطلبية: ${offer}</p>
+            <p>سعر التوصيل: ${delivery} دج</p>
+            <p>سعر الطلبية: ${price} دج</p>
+            <p>المجموع الكلي: ${total} دج</p>
+        `;
     </script>
 </body>
 </html>
