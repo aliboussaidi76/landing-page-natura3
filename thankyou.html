@@ -3,112 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>شكرًا على طلبك | مناحل آل بوسعيدي</title>
-    <meta name="description" content="شكراً على طلبك! اكتشف منتجاتنا الإضافية واحصل على أفضل عروض العسل الطبيعي.">
-    <meta name="keywords" content="عسل طبيعي, عسل للأطفال, منتجات صحية, مناحل آل بوسعيدي, upsells, عروض العسل">
+    <title>شكراً على طلبك!</title>
+    <meta name="description" content="شكراً لطلبك! اكتشف منتجاتنا الإضافية لتعزيز تجربة العسل الطبيعي.">
+    <meta name="keywords" content="عسل, منتجات إضافية, up-sell, صحة, تغذية">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --primary-color: #ff914d;
-            --secondary-color: #ffb74d;
-            --dark-color: #1a4d29;
-            --light-color: #f0f8f0;
-            --button-color: #4CAF50;
-            --font-family: 'Cairo', sans-serif;
-        }
-        * { box-sizing: border-box; margin:0; padding:0; }
-        body { font-family: var(--font-family); line-height:1.6; background:#FFF8E1; color:var(--dark-color); }
-        .container { max-width:1100px; margin:auto; padding:15px; }
-        header { background: linear-gradient(135deg, var(--dark-color), #2f693e); color:white; padding:30px 0; text-align:center; }
-        header h1 { font-size:2.2rem; margin-bottom:8px; }
-        header p { font-size:1rem; max-width:700px; margin:auto; }
-        .summary { background:white; padding:20px; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.1); margin:20px auto; max-width:500px; text-align:right; }
-        .summary p { margin-bottom:10px; font-size:1.1rem; }
-        .upsells { display:flex; flex-wrap:wrap; gap:15px; justify-content:center; margin:30px 0; }
-        .upsell-item { background:white; border-radius:15px; padding:10px; width:220px; box-shadow:0 4px 8px rgba(0,0,0,0.1); text-align:center; }
-        .upsell-item img { width:100%; border-radius:10px; margin-bottom:10px; }
-        .upsell-item h3 { font-size:1.1rem; margin-bottom:5px; }
-        .stars { color:gold; margin-bottom:5px; }
-        footer { text-align:center; padding:15px; background:#2f693e; color:white; margin-top:20px; border-radius:0 0 10px 10px; }
-        @media(max-width:768px){ .upsells{flex-direction:column; align-items:center;} }
+        body { font-family: 'Cairo', sans-serif; background:#FFF8E1; color:#1a4d29; text-align:center; padding:20px;}
+        h1 { color:#ff914d; margin-bottom:10px;}
+        .summary { background:white; padding:20px; border-radius:15px; box-shadow:0 5px 15px rgba(0,0,0,0.1); margin-bottom:30px; max-width:400px; margin:auto; text-align:right;}
+        .summary p { margin:8px 0; font-weight:bold;}
+        .upsells { display:flex; flex-wrap:wrap; justify-content:center; gap:15px; margin-top:20px;}
+        .upsell-item { background:white; padding:15px; border-radius:10px; width:200px; box-shadow:0 3px 8px rgba(0,0,0,0.1); text-align:center;}
+        .upsell-item img { max-width:100%; border-radius:10px;}
+        .stars { color:#ff9800; margin-top:5px;}
+        footer { margin-top:40px; font-size:0.9rem; background:#f0f0f0; padding:15px;}
     </style>
 </head>
 <body>
-    <header>
-        <h1>شكرًا على طلبك!</h1>
-        <p>تم استلام طلبك بنجاح. سنتواصل معك قريبًا لتأكيد الطلب.</p>
-    </header>
 
-    <div class="container">
-        <div class="summary">
-            <p><strong>مكونات الطلبية:</strong> <span id="order-items">عبوة واحدة</span></p>
-            <p><strong>سعر التوصيل:</strong> <span id="delivery-price">400 دج</span></p>
-            <p><strong>سعر الطلبية:</strong> <span id="order-price">1500 دج</span></p>
-            <p><strong>المجموع الكلي:</strong> <span id="total-price">1900 دج</span></p>
-        </div>
+<h1>شكراً على طلبك!</h1>
 
-        <h2 style="text-align:center; margin-top:30px;">منتجات إضافية ننصح بها</h2>
-        <div class="upsells">
-            <div class="upsell-item">
-                <img src="images/sexual-power.jpg" alt="خلطة زيادة القدرة">
-                <h3>خلطة زيادة القدرة</h3>
-                <div class="stars">★★★★★</div>
-            </div>
-            <div class="upsell-item">
-                <img src="images/propolis.jpg" alt="عكبر">
-                <h3>العكبر</h3>
-                <div class="stars">★★★★☆</div>
-            </div>
-            <div class="upsell-item">
-                <img src="images/sidr.jpg" alt="عسل السدر">
-                <h3>عسل السدر</h3>
-                <div class="stars">★★★★★</div>
-            </div>
-            <div class="upsell-item">
-                <img src="images/flowers.jpg" alt="عسل الأزهار">
-                <h3>عسل الأزهار</h3>
-                <div class="stars">★★★★☆</div>
-            </div>
-            <div class="upsell-item">
-                <img src="images/cough.jpg" alt="عسل السعال">
-                <h3>عسل السعال</h3>
-                <div class="stars">★★★★★</div>
-            </div>
-            <div class="upsell-item">
-                <img src="images/flu.jpg" alt="عسل الإنفلونزا">
-                <h3>عسل الإنفلونزا</h3>
-                <div class="stars">★★★★☆</div>
-            </div>
-            <div class="upsell-item">
-                <img src="images/royal-jelly.jpg" alt="جيلي رويال">
-                <h3>جيلي رويال</h3>
-                <div class="stars">★★★★★</div>
-            </div>
-            <div class="upsell-item">
-                <img src="images/pollen.jpg" alt="حبوب اللقاح">
-                <h3>حبوب اللقاح</h3>
-                <div class="stars">★★★★☆</div>
-            </div>
-        </div>
+<div class="summary">
+    <p>مكونات الطلبية: <span id="order-items"></span></p>
+    <p>سعر التوصيل: <span id="delivery-price"></span> دج</p>
+    <p>سعر الطلبية: <span id="order-price"></span> دج</p>
+    <p>المجموع الكلي: <span id="total-price"></span> دج</p>
+</div>
+
+<h2>منتجاتنا الإضافية</h2>
+<div class="upsells">
+    <div class="upsell-item">
+        <img src="path-to-product1.jpg" alt="خلطة زيادة القدرة الجنسية">
+        <p>خلطة زيادة القدرة الجنسية</p>
+        <div class="stars">★★★★★</div>
     </div>
+    <div class="upsell-item">
+        <img src="path-to-product2.jpg" alt="العكبر">
+        <p>العكبر</p>
+        <div class="stars">★★★★☆</div>
+    </div>
+    <div class="upsell-item">
+        <img src="path-to-product3.jpg" alt="البروبوليس">
+        <p>البروبوليس</p>
+        <div class="stars">★★★★☆</div>
+    </div>
+    <div class="upsell-item">
+        <img src="path-to-product4.jpg" alt="عسل السدر">
+        <p>عسل السدر</p>
+        <div class="stars">★★★★☆</div>
+    </div>
+    <div class="upsell-item">
+        <img src="path-to-product5.jpg" alt="عسل الأزهار">
+        <p>عسل الأزهار</p>
+        <div class="stars">★★★★☆</div>
+    </div>
+</div>
 
-    <footer>
-        جميع الحقوق محفوظة لشركة مناحل آل بوسعيدي
-    </footer>
+<footer>جميع الحقوق محفوظة لشركة مناحل آل بوسعيدي</footer>
 
-    <script>
-        // مثال لربط بيانات الطلب من الفورم في index.html
-        const params = new URLSearchParams(window.location.search);
-        const items = params.get('items') || 'عبوة واحدة';
-        const delivery = params.get('delivery') || '400 دج';
-        const orderPrice = params.get('order') || '1500 دج';
+<script>
+    // Get order data from URL params (Formspree redirect sends them)
+    const urlParams = new URLSearchParams(window.location.search);
+    const items = urlParams.get('selectedOffer') || 'عبوة واحدة';
+    const price = parseInt(urlParams.get('offerPrice')) || 1500;
+    const delivery = 400; // مثال ثابت يمكن تعديله حسب الولاية
+    const total = price + delivery;
 
-        document.getElementById('order-items').textContent = items;
-        document.getElementById('delivery-price').textContent = delivery;
-        document.getElementById('order-price').textContent = orderPrice;
-        // المجموع الكلي
-        let total = parseInt(orderPrice.replace(/\D/g,'')) + parseInt(delivery.replace(/\D/g,''));
-        document.getElementById('total-price').textContent = total + ' دج';
-    </script>
+    document.getElementById('order-items').textContent = items;
+    document.getElementById('order-price').textContent = price;
+    document.getElementById('delivery-price').textContent = delivery;
+    document.getElementById('total-price').textContent = total;
+</script>
+
 </body>
 </html>
