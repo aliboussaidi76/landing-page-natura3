@@ -156,7 +156,6 @@ document.getElementById('orderForm').addEventListener('submit', function(e){
             const params = new URLSearchParams();
             params.append('items',offerName);
             params.append('price',offerPrice);
-            
             params.append('delivery',deliveryPrice+' دج');
             params.append('total',total+' دج');
             window.location.href = 'thankyou.html?'+params.toString();
