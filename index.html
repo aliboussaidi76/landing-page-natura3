@@ -35,9 +35,6 @@
         .form-section button { background-color:orange; color:white; padding:10px 20px; border:none; cursor:pointer; margin-top:10px; }
         .fixed-order-btn { position:fixed; bottom:20px; left:50%; transform:translateX(-50%); background-color:green; color:white; padding:15px 30px; border-radius:30px; font-weight:bold; cursor:pointer; animation:shake 1s infinite; z-index:999; }
         @keyframes shake { 0%{transform:translateX(-50%) translateY(0);} 25%{transform:translateX(-50%) translateY(-5px);} 50%{transform:translateX(-50%) translateY(0);} 75%{transform:translateX(-50%) translateY(5px);} 100%{transform:translateX(-50%) translateY(0);} }
-        .section { margin:30px 0; }
-        .ingredients, .benefits, .reviews { display:flex; flex-direction:column; align-items:center; gap:15px; }
-        .ingredient-item, .benefit-item, .review-item { background:white; padding:15px; border-radius:10px; box-shadow:0 2px 8px rgba(0,0,0,0.1); max-width:400px; width:100%; text-align:center; }
         footer { text-align:center; padding:20px; background:#4a6c4c; color:white; margin-top:30px; }
     </style>
 </head>
@@ -63,65 +60,21 @@
 
 <!-- عروض -->
 <section class="container offers-section">
-    <div class="offer-item selected">
+    <div class="offer-item selected" data-offer="عبوة واحدة">
         <img src="pack1.jpg" alt="عبوة واحدة" style="width:100%; border-radius:10px;">
         <h3>عبوة واحدة</h3>
         <p>أفضل عرض لتجربة العسل</p>
     </div>
-    <div class="offer-item">
+    <div class="offer-item" data-offer="عبوتان">
         <img src="pack2.jpg" alt="عبوتان" style="width:100%; border-radius:10px;">
         <h3>عبوتان</h3>
         <p>وفر أكثر واحصل على فوائد مضاعفة</p>
     </div>
-    <div class="offer-item">
+    <div class="offer-item" data-offer="ثلاث عبوات">
         <img src="pack3.jpg" alt="ثلاث عبوات" style="width:100%; border-radius:10px;">
         <h3>ثلاث عبوات</h3>
         <p>اشتري ثلاثة وخذ واحدة مجانا</p>
     </div>
-</section>
-
-<!-- صورة عامة -->
-<section class="container section">
-    <img src="mom-child.jpg" alt="أم تطعم طفلها العسل" style="max-width:400px; width:100%; border-radius:15px;">
-</section>
-
-<!-- مكونات العسل -->
-<section class="container section ingredients">
-    <h2>مكونات العسل</h2>
-    <div class="ingredient-item">
-        <img src="honey.jpg" alt="العسل الجبلي" style="width:50px; border-radius:5px;">
-        <p>العسل الجبلي: غني بالفيتامينات والمعادن</p>
-    </div>
-    <div class="ingredient-item">
-        <img src="pollen.jpg" alt="حبوب اللقاح" style="width:50px; border-radius:5px;">
-        <p>حبوب اللقاح: تعزيز المناعة والطاقة</p>
-    </div>
-    <div class="ingredient-item">
-        <img src="royal-jelly.jpg" alt="جيلي رويال" style="width:50px; border-radius:5px;">
-        <p>جيلي رويال: زيادة التركيز والنمو</p>
-    </div>
-</section>
-
-<!-- فوائد العسل -->
-<section class="container section benefits">
-    <h2>فوائد العسل</h2>
-    <div class="benefit-item">تخفيف السعال الحاد</div>
-    <div class="benefit-item">ضد الانفلونزا</div>
-    <div class="benefit-item">زيادة الطاقة والنشاط</div>
-    <div class="benefit-item">التركيز وسرعة الحفظ</div>
-    <div class="benefit-item">النمو الجيد</div>
-    <div class="benefit-item">فتح الشهية</div>
-</section>
-
-<!-- آراء الزبائن -->
-<section class="container section reviews">
-    <h2>آراء الزبائن</h2>
-    <div class="review-item">سعيد: "العسل ممتاز، طفلي أصبح نشيط جدًا!"</div>
-    <div class="review-item">ليلى: "منتج رائع، أنصح الجميع بتجربته."</div>
-    <div class="review-item">يوسف: "مذاق لذيذ وفوائد واضحة."</div>
-    <div class="review-item">سمية: "الطفل صار ينام أفضل ويركز أكثر."</div>
-    <div class="review-item">آدم: "خدمة سريعة وعسل طبيعي ممتاز."</div>
-    <div class="review-item">جميلة: "شراء مستمر، أحب هذا العسل!"</div>
 </section>
 
 <!-- نموذج الطلب -->
@@ -129,7 +82,6 @@
     <h3>للطلب اكتب معلوماتك</h3>
     <form action="https://formspree.io/f/xnnbljgo" method="POST">
         <input type="text" name="name" placeholder="الاسم" required>
-        <input type="email" name="email" placeholder="البريد الإلكتروني" required>
         <input type="tel" name="phone" placeholder="رقم الهاتف" required pattern="[0-9]{10}" title="يرجى إدخال رقم هاتف صحيح مكون من 10 أرقام">
         <select name="state" required>
             <option value="" disabled selected>اختر ولايتك</option>
@@ -139,16 +91,12 @@
             <option value="بومرداس">بومرداس</option>
             <option value="تيزي وزو">تيزي وزو</option>
             <option value="بجاية">بجاية</option>
-            <option value="الشلف">الشلف</option>
-            <option value="مستغانم">مستغانم</option>
             <option value="وهران">وهران</option>
-            <option value="سيدي بلعباس">سيدي بلعباس</option>
-            <option value="قسنطينة">قسنطينة</option>
-            <option value="عنابة">عنابة</option>
-            <option value="المسيلة">المسيلة</option>
             <option value="سطيف">سطيف</option>
-            <option value="برج بوعريريج">برج بوعريريج</option>
+            <option value="قسنطينة">قسنطينة</option>
         </select>
+        <!-- الحقل المخفي لحفظ العرض -->
+        <input type="hidden" name="offer" id="selected-offer" value="عبوة واحدة">
         <!-- إعادة التوجيه بعد الإرسال -->
         <input type="hidden" name="_next" value="https://asal-enfants.netlify.app/thankyou.html">
         <button type="submit">تأكيد الطلب</button>
@@ -163,6 +111,20 @@
 <footer>
     جميع الحقوق محفوظة لشركة مناحل آل بوسعيدي
 </footer>
+
+<script>
+    // تحديد العرض المختار وربطه بالفورم
+    const offers = document.querySelectorAll('.offer-item');
+    const hiddenOffer = document.getElementById('selected-offer');
+
+    offers.forEach(offer => {
+        offer.addEventListener('click', () => {
+            offers.forEach(o => o.classList.remove('selected'));
+            offer.classList.add('selected');
+            hiddenOffer.value = offer.getAttribute('data-offer');
+        });
+    });
+</script>
 
 </body>
 </html>
