@@ -3,169 +3,227 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>مناحل آل بوسعيدي - خلطات عسل طبيعية</title>
-  <meta name="description" content="عسل طبيعي وخلطات مقوية للمناعة والشهية والنمو - منتجات مناحل آل بوسعيدي: عسل السدر، العسل الجبلي، خلطات القدرة الجنسية والتسمين والجهاز التنفسي.">
-  <meta name="keywords" content="عسل طبيعي, عسل السدر, عسل الأزهار, عسل جبلي, غذاء ملكات, بروبوليس, خلطات عسل, تقوية المناعة, التسمين, القدرة الجنسية, منتجات طبيعية الجزائر">
+  <title>خلطة تقوية المناعة وزيادة الشهية | مناحل آل بوسعيدي</title>
+  <meta name="description" content="اشتري خلطة العسل الطبيعية لتقوية مناعة الأطفال، فتح الشهية، علاج النحافة، مع عروض خاصة وتوصيل سريع لكل ولايات الجزائر.">
+  <meta name="keywords" content="عسل طبيعي, عسل سدر, عسل جبلي, عسل الجزائر, تقوية المناعة, فتح الشهية, علاج النحافة, مناحل آل بوسعيدي">
+
   <style>
-    body {font-family: Tahoma, sans-serif;margin:0;background:linear-gradient(135deg,#fff8e1,#f9e79f);color:#333;}
-    header {background:linear-gradient(90deg,#d4af37,#f1c40f);color:#fff;text-align:center;padding:20px;}
-    header h1 {margin:0;font-size:28px;}
-    header .cta {margin-top:5px;font-size:18px;}
-    .section {padding:30px;max-width:1000px;margin:auto;}
-    .product {background:#fff;border-radius:12px;padding:20px;margin-bottom:20px;box-shadow:0 4px 8px rgba(0,0,0,0.1);text-align:center;}
-    .product h2 {color:#b8860b;}
-    .price {font-size:20px;margin:10px 0;}
-    .btn {display:inline-block;padding:10px 18px;margin:8px;background:#d4af37;color:#fff;border-radius:8px;text-decoration:none;font-weight:bold;}
-    .btn:hover {background:#b8860b;}
-    form {background:#fff;padding:20px;border-radius:12px;box-shadow:0 4px 8px rgba(0,0,0,0.1);}
-    form label {display:block;margin-top:10px;}
-    form input,form select {width:100%;padding:10px;margin-top:5px;border-radius:6px;border:1px solid #ccc;}
-    footer {text-align:center;padding:20px;background:#333;color:#fff;margin-top:20px;}
-    #summary {margin:15px 0;font-weight:bold;color:#000;}
+    body {
+      font-family: "Tahoma", sans-serif;
+      margin:0;
+      background: linear-gradient(to bottom, #fff8e1, #fff);
+      color: #333;
+    }
+    header {
+      background: linear-gradient(to right, #b8860b, #ffd700);
+      color: white;
+      padding: 20px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    header h1 {
+      font-size: 28px;
+      margin: 0;
+      font-weight: bold;
+    }
+    header .subtitle {
+      font-size: 18px;
+      margin-top: 5px;
+    }
+    .contact-btn {
+      display: inline-block;
+      margin-top: 10px;
+      background: #000;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+    }
+    .offer-section {
+      text-align: center;
+      padding: 40px 20px;
+    }
+    .offer-card {
+      border: 2px solid #b8860b;
+      border-radius: 12px;
+      padding: 20px;
+      margin: 10px auto;
+      max-width: 500px;
+      background: #fffbea;
+    }
+    .offer-card h3 {
+      color: #b8860b;
+    }
+    .btn {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .buy-now { background:#b8860b; color:white; }
+    .add-cart { background:#444; color:white; }
+    .cart-summary {
+      background:#fff4d1;
+      padding:20px;
+      margin:20px;
+      border-radius:10px;
+    }
+    form {
+      padding:20px;
+      background:#fafafa;
+      border-radius:10px;
+      margin:20px;
+      border:1px solid #eee;
+    }
+    label { display:block; margin:10px 0 5px; }
+    select, input {
+      width:100%; padding:10px; margin-bottom:15px;
+    }
+    footer {
+      text-align:center;
+      padding:20px;
+      background:#f4f4f4;
+      margin-top:20px;
+    }
+    .fixed-btn {
+      position: fixed;
+      bottom:0; left:0; right:0;
+      background:#000;
+      color:#fff;
+      padding:15px;
+      text-align:center;
+      font-size:20px;
+      cursor:pointer;
+      z-index:1000;
+    }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>مناحل آل بوسعيدي</h1>
-  <div class="cta">📞 اتصل بنا | 🚚 عرض محدود: التوصيل للمنزل والدفع عند الاستلام</div>
+  <h1>🍯 مناحل آل بوسعيدي</h1>
+  <div class="subtitle">عرض محدود: التوصيل إلى المنزل + الدفع عند الاستلام</div>
+  <a href="tel:+213660000000" class="contact-btn">📞 اتصل بنا: +213 660 00 00 00</a>
 </header>
 
-<section class="section product">
-  <h2>🔥 الخلطة الرئيسية: تقوية المناعة وزيادة الشهية والنمو</h2>
-  <p>مكونات طبيعية 100%: عسل نقي + غذاء ملكات + حبوب لقاح + بروبوليس</p>
-  <div class="price">
-    ✅ 1 عبوة = 2800 دج <br>
-    ✅ 2 عبوتين = 5000 دج + توصيل مجاني <br>
-    ✅ 3 عبوات + 1 مجانا = 8400 دج + توصيل مجاني
+<section class="offer-section">
+  <h2>خلطة تقوية المناعة وزيادة الشهية</h2>
+  <p>منتج طبيعي 100% للأطفال والكبار: يقوي المناعة، يفتح الشهية، يحارب النحافة</p>
+
+  <div class="offer-card">
+    <h3>🎁 العروض الخاصة</h3>
+    <p>✅ 1 عبوة = 2800 دج</p>
+    <p>✅ 2 عبوات = 5000 دج + التوصيل مجاني</p>
+    <p>✅ 3 عبوات + 1 مجانا 🎉 + التوصيل مجاني</p>
+    <button class="btn buy-now" onclick="buyNow()">اشتري مباشرة</button>
+    <button class="btn add-cart" onclick="addToCart('خلطة المناعة', 2800)">أضف إلى السلة</button>
   </div>
-  <a href="#orderForm" class="btn">اشتري مباشرة</a>
-  <a href="#orderForm" class="btn">أضف إلى السلة</a>
 </section>
 
-<section class="section">
+<section class="offer-section">
   <h2>منتجات أخرى</h2>
-  <div class="product">🍯 عسل السدر</div>
-  <div class="product">🍯 عسل الأزهار</div>
-  <div class="product">🍯 العسل الجبلي</div>
-  <div class="product">💪 خلطة القدرة الجنسية</div>
-  <div class="product">👩‍🍼 خلطة زيادة فرص الحمل</div>
-  <div class="product">🥄 خلطة التسمين</div>
-  <div class="product">😷 خلطة الجهاز التنفسي والسعال</div>
+  <div class="offer-card">
+    <h3>عسل السدر</h3>
+    <button class="btn add-cart" onclick="addToCart('عسل السدر', 3500)">أضف إلى السلة</button>
+  </div>
+  <div class="offer-card">
+    <h3>خلطة القدرة الجنسية</h3>
+    <button class="btn add-cart" onclick="addToCart('خلطة القدرة الجنسية', 4500)">أضف إلى السلة</button>
+  </div>
+  <!-- كرر للمنتجات الأخرى -->
 </section>
 
-<section class="section">
-  <h2>📝 فورم الطلب</h2>
-  <form id="orderForm" method="POST" action="https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec" onsubmit="return handleSubmit(event)">
-    <label>الاسم الكامل</label>
-    <input type="text" name="name" required>
-    
-    <label>رقم الهاتف</label>
-    <input type="tel" name="phone" required>
-    
-    <label>الولاية</label>
-    <select name="wilaya" id="wilaya" required onchange="updateSummary()">
-      <option value="">اختر ولايتك</option>
-      <option value="أدرار" data-price="600">أدرار - 600 دج</option>
-      <option value="الشلف" data-price="500">الشلف - 500 دج</option>
-      <option value="الأغواط" data-price="500">الأغواط - 500 دج</option>
-      <option value="أم البواقي" data-price="600">أم البواقي - 600 دج</option>
-      <option value="باتنة" data-price="500">باتنة - 500 دج</option>
-      <option value="بجاية" data-price="400">بجاية - 400 دج</option>
-      <option value="بسكرة" data-price="600">بسكرة - 600 دج</option>
-      <option value="بشار" data-price="700">بشار - 700 دج</option>
-      <option value="البليدة" data-price="400">البليدة - 400 دج</option>
-      <option value="البويرة" data-price="400">البويرة - 400 دج</option>
-      <option value="تمنراست" data-price="800">تمنراست - 800 دج</option>
-      <option value="تبسة" data-price="600">تبسة - 600 دج</option>
-      <option value="تلمسان" data-price="500">تلمسان - 500 دج</option>
-      <option value="تيارت" data-price="500">تيارت - 500 دج</option>
-      <option value="تيزي وزو" data-price="400">تيزي وزو - 400 دج</option>
-      <option value="الجزائر" data-price="300">الجزائر - 300 دج</option>
-      <option value="الجلفة" data-price="500">الجلفة - 500 دج</option>
-      <option value="جيجل" data-price="400">جيجل - 400 دج</option>
-      <option value="سطيف" data-price="500">سطيف - 500 دج</option>
-      <option value="سعيدة" data-price="500">سعيدة - 500 دج</option>
-      <option value="سكيكدة" data-price="500">سكيكدة - 500 دج</option>
-      <option value="سيدي بلعباس" data-price="500">سيدي بلعباس - 500 دج</option>
-      <option value="عنابة" data-price="500">عنابة - 500 دج</option>
-      <option value="قالمة" data-price="500">قالمة - 500 دج</option>
-      <option value="قسنطينة" data-price="500">قسنطينة - 500 دج</option>
-      <option value="المدية" data-price="400">المدية - 400 دج</option>
-      <option value="مستغانم" data-price="500">مستغانم - 500 دج</option>
-      <option value="المسيلة" data-price="500">المسيلة - 500 دج</option>
-      <option value="معسكر" data-price="500">معسكر - 500 دج</option>
-      <option value="ورقلة" data-price="600">ورقلة - 600 دج</option>
-      <option value="وهران" data-price="500">وهران - 500 دج</option>
-      <option value="البيض" data-price="600">البيض - 600 دج</option>
-      <option value="إليزي" data-price="900">إليزي - 900 دج</option>
-      <option value="برج بوعريريج" data-price="500">برج بوعريريج - 500 دج</option>
-      <option value="بومرداس" data-price="400">بومرداس - 400 دج</option>
-      <option value="الطارف" data-price="500">الطارف - 500 دج</option>
-      <option value="تندوف" data-price="900">تندوف - 900 دج</option>
-      <option value="تيسمسيلت" data-price="500">تيسمسيلت - 500 دج</option>
-      <option value="الوادي" data-price="600">الوادي - 600 دج</option>
-      <option value="خنشلة" data-price="500">خنشلة - 500 دج</option>
-      <option value="سوق أهراس" data-price="500">سوق أهراس - 500 دج</option>
-      <option value="تيبازة" data-price="400">تيبازة - 400 دج</option>
-      <option value="ميلة" data-price="500">ميلة - 500 دج</option>
-      <option value="عين الدفلى" data-price="500">عين الدفلى - 500 دج</option>
-      <option value="النعامة" data-price="700">النعامة - 700 دج</option>
-      <option value="عين تموشنت" data-price="500">عين تموشنت - 500 دج</option>
-      <option value="غرداية" data-price="600">غرداية - 600 دج</option>
-      <option value="غليزان" data-price="500">غليزان - 500 دج</option>
-      <option value="المغير" data-price="600">المغير - 600 دج</option>
-      <option value="المنيعة" data-price="700">المنيعة - 700 دج</option>
-      <option value="أولاد جلال" data-price="600">أولاد جلال - 600 دج</option>
-      <option value="بني عباس" data-price="700">بني عباس - 700 دج</option>
-      <option value="برج باجي مختار" data-price="900">برج باجي مختار - 900 دج</option>
-      <option value="جانت" data-price="900">جانت - 900 دج</option>
-      <option value="إن صالح" data-price="900">إن صالح - 900 دج</option>
-      <option value="إن قزام" data-price="900">إن قزام - 900 دج</option>
-      <option value="تيميمون" data-price="800">تيميمون - 800 دج</option>
-      <option value="تقرت" data-price="600">تقرت - 600 دج</option>
-    </select>
-
-    <label>عدد العبوات</label>
-    <select name="quantity" id="quantity" required onchange="updateSummary()">
-      <option value="1">1 عبوة - 2800 دج</option>
-      <option value="2">2 عبوتين - 5000 دج (توصيل مجاني)</option>
-      <option value="3">3 عبوات + 1 مجانا - 8400 دج (توصيل مجاني)</option>
-    </select>
-
-    <div id="summary"></div>
-
-    <button type="submit" class="btn">تأكيد الطلب</button>
-  </form>
+<section class="cart-summary" id="cart">
+  <h3>🛒 ملخص الطلبية</h3>
+  <ul id="cart-items"></ul>
+  <p id="delivery">سعر التوصيل: 0 دج</p>
+  <p><b>الإجمالي: <span id="total">0</span> دج</b></p>
 </section>
+
+<form id="orderForm" onsubmit="return handleSubmit(event)">
+  <h3>معلومات الزبون</h3>
+  <label>الاسم الكامل</label>
+  <input type="text" name="name" required>
+
+  <label>رقم الهاتف</label>
+  <input type="tel" name="phone" required>
+
+  <label>الولاية</label>
+  <select name="wilaya" id="wilaya" onchange="updateDelivery()" required>
+    <option value="">اختر ولايتك</option>
+    <option value="الجزائر">الجزائر - 300 دج</option>
+    <option value="وهران">وهران - 400 دج</option>
+    <option value="سطيف">سطيف - 500 دج</option>
+    <!-- أضف باقي الولايات هنا -->
+  </select>
+
+  <input type="hidden" name="order" id="orderInput">
+  <input type="hidden" name="total" id="totalInput">
+
+  <button type="submit" class="btn buy-now">تأكيد الطلب</button>
+</form>
 
 <footer>
-  <p>🔒 سياسة الإرجاع | 🏢 حقوق النشر © 2025 شركة مناحل آل بوسعيدي</p>
+  <p>© 2025 شركة مناحل آل بوسعيدي</p>
+  <p>🔄 يمكن للزبون إرجاع المنتج في حالة التلف أو وجود خلل</p>
 </footer>
 
+<div class="fixed-btn" onclick="scrollToForm()">اطلب الآن</div>
+
 <script>
-function updateSummary() {
-  const wilayaSelect = document.getElementById('wilaya');
-  const shipping = parseInt(wilayaSelect.options[wilayaSelect.selectedIndex].dataset.price || 0);
-  const qty = document.getElementById('quantity').value;
-  let total = 0;
-  let delivery = shipping;
+  let cart = [];
+  let deliveryPrices = { "الجزائر":300, "وهران":400, "سطيف":500 };
 
-  if (qty == "1") { total = 2800 + shipping; }
-  if (qty == "2") { total = 5000; delivery = 0; }
-  if (qty == "3") { total = 8400; delivery = 0; }
+  function addToCart(product, price) {
+    cart.push({product, price});
+    renderCart();
+  }
 
-  document.getElementById('summary').innerText =
-    "السعر الإجمالي: " + total + " دج (التوصيل: " + (delivery==0?"مجاني":delivery+" دج") + ")";
-}
+  function renderCart() {
+    let list = document.getElementById("cart-items");
+    list.innerHTML = "";
+    let total = 0;
+    cart.forEach(item=>{
+      let li = document.createElement("li");
+      li.textContent = `${item.product} - ${item.price} دج`;
+      list.appendChild(li);
+      total += item.price;
+    });
+    document.getElementById("total").innerText = total;
+    document.getElementById("totalInput").value = total;
+    document.getElementById("orderInput").value = cart.map(i=>i.product).join(", ");
+  }
 
-function handleSubmit(e) {
-  e.preventDefault();
-  const form = e.target;
-  fetch(form.action, { method: 'POST', body: new FormData(form) })
-    .then(() => window.location.href = "thankyou.html");
-  return false;
-}
+  function updateDelivery() {
+    let wilaya = document.getElementById("wilaya").value;
+    let delivery = deliveryPrices[wilaya] || 500;
+    document.getElementById("delivery").innerText = "سعر التوصيل: " + delivery + " دج";
+  }
+
+  function buyNow() {
+    scrollToForm();
+    addToCart("خلطة المناعة", 2800);
+  }
+
+  function scrollToForm() {
+    document.getElementById("orderForm").scrollIntoView({behavior:"smooth"});
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    fetch("YOUR_GOOGLE_SCRIPT_URL", {
+      method: "POST",
+      body: new FormData(document.getElementById("orderForm"))
+    }).then(()=>{
+      window.location.href="thankyou.html";
+    });
+    return false;
+  }
 </script>
 
 </body>
