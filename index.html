@@ -3,169 +3,104 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>خلطة تقوية المناعة وزيادة الشهية | مناحل آل بوسعيدي</title>
-  <meta name="description" content="اشتري خلطة العسل الطبيعية لتقوية مناعة الأطفال، فتح الشهية، علاج النحافة، مع عروض خاصة وتوصيل سريع لكل ولايات الجزائر.">
-  <meta name="keywords" content="عسل طبيعي, عسل سدر, عسل جبلي, عسل الجزائر, تقوية المناعة, فتح الشهية, علاج النحافة, مناحل آل بوسعيدي">
+  <title>خلطة تقوية المناعة للأطفال وزيادة الشهية | مناحل آل بوسعيدي</title>
+  <meta name="description" content="اشتري الآن خلطة العسل الطبيعية لتقوية المناعة وفتح الشهية وزيادة النمو للأطفال والكبار. عروض خاصة + توصيل سريع لجميع ولايات الجزائر.">
+  <meta name="keywords" content="عسل طبيعي, عسل سدر, خلطة المناعة, فتح الشهية, علاج النحافة, مناحل آل بوسعيدي, عسل الجزائر">
 
   <style>
-    body {
-      font-family: "Tahoma", sans-serif;
-      margin:0;
-      background: linear-gradient(to bottom, #fff8e1, #fff);
-      color: #333;
-    }
-    header {
-      background: linear-gradient(to right, #b8860b, #ffd700);
-      color: white;
-      padding: 20px;
-      text-align: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-    header h1 {
-      font-size: 28px;
-      margin: 0;
-      font-weight: bold;
-    }
-    header .subtitle {
-      font-size: 18px;
-      margin-top: 5px;
-    }
-    .contact-btn {
-      display: inline-block;
-      margin-top: 10px;
-      background: #000;
-      color: #fff;
-      padding: 10px 20px;
-      border-radius: 6px;
-      text-decoration: none;
-    }
-    .offer-section {
-      text-align: center;
-      padding: 40px 20px;
-    }
-    .offer-card {
-      border: 2px solid #b8860b;
-      border-radius: 12px;
-      padding: 20px;
-      margin: 10px auto;
-      max-width: 500px;
-      background: #fffbea;
-    }
-    .offer-card h3 {
-      color: #b8860b;
-    }
-    .btn {
-      display: inline-block;
-      margin: 10px;
-      padding: 12px 20px;
-      border: none;
-      border-radius: 8px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-    .buy-now { background:#b8860b; color:white; }
-    .add-cart { background:#444; color:white; }
-    .cart-summary {
-      background:#fff4d1;
-      padding:20px;
-      margin:20px;
-      border-radius:10px;
-    }
-    form {
-      padding:20px;
-      background:#fafafa;
-      border-radius:10px;
-      margin:20px;
-      border:1px solid #eee;
-    }
+    body { font-family: "Tahoma", sans-serif; margin:0; background: linear-gradient(to bottom,#fffbe6,#fff); color:#333; }
+    header { background: linear-gradient(to right, #b8860b, #ffd700); color:#fff; padding:20px; display:flex; justify-content:space-between; align-items:center; position:sticky; top:0; z-index:1000; }
+    .logo { font-size:26px; font-weight:bold; }
+    .logo span { color:#000; background:#fff; padding:5px 10px; border-radius:8px; }
+    .header-img { width:60px; }
+    .contact-btn { background:#000; color:#fff; padding:10px 15px; border-radius:6px; text-decoration:none; }
+    .hero { text-align:center; padding:30px; }
+    .hero img { width:200px; border-radius:15px; margin-bottom:15px; }
+    .hero h1 { font-size:28px; color:#b8860b; }
+    .hero h2 { font-size:20px; color:#555; margin-top:10px; }
+    .offer-card { border:2px solid #b8860b; border-radius:12px; padding:20px; margin:15px auto; max-width:600px; background:#fff9e6; text-align:center; }
+    .offer-card:hover { box-shadow:0 0 10px #ffd700; }
+    .offer-card h3 { margin:10px 0; color:#b8860b; }
+    .offer-btn { display:block; margin:10px auto; padding:12px; font-size:16px; border:none; border-radius:8px; cursor:pointer; width:80%; }
+    .buy-now { background:#b8860b; color:#fff; }
+    .add-cart { background:#444; color:#fff; }
+    .add-cart:active { background:#000; }
+    .cart { background:#fff4d1; padding:20px; margin:20px; border-radius:10px; }
+    .cart h3 { margin-top:0; }
+    .cart-item { display:flex; justify-content:space-between; margin-bottom:10px; }
+    .remove-btn { background:red; color:#fff; border:none; padding:5px 10px; border-radius:5px; cursor:pointer; }
+    form { background:#fafafa; border:1px solid #eee; border-radius:10px; padding:20px; margin:20px; }
     label { display:block; margin:10px 0 5px; }
-    select, input {
-      width:100%; padding:10px; margin-bottom:15px;
-    }
-    footer {
-      text-align:center;
-      padding:20px;
-      background:#f4f4f4;
-      margin-top:20px;
-    }
-    .fixed-btn {
-      position: fixed;
-      bottom:0; left:0; right:0;
-      background:#000;
-      color:#fff;
-      padding:15px;
-      text-align:center;
-      font-size:20px;
-      cursor:pointer;
-      z-index:1000;
-    }
+    input, select { width:100%; padding:10px; margin-bottom:15px; }
+    footer { background:#f4f4f4; text-align:center; padding:20px; margin-top:30px; }
+    .fixed-btn { position:fixed; bottom:0; left:0; right:0; background:#000; color:#fff; text-align:center; padding:15px; font-size:18px; cursor:pointer; z-index:1000; }
+    .why-section { background:#fff; padding:30px; margin:20px; border-radius:12px; }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>🍯 مناحل آل بوسعيدي</h1>
-  <div class="subtitle">عرض محدود: التوصيل إلى المنزل + الدفع عند الاستلام</div>
-  <a href="tel:+213660000000" class="contact-btn">📞 اتصل بنا: +213 660 00 00 00</a>
+  <img src="honey.png" class="header-img" alt="عسل">
+  <div class="logo">🍯 <span>مناحل آل بوسعيدي</span></div>
+  <a href="tel:+213660000000" class="contact-btn">📞 اتصل بنا</a>
 </header>
 
-<section class="offer-section">
-  <h2>خلطة تقوية المناعة وزيادة الشهية</h2>
-  <p>منتج طبيعي 100% للأطفال والكبار: يقوي المناعة، يفتح الشهية، يحارب النحافة</p>
+<section class="hero">
+  <img src="main-product.jpg" alt="خلطة المناعة">
+  <h1>خلطة عسل طبيعية لتقوية المناعة وزيادة الشهية</h1>
+  <h2>لك ولأطفالك: صحة، نمو، ذاكرة قوية، تركيز وطاقة يومية</h2>
+</section>
 
-  <div class="offer-card">
-    <h3>🎁 العروض الخاصة</h3>
-    <p>✅ 1 عبوة = 2800 دج</p>
-    <p>✅ 2 عبوات = 5000 دج + التوصيل مجاني</p>
-    <p>✅ 3 عبوات + 1 مجانا 🎉 + التوصيل مجاني</p>
-    <button class="btn buy-now" onclick="buyNow()">اشتري مباشرة</button>
-    <button class="btn add-cart" onclick="addToCart('خلطة المناعة', 2800)">أضف إلى السلة</button>
+<section>
+  <div class="offer-card" onclick="selectOffer(1)">
+    <h3>1 عبوة = 2800 دج</h3>
+    <button class="offer-btn buy-now">اشتري الآن</button>
+  </div>
+  <div class="offer-card" onclick="selectOffer(2)">
+    <h3>2 عبوات = 5000 دج + التوصيل مجاني</h3>
+    <button class="offer-btn buy-now">احجز العرض</button>
+  </div>
+  <div class="offer-card" onclick="selectOffer(3)">
+    <h3>3 عبوات + 1 مجانا 🎁 + التوصيل مجاني</h3>
+    <button class="offer-btn buy-now">استفد من العرض</button>
   </div>
 </section>
 
-<section class="offer-section">
-  <h2>منتجات أخرى</h2>
-  <div class="offer-card">
-    <h3>عسل السدر</h3>
-    <button class="btn add-cart" onclick="addToCart('عسل السدر', 3500)">أضف إلى السلة</button>
-  </div>
-  <div class="offer-card">
-    <h3>خلطة القدرة الجنسية</h3>
-    <button class="btn add-cart" onclick="addToCart('خلطة القدرة الجنسية', 4500)">أضف إلى السلة</button>
-  </div>
-  <!-- كرر للمنتجات الأخرى -->
+<section class="why-section">
+  <h2>لماذا طفلك في حاجة إلى هذا العسل؟</h2>
+  <p>🍯 يقوي المناعة ضد الأمراض الموسمية مثل الزكام والأنفلونزا. <br>
+     🍯 يفتح الشهية ويحارب النحافة وسوء التغذية. <br>
+     🍯 يمنح طفلك طاقة وحيوية طوال اليوم. <br>
+     🍯 يساعد على تحسين الذاكرة والتركيز في الدراسة. <br>
+     🍯 يحتوي على خليط من العسل الطبيعي وغذاء الملكات وحبوب اللقاح.</p>
 </section>
 
-<section class="cart-summary" id="cart">
-  <h3>🛒 ملخص الطلبية</h3>
-  <ul id="cart-items"></ul>
+<section class="cart" id="cart">
+  <h3>🛒 سلة المشتريات</h3>
+  <div id="cart-items"></div>
   <p id="delivery">سعر التوصيل: 0 دج</p>
   <p><b>الإجمالي: <span id="total">0</span> دج</b></p>
 </section>
 
 <form id="orderForm" onsubmit="return handleSubmit(event)">
-  <h3>معلومات الزبون</h3>
+  <h3>📋 تأكيد الطلب</h3>
   <label>الاسم الكامل</label>
   <input type="text" name="name" required>
-
   <label>رقم الهاتف</label>
   <input type="tel" name="phone" required>
-
   <label>الولاية</label>
   <select name="wilaya" id="wilaya" onchange="updateDelivery()" required>
     <option value="">اختر ولايتك</option>
     <option value="الجزائر">الجزائر - 300 دج</option>
     <option value="وهران">وهران - 400 دج</option>
     <option value="سطيف">سطيف - 500 دج</option>
-    <!-- أضف باقي الولايات هنا -->
+    <option value="قسنطينة">قسنطينة - 400 دج</option>
+    <option value="باتنة">باتنة - 450 دج</option>
+    <!-- ⚡ أضف باقي 58 ولاية كاملة هنا -->
   </select>
-
   <input type="hidden" name="order" id="orderInput">
   <input type="hidden" name="total" id="totalInput">
-
-  <button type="submit" class="btn buy-now">تأكيد الطلب</button>
+  <button type="submit" class="offer-btn buy-now">تأكيد الطلب</button>
 </form>
 
 <footer>
@@ -177,51 +112,56 @@
 
 <script>
   let cart = [];
-  let deliveryPrices = { "الجزائر":300, "وهران":400, "سطيف":500 };
+  let deliveryPrices = { "الجزائر":300,"وهران":400,"سطيف":500,"قسنطينة":400,"باتنة":450 };
 
-  function addToCart(product, price) {
-    cart.push({product, price});
+  function selectOffer(type){
+    cart = [];
+    if(type===1) cart.push({product:"خلطة المناعة", price:2800});
+    if(type===2) cart.push({product:"خلطة المناعة ×2", price:5000});
+    if(type===3) cart.push({product:"خلطة المناعة ×3 + 1 مجانا", price:8400});
+    renderCart();
+    scrollToForm();
+  }
+
+  function addToCart(product, price){
+    cart.push({product,price});
     renderCart();
   }
 
-  function renderCart() {
-    let list = document.getElementById("cart-items");
-    list.innerHTML = "";
-    let total = 0;
-    cart.forEach(item=>{
-      let li = document.createElement("li");
-      li.textContent = `${item.product} - ${item.price} دج`;
-      list.appendChild(li);
-      total += item.price;
+  function removeFromCart(index){
+    cart.splice(index,1);
+    renderCart();
+  }
+
+  function renderCart(){
+    let items = document.getElementById("cart-items");
+    items.innerHTML="";
+    let total=0;
+    cart.forEach((item,i)=>{
+      total+=item.price;
+      items.innerHTML+=`<div class="cart-item">${item.product} - ${item.price} دج <button class="remove-btn" onclick="removeFromCart(${i})">حذف</button></div>`;
     });
-    document.getElementById("total").innerText = total;
-    document.getElementById("totalInput").value = total;
-    document.getElementById("orderInput").value = cart.map(i=>i.product).join(", ");
+    document.getElementById("total").innerText=total;
+    document.getElementById("totalInput").value=total;
+    document.getElementById("orderInput").value=cart.map(i=>i.product).join(", ");
   }
 
-  function updateDelivery() {
-    let wilaya = document.getElementById("wilaya").value;
-    let delivery = deliveryPrices[wilaya] || 500;
-    document.getElementById("delivery").innerText = "سعر التوصيل: " + delivery + " دج";
+  function updateDelivery(){
+    let wilaya=document.getElementById("wilaya").value;
+    let total=parseInt(document.getElementById("total").innerText)||0;
+    let delivery=deliveryPrices[wilaya]||500;
+    if(total>=5000) delivery=0;
+    document.getElementById("delivery").innerText="سعر التوصيل: "+delivery+" دج";
   }
 
-  function buyNow() {
-    scrollToForm();
-    addToCart("خلطة المناعة", 2800);
-  }
+  function scrollToForm(){ document.getElementById("orderForm").scrollIntoView({behavior:"smooth"}); }
 
-  function scrollToForm() {
-    document.getElementById("orderForm").scrollIntoView({behavior:"smooth"});
-  }
-
-  function handleSubmit(e) {
+  function handleSubmit(e){
     e.preventDefault();
-    fetch("YOUR_GOOGLE_SCRIPT_URL", {
-      method: "POST",
-      body: new FormData(document.getElementById("orderForm"))
-    }).then(()=>{
-      window.location.href="thankyou.html";
-    });
+    fetch("YOUR_GOOGLE_SCRIPT_URL",{
+      method:"POST",
+      body:new FormData(document.getElementById("orderForm"))
+    }).then(()=>{ window.location.href="thankyou.html"; });
     return false;
   }
 </script>
