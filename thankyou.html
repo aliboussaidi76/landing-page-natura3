@@ -1,15 +1,7 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-  <meta charset="UTF-8">
-  <title>شكرا لطلبك</title>
-  <style>
-    body {font-family: Tahoma; text-align:center; padding:50px; background:#fff8e1;}
-    h1 {color:#b8860b;}
-  </style>
-</head>
-<body>
-  <h1>✅ شكرا لطلبك!</h1>
-  <p>تم استلام معلوماتك وسنتواصل معك لتأكيد الطلب.</p>
-</body>
-</html>
+function doPost(e) {
+  var sheet = SpreadsheetApp.openById("YOUR_SHEET_ID").getSheetByName("Orders");
+  var data = e.parameter;
+  sheet.appendRow([new Date(), data.name, data.phone, data.wilaya, data.order, data.total]);
+  return ContentService.createTextOutput("تم الحفظ");
+}
+
