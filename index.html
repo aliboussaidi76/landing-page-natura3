@@ -1,45 +1,76 @@
 <!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>مناحل آل بوسعيدي — خلطة تقوية المناعة وفتح الشهية</title>
   <meta name="description" content="خلطة عسل طبيعية لتقوية مناعة الأطفال، فتح الشهية، زيادة النمو والطاقة. توصيل لجميع ولايات الجزائر والدفع عند الاستلام.">
-  <meta name="keywords" content="عسل طبيعي, خلطة مناعة, فتح الشهية, غذاء ملكات, عسل السدر, عسل الأزهار, بروبوليس, حبوب لقاح, مناحل آل بوسعيدي">
+  <meta name="keywords" content="عسل طبيعي, خلطات عسل, تقوية المناعة, فتح الشهية, تسمين, عسل السدر, عسل الأزهار, غذاء ملكات, بروبوليس, حبوب اللقاح, مناحل آل بوسعيدي">
   <meta name="author" content="مناحل آل بوسعيدي">
 
   <style>
     :root{
       --gold1:#d4af37; --gold2:#b8860b; --accent:#ef6c00;
-      --bg1:#fff8e1; --bg2:#fff4d1; --card:#ffffff; --muted:#6b4f3a; --radius:14px;
+      --bg1:#fff8e1; --bg2:#fff4d1; --card:#ffffff; --muted:#674a32; --radius:14px;
     }
     *{box-sizing:border-box}
-    body{margin:0;font-family:"Tajawal",Tahoma,Arial,sans-serif;background:linear-gradient(180deg,var(--bg1),var(--bg2));color:#222}
-    a{color:inherit}
-    /* Container centers content */
-    .container{max-width:1100px;margin:26px auto;padding:0 18px}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:"Tajawal", "Segoe UI", Tahoma, Arial, sans-serif;
+      background:linear-gradient(180deg,var(--bg1),var(--bg2));
+      color:#222;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+    }
+
+    /* Center container */
+    .container{
+      width:100%;
+      max-width:1100px;
+      margin:28px auto;
+      padding:0 16px;
+    }
 
     /* Header */
-    header{background:linear-gradient(90deg,var(--gold1),var(--gold2));color:#fff;padding:14px;border-radius:12px;display:flex;align-items:center;justify-content:space-between;gap:12px;box-shadow:0 8px 30px rgba(0,0,0,0.08)}
-    .logo{display:flex;align-items:center;gap:12px}
-    .mark{width:64px;height:64px;border-radius:12px;background:linear-gradient(135deg,var(--gold2),var(--gold1));display:flex;align-items:center;justify-content:center;font-weight:900;color:#fff;font-size:28px;box-shadow:0 8px 24px rgba(0,0,0,0.12)}
-    .logotext{line-height:1}
+    header{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      padding:14px;
+      border-radius:12px;
+      background:linear-gradient(90deg,var(--gold1),var(--gold2));
+      color:#fff;
+      box-shadow:0 12px 40px rgba(0,0,0,0.08);
+    }
+    .logo { display:flex; align-items:center; gap:12px; }
+    .mark{
+      width:68px;height:68px;border-radius:12px;
+      background:linear-gradient(135deg,var(--gold2),var(--gold1));
+      display:flex;align-items:center;justify-content:center;
+      font-weight:900;color:#fff;font-size:28px;
+      box-shadow:0 8px 24px rgba(0,0,0,0.12)
+    }
     .logotext .title{font-size:20px;font-weight:900}
     .logotext .sub{font-size:12px;opacity:0.95}
     .header-right{display:flex;align-items:center;gap:12px}
-    .hdr-img{width:56px;height:56px;border-radius:10px;background:#fff5e1;display:flex;align-items:center;justify-content:center;color:var(--gold2);font-weight:700}
-    .call-btn{background:#000;color:#fff;padding:10px 14px;border-radius:10px;font-weight:800;text-decoration:none;display:inline-flex;align-items:center;gap:8px}
+    .hdr-badge{background:rgba(255,255,255,0.12);padding:8px 12px;border-radius:10px;font-weight:800}
+    .call-btn{background:#000;color:#fff;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:800}
 
     /* Hero */
-    .hero{display:flex;gap:20px;align-items:center;margin-top:18px;flex-wrap:wrap}
-    .hero-left{flex:1;min-width:300px}
+    .hero{display:flex;gap:20px;align-items:stretch;margin-top:18px;flex-wrap:wrap;justify-content:center}
+    .hero-left{flex:1;min-width:320px}
     .hero-right{width:420px;min-width:280px}
-    .card{background:var(--card);padding:20px;border-radius:var(--radius);box-shadow:0 20px 50px rgba(0,0,0,0.08)}
+    .card{background:var(--card);padding:20px;border-radius:var(--radius);box-shadow:0 18px 50px rgba(0,0,0,0.08)}
     h1{margin:0;color:var(--gold2);font-size:30px;text-align:center}
     h2{margin:10px 0 0;font-size:16px;color:var(--muted);text-align:center}
     .price-line{margin-top:12px;font-weight:900;text-align:center}
     .offers{display:flex;gap:10px;justify-content:center;margin-top:12px;flex-wrap:wrap}
-    .offer-pill{padding:10px 14px;border-radius:12px;background:#fff;border:2px solid transparent;cursor:pointer;font-weight:900;min-width:170px;text-align:center}
+    .offer-pill{padding:10px 14px;border-radius:12px;background:#fff;border:2px solid transparent;cursor:pointer;font-weight:900;min-width:160px;text-align:center}
     .offer-pill.selected{background:linear-gradient(90deg,var(--gold1),var(--accent));color:#fff;border-color:rgba(255,255,255,0.12)}
 
     .cta-row{display:flex;gap:10px;justify-content:center;margin-top:16px}
@@ -47,15 +78,14 @@
     .btn.primary{background:var(--accent);color:#fff}
     .btn.ghost{background:#fff;border:2px solid var(--accent);color:var(--accent)}
 
-    .hero-image{border-radius:12px;overflow:hidden}
-    .hero-image img{width:100%;height:100%;display:block;object-fit:cover}
+    .hero-image img{width:100%;height:100%;object-fit:cover;border-radius:10px;display:block}
 
     /* Why */
-    .why{margin-top:18px;padding:18px;background:linear-gradient(180deg,#fffaf0,#fff6df);border-radius:12px;border:1px solid rgba(184,134,11,0.06)}
+    .why{margin-top:18px;padding:16px;background:linear-gradient(180deg,#fffaf0,#fff6df);border-radius:12px;border:1px solid rgba(184,134,11,0.06)}
     .why h3{color:var(--gold2);margin-top:0}
     .why p{color:#4a3b2f;line-height:1.7;text-align:justify}
 
-    /* Products grid */
+    /* products grid */
     .product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}
     .prod{display:flex;gap:12px;align-items:center;padding:12px;background:var(--card);border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,0.06)}
     .prod img{width:120px;height:84px;object-fit:cover;border-radius:8px}
@@ -72,12 +102,13 @@
     .row{display:flex;justify-content:space-between;margin-bottom:8px}
     .small{font-size:13px;color:var(--muted)}
 
-    /* Cart box */
-    #cartBox{position:fixed;left:18px;bottom:90px;width:360px;max-height:60vh;background:var(--card);box-shadow:0 18px 60px rgba(0,0,0,0.12);border-radius:12px;padding:12px;overflow:auto;display:none;z-index:999}
-    #floatOrder{position:fixed;left:0;right:0;bottom:0;background:#000;color:#fff;padding:14px;text-align:center;font-weight:900;cursor:pointer;z-index:1000}
+    /* cart box & floating */
+    #cartBox{position:fixed;left:18px;bottom:88px;width:360px;max-height:60vh;background:var(--card);box-shadow:0 18px 60px rgba(0,0,0,0.12);border-radius:12px;padding:12px;overflow:auto;display:none;z-index:999}
+    #floatOrder{position:fixed;left:0;right:0;bottom:0;background:#000;color:#fff;padding:14px;text-align:center;font-weight:900;cursor:pointer;z-index:1000;border-top-left-radius:12px;border-top-right-radius:12px}
 
     footer{margin-top:30px;padding:18px;text-align:center;color:var(--muted)}
 
+    /* responsive */
     @media (max-width:1000px){
       .product-grid{grid-template-columns:repeat(2,1fr)}
       .summary{width:100%}
@@ -94,30 +125,28 @@
   <div class="container">
 
     <!-- HEADER -->
-    <header class="card" style="display:flex;align-items:center;justify-content:space-between">
+    <header>
       <div class="logo">
         <div class="mark" aria-hidden="true">م</div>
         <div class="logotext">
           <div class="title">مناحل آل بوسعيدي</div>
-          <div class="sub">عسل طبيعي وخلطات علاجية</div>
+          <div class="sub">عسل نقي وخلطات علاجية</div>
         </div>
       </div>
 
       <div class="header-right">
-        <div class="hdr-img" aria-hidden="true">شهد</div>
-        <div style="font-weight:800;background:rgba(255,255,255,0.12);padding:8px 10px;border-radius:8px">🚚 توصيل لجميع الولايات — الدفع عند الاستلام</div>
+        <div class="hdr-badge">🚚 توصيل لكل الولايات — الدفع عند الاستلام</div>
         <a class="call-btn" href="tel:+213550123456">📞 اتصل الآن <strong>+213 550 12 34 56</strong></a>
-        <div class="hdr-img" aria-hidden="true">عسل</div>
       </div>
     </header>
 
     <!-- HERO -->
     <section class="hero">
       <div class="hero-left card">
-        <h1>خلطة تقوية المناعة وزيادة الشهية والنمو — للأطفال والكبار</h1>
-        <h2>مزيج طبيعي من عسل نقي، غذاء ملكات، حبوب لقاح وبروبوليس — لنتائج ملموسة في الشهية والطاقة والنمو</h2>
+        <h1>خلطة تقوية المناعة وزيادة الشهية والنمو</h1>
+        <h2>مزيج من العسل النقي، غذاء ملكات، حبوب لقاح وبروبوليس — للنتائج الصحّية والسريعة</h2>
 
-        <div class="price-line">عرض الإطلاق: 1 عبوة — <strong>2800 د.ج</strong> | 2 عبوتين — <strong>5000 د.ج</strong> (توصيل مجاني) | 3 عبوات + 1 مجاناً — <strong>8400 د.ج</strong> (توصيل مجاني)</div>
+        <div class="price-line">عرض الإطلاق: 1 عبوة — <strong>2800 د.ج</strong> | 2 عبوتين — <strong>5000 د.ج</strong> (توصيل مجاني) | 3 عبوات +1 مجاناً — <strong>8400 د.ج</strong> (توصيل مجاني)</div>
 
         <div style="margin-top:12px;font-weight:900;text-align:center">للطلب اختر العرض الذي يناسبك</div>
         <div class="offers" role="tablist" aria-label="عروض">
@@ -134,27 +163,25 @@
         <div class="why" aria-label="لماذا">
           <h3>لماذا طفلك في حاجة إلى هذا العسل؟</h3>
           <p>
-            ملعقة يومياً من خلطة مناحل آل بوسعيدي تمنح طفلك طاقة وحيوية، تفتح الشهية، تدعم النمو الطبيعي، وتحسّن التركيز والذاكرة. تحتوي الخلطة على مضادات أكسدة، فيتامينات ومعادن طبيعية تساعد على تقوية المناعة ومقاومة الأمراض الموسمية. النتائج المرصودة: زيادة الشهية، نشاط أكبر، تركيز أفضل بالمدرسة، ونمو صحي.
+            ملعقة يومياً من خلطة مناحل آل بوسعيدي تمنح طفلك طاقة وحيوية، تفتح الشهية، تدعم النمو الطبيعي، وتحسّن التركيز والذاكرة. الخلطة تحتوي على مضادات أكسدة، فيتامينات ومعادن طبيعية تقوّي المناعة وتقلّل من حالات التعب والانفلونزا الموسمية. النتائج المتوقعة: زيادة الشهية، نشاط أكبر، تحسن في التركيز والتحصيل الدراسي، نمو صحي ومستقر.
           </p>
         </div>
 
         <!-- main product preview -->
         <div style="margin-top:14px" class="product-grid" aria-hidden="true">
           <div class="prod" style="grid-column: span 3">
-            <img alt="خلطة المناعة" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='800' height='480'><rect rx='12' width='100%25' height='100%25' fill='%23fff5e1'/><text x='50%25' y='50%25' text-anchor='middle' dominant-baseline='middle' font-family='Tahoma' font-size='36' fill='%23b8860b'>خلطة المناعة</text></svg>">
+            <img alt="خلطة المناعة" src="data:image/svg+xml;utf8,<?xml version='1.0'?><svg xmlns='http://www.w3.org/2000/svg' width='800' height='480'><rect rx='12' width='100%' height='100%' fill='%23fff5e1'/><text x='50%' y='50%' text-anchor='middle' dominant-baseline='middle' font-family='Tahoma' font-size='36' fill='%23b8860b'>خلطة المناعة</text></svg>">
             <div class="meta">
               <h4>خلطة تقوية المناعة وفتح الشهية</h4>
-              <div class="small">مكونات طبيعية 100%: عسل نقي، غذاء ملكات، حبوب لقاح، بروبوليس.</div>
+              <div class="small">مكونات: عسل نقي، غذاء ملكات، حبوب لقاح، بروبوليس.</div>
             </div>
           </div>
         </div>
 
       </div>
 
-      <div class="hero-right">
-        <div class="card hero-image">
-          <img alt="صورة المنتج" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='800' height='600'><rect rx='12' width='100%25' height='100%25' fill='%23fff5e1'/><g><circle cx='420' cy='220' r='110' fill='%23f9e4b3'/><text x='420' y='230' text-anchor='middle' dominant-baseline='middle' font-family='Tahoma' font-size='28' fill='%23b8860b'>خلطة المناعة</text></g></svg>">
-        </div>
+      <div class="hero-right card hero-image">
+        <img alt="صورة المنتج" src="data:image/svg+xml;utf8,<?xml version='1.0'?><svg xmlns='http://www.w3.org/2000/svg' width='800' height='600'><rect rx='12' width='100%' height='100%' fill='%23fff5e1'/><g><circle cx='420' cy='220' r='110' fill='%23f9e4b3'/><text x='420' y='230' text-anchor='middle' dominant-baseline='middle' font-family='Tahoma' font-size='28' fill='%23b8860b'>خلطة المناعة</text></g></svg>">
       </div>
     </section>
 
@@ -177,7 +204,7 @@
 
           <label>الولاية</label>
           <select id="wilaya" name="wilaya" required onchange="recalculate()">
-            <option value="">اختر الولاية</option>
+            <option value="">اختر ولايتك</option>
           </select>
 
           <label>العنوان (شارع، رقم)</label>
@@ -230,12 +257,13 @@
   <div id="floatOrder" onclick="scrollToCheckout()">اطلب الآن</div>
 
 <script>
-/* ============================
-   ضع هنا رابط Google Web App بعد نشر Code.gs كـ Web App
-   ============================ */
+/* ----------------------------
+   ضع هنا رابط Google Web App (بعد نشر Code.gs كـ Web App)
+   مثال: "https://script.google.com/macros/s/AKfycb.../exec"
+   ---------------------------- */
 const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzacfI1sIXosgi1le2QQjJxisVBJmqBgRn-voFKhNnuZqOhOXNLx-uuxhfmLPDk9u7Mlg/exec";
 
-/* ====== Products & upsells (main offers included) ====== */
+/* Products (offers + upsells) */
 const PRODUCTS = [
   {id:'main_one',title:'خلطة المناعة — 1 عبوة',price:2800,qty:1,freeShipping:false},
   {id:'main_two',title:'خلطة المناعة — 2 عبوتين',price:5000,qty:2,freeShipping:true},
@@ -250,7 +278,7 @@ const PRODUCTS = [
   {id:'resp',title:'خلطة الجهاز التنفسي والسعال',price:5500,qty:1,imgText:'خلطة الجهاز التنفسي'}
 ];
 
-/* ====== Shipping prices (كل الولايات) ====== */
+/* أسعار التوصيل — 58 ولاية (قيمة مقترحة، يمكنك تعديلها) */
 const shippingPrices = {
  "أدرار":600,"الشلف":500,"الأغواط":500,"أم البواقي":600,"باتنة":500,
  "بجاية":400,"بسكرة":600,"بشار":700,"البليدة":400,"البويرة":400,
@@ -266,22 +294,18 @@ const shippingPrices = {
  "جانت":900,"المغير":800,"المنيعة":700
 };
 
-/* ====== State ====== */
+/* State */
 let cart = [];
 let selectedOffer = 'main_one';
 
-/* ====== Utility functions ====== */
-function format(num){ return (num||0).toLocaleString() + " د.ج"; }
+/* Helpers */
+function format(n){ return (n||0).toLocaleString() + " د.ج"; }
 function findProduct(id){ return PRODUCTS.find(p=>p.id===id); }
-
-/* ====== create SVG placeholder image data URI ====== */
 function createDataImg(text,w=400,h=260){
-  return "data:image/svg+xml;utf8," + encodeURIComponent(
-    `<svg xmlns='http://www.w3.org/2000/svg' width='${w}' height='${h}'><rect rx='12' width='100%' height='100%' fill='%23fff5e1'/><text x='50%' y='50%' text-anchor='middle' dominant-baseline='middle' font-family='Tahoma' font-size='20' fill='%23b8860b'>${text}</text></svg>`
-  );
+  return "data:image/svg+xml;utf8," + encodeURIComponent(`<svg xmlns='http://www.w3.org/2000/svg' width='${w}' height='${h}'><rect rx='12' width='100%' height='100%' fill='%23fff5e1'/><text x='50%' y='50%' text-anchor='middle' dominant-baseline='middle' font-family='Tahoma' font-size='20' fill='%23b8860b'>${text}</text></svg>`);
 }
 
-/* ====== render upsells ====== */
+/* Render upsells */
 function renderUpsells(){
   const grid = document.getElementById('upsellGrid');
   grid.innerHTML = '';
@@ -307,7 +331,7 @@ function renderUpsells(){
 }
 renderUpsells();
 
-/* ====== populate wilayas select ====== */
+/* Populate wilayas */
 function populateWilayas(){
   const sel = document.getElementById('wilaya');
   Object.keys(shippingPrices).forEach(w=>{
@@ -319,17 +343,14 @@ function populateWilayas(){
 }
 populateWilayas();
 
-/* ====== Offers UI ====== */
+/* Offers UI */
 function uiChooseOffer(key){
-  // map key to product id
   selectedOffer = (key==='two')? 'main_two' : (key==='four')? 'main_four' : 'main_one';
   document.querySelectorAll('.offer-pill').forEach(el=>el.classList.remove('selected'));
-  document.querySelectorAll('.offer-pill').forEach(el=>{
-    if(el.dataset.key===key) el.classList.add('selected');
-  });
+  document.querySelectorAll('.offer-pill').forEach(el=>{ if(el.dataset.key===key) el.classList.add('selected'); });
 }
 
-/* ====== Cart functions ====== */
+/* Cart functions */
 function addToCart(id){
   const p = findProduct(id);
   if(!p) return;
@@ -344,25 +365,23 @@ function removeFromCart(i){
 }
 function clearCart(){ cart=[]; saveCart(); renderCart(); }
 
-function saveCart(){ localStorage.setItem('manahil_cart', JSON.stringify(cart)); }
-function loadCart(){ try{ cart = JSON.parse(localStorage.getItem('manahil_cart')||'[]')||[]; }catch(e){cart=[];} renderCart(); }
+function saveCart(){ localStorage.setItem('manahil_cart_v2', JSON.stringify(cart)); }
+function loadCart(){ try{ cart = JSON.parse(localStorage.getItem('manahil_cart_v2')||'[]')||[]; }catch(e){cart=[];} renderCart(); }
 
-/* ====== render cart summary & totals ====== */
+/* Render cart summary & totals */
 function renderCart(){
   const summary = document.getElementById('cartItemsSummary');
   if(cart.length===0){
     summary.innerHTML = "<div class='small'>السلة فارغة</div>";
   } else {
-    summary.innerHTML = cart.map((it,i)=>{
-      return `<div style="margin-bottom:10px"><strong>${it.title}</strong> — ${format(it.price)} × ${it.qty} <button style="margin-left:8px;background:#e74c3c;border:none;color:#fff;padding:6px;border-radius:8px;cursor:pointer" onclick="removeFromCart(${i})">حذف</button></div>`;
-    }).join('');
+    summary.innerHTML = cart.map((it,i)=>`<div style="margin-bottom:10px"><strong>${it.title}</strong> — ${format(it.price)} × ${it.qty} <button style="margin-left:8px;background:#e74c3c;border:none;color:#fff;padding:6px;border-radius:8px;cursor:pointer" onclick="removeFromCart(${i})">حذف</button></div>`).join('');
   }
   const subtotal = cart.reduce((s,i)=>s + (i.price*(i.qty||1)), 0);
   document.getElementById('subtotal').innerText = format(subtotal);
   recalculate();
 }
 
-/* ====== shipping & recalc ====== */
+/* Shipping & recalc */
 function recalculate(){
   const wilaya = document.getElementById('wilaya').value;
   const subtotal = cart.reduce((s,i)=>s + (i.price*(i.qty||1)), 0);
@@ -384,7 +403,7 @@ function recalculate(){
   document.getElementById('itemsInput').value = JSON.stringify(cart);
 }
 
-/* ====== show/hide cart box ====== */
+/* Cart box controls */
 function showCartBox(){
   const el = document.getElementById('cartBox');
   el.style.display = 'block';
@@ -392,15 +411,14 @@ function showCartBox(){
 }
 function hideCartBox(){ document.getElementById('cartBox').style.display='none'; }
 function toggleCartBox(){ const b=document.getElementById('cartBox'); if(b.style.display==='block') hideCartBox(); else showCartBox(); }
-
 function scrollToCheckout(){ document.getElementById('orderForm').scrollIntoView({behavior:'smooth',block:'center'}); }
 
-/* ====== Offers actions ====== */
+/* Offer actions */
 function onAddOffer(){
   addToCart(selectedOffer);
   const btn = document.getElementById('addOfferBtn');
   btn.style.background = '#00a86b';
-  setTimeout(()=>btn.style.background='',700);
+  setTimeout(()=>btn.style.background = '',700);
 }
 function onBuyNow(){
   cart = [];
@@ -411,7 +429,7 @@ function onBuyNow(){
   setTimeout(()=>document.getElementById('custName').focus(),300);
 }
 
-/* ====== submit order ====== */
+/* Submit order (sends JSON to Apps Script) */
 async function submitOrder(e){
   if(e && e.preventDefault) e.preventDefault();
 
@@ -444,29 +462,26 @@ async function submitOrder(e){
     if(!res.ok || (data && data.status==='error')){
       throw new Error((data && data.message) ? data.message : 'حدث خطأ أثناء إرسال الطلب');
     }
-    // نجاح
+    // On success
     clearCart();
     window.location.href = 'thankyou.html';
   } catch(err){
     console.error(err);
-    alert('حصل خطأ أثناء إرسال الطلب: ' + err.message + '\nتأكد من أنك نشرت Google Apps Script كـ Web App ووضع رابط الـ SCRIPT_URL صحيح.');
+    alert('حصل خطأ أثناء إرسال الطلب: ' + err.message + '\nتأكد من نشر Google Apps Script كـ Web App ووضع رابط الـ SCRIPT_URL صحيح.');
   }
-
   return false;
 }
 
-/* ======= init ======= */
+/* Init */
 (function init(){
-  // default selection
   uiChooseOffer('one');
   loadCart();
   recalculate();
-  // make selectedOffer reflect initial key
-  // ensure float button works
   document.getElementById('floatOrder').addEventListener('click', scrollToCheckout);
 })();
 </script>
 
 </body>
 </html>
+```0
 
