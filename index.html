@@ -1,167 +1,425 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="مناحل آل بوسعيدي - عسل طبيعي وخلطات مقوية للمناعة وزيادة الشهية والنمو">
-  <meta name="keywords" content="عسل طبيعي, تقوية المناعة, زيادة الشهية, علاج النحافة, مناحل آل بوسعيدي, منتجات النحل, غذاء ملكات, حبوب اللقاح, العكبر, البروبوليس">
-  <title>مناحل آل بوسعيدي | عسل طبيعي وخلطات علاجية</title>
-  <style>
-    body {margin:0; font-family:'Tahoma', sans-serif; background:#fff8e7; color:#333;}
-    header {display:flex; justify-content:space-between; align-items:center; padding:10px 20px; background:#fff3cd; border-bottom:3px solid goldenrod;}
-    header img {height:60px;}
-    .logo {font-size:28px; font-weight:bold; color:goldenrod;}
-    .hero {text-align:center; padding:40px 20px; background:linear-gradient(to bottom,#fff3cd,#fff);}
-    .hero img {max-width:200px; margin-bottom:20px;}
-    .hero h1 {font-size:32px; color:#222;}
-    .hero h2 {font-size:20px; color:#555;}
-    .offers, .products, .upsells {padding:40px 20px; text-align:center;}
-    .offers h2, .products h2, .upsells h2 {color:goldenrod;}
-    .card {border:1px solid #eee; border-radius:10px; padding:20px; margin:10px; display:inline-block; width:250px; vertical-align:top; background:#fff; box-shadow:0 3px 6px rgba(0,0,0,0.1);}
-    .card img {max-width:100%; border-radius:10px;}
-    .card button {background:goldenrod; color:white; padding:10px; border:none; border-radius:6px; cursor:pointer; margin-top:10px;}
-    .card button:hover {background:#c99700;}
-    .stars {color:orange; margin:5px 0;}
-    .cart-summary {padding:20px; background:#fdf3d5; margin:20px auto; border-radius:10px; max-width:600px;}
-    form {max-width:600px; margin:20px auto; background:#fff; padding:20px; border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,0.1);}
-    form input, form select {width:100%; padding:10px; margin:10px 0; border:1px solid #ccc; border-radius:6px;}
-    form button {background:black; color:white; padding:12px; border:none; border-radius:6px; cursor:pointer; font-size:18px;}
-    form button:hover {background:#444;}
-    .fixed-order {position:fixed; bottom:0; left:0; right:0; background:black; color:white; text-align:center; padding:15px; font-size:20px; cursor:pointer;}
-    footer {text-align:center; padding:20px; background:#fff3cd; margin-top:40px;}
-    footer p {margin:5px 0;}
-  </style>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>مناحل آل بوسعيدي — خلطة تقوية المناعة وفتح الشهية</title>
+<meta name="description" content="عسل طبيعي وخلطات لتقوية المناعة، فتح الشهية، النمو - توصيل لجميع ولايات الجزائر والدفع عند الاستلام">
+<meta name="keywords" content="عسل, مناحل, غذاء ملكات, حبوب لقاح, بروبوليس, عسل السدر, خلطة مناعة, الجزائر">
+
+<style>
+:root{
+  --orange:#ff7a00;
+  --gold:#d4af37;
+  --dark:#0b0b0b;
+  --muted:#6b4f3a;
+  --card:#fff;
+  --radius:14px;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:"Tajawal", "Segoe UI", Tahoma, Arial, sans-serif;background:linear-gradient(180deg,#fffaf0,#fff8e6);color:var(--dark)}
+.container{max-width:1100px;margin:18px auto;padding:0 16px}
+header{display:flex;align-items:center;justify-content:space-between;padding:12px;border-radius:12px;background:linear-gradient(90deg,var(--gold),var(--orange));color:#fff;box-shadow:0 8px 30px rgba(0,0,0,0.08)}
+.logo{display:flex;align-items:center;gap:12px}
+.logo .mark{width:64px;height:64px;border-radius:12px;background:rgba(255,255,255,0.12);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:26px}
+.logo .text{line-height:1}
+.logo .title{font-weight:900;font-size:20px}
+.header-right{display:flex;align-items:center;gap:12px}
+.call-btn{background:#000;color:#fff;padding:9px 14px;border-radius:10px;text-decoration:none;font-weight:800}
+
+.hero{display:flex;gap:20px;align-items:center;flex-wrap:wrap;margin-top:18px}
+.hero-card{flex:1;min-width:320px;background:var(--card);padding:20px;border-radius:var(--radius);box-shadow:0 14px 40px rgba(0,0,0,0.08)}
+.hero-image{width:420px;min-width:260px;border-radius:12px;overflow:hidden;box-shadow:0 12px 30px rgba(0,0,0,0.06)}
+.hero h1{margin:0;font-size:28px;color:var(--dark);text-align:center}
+.hero h2{margin:8px 0 0;color:var(--muted);text-align:center}
+
+.price-line{margin-top:12px;font-weight:900;text-align:center;color:var(--dark)}
+
+.offers{display:flex;gap:10px;justify-content:center;margin-top:12px;flex-wrap:wrap}
+.offer-pill{padding:12px 16px;border-radius:12px;background:#fff;border:2px solid transparent;cursor:pointer;font-weight:900;min-width:170px;text-align:center}
+.offer-pill.selected{background:linear-gradient(90deg,var(--gold),var(--orange));color:#fff;border-color:rgba(255,255,255,0.12)}
+
+.cta-row{display:flex;gap:10px;justify-content:center;margin-top:16px}
+.btn{padding:12px 16px;border-radius:12px;border:none;cursor:pointer;font-weight:900}
+.btn.primary{background:var(--orange);color:#fff}
+.btn.ghost{background:#fff;border:2px solid var(--orange);color:var(--orange)}
+
+.why{margin-top:18px;padding:18px;background:linear-gradient(180deg,#fffaf0,#fff6df);border-radius:12px;border:1px solid rgba(184,134,11,0.06)}
+.why h3{color:var(--gold);margin-top:0}
+.why p{color:#4a3b2f;line-height:1.7;text-align:justify}
+
+.product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}
+.prod{display:flex;flex-direction:column;gap:12px;align-items:center;padding:12px;background:var(--card);border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,0.06)}
+.prod img{width:120px;height:84px;object-fit:cover;border-radius:8px}
+.prod h4{margin:6px 0}
+.stars{color:#f5b301;font-size:16px;margin-top:6px}
+
+/* Checkout */
+.checkout{display:flex;gap:14px;margin-top:22px;flex-wrap:wrap;align-items:flex-start;justify-content:space-between}
+.order-form{flex:1;min-width:320px;background:var(--card);padding:18px;border-radius:12px;box-shadow:0 12px 30px rgba(0,0,0,0.06)}
+.summary{width:360px;min-width:300px;background:var(--card);padding:18px;border-radius:12px;box-shadow:0 12px 30px rgba(0,0,0,0.06)}
+label{display:block;margin:10px 0 6px;font-weight:800}
+input,select,textarea{width:100%;padding:10px;border-radius:10px;border:1px solid #eee;margin-bottom:8px}
+.row{display:flex;justify-content:space-between;margin-bottom:8px}
+.small{font-size:13px;color:var(--muted)}
+
+#cartBox{position:fixed;left:18px;bottom:90px;width:360px;max-height:60vh;background:var(--card);box-shadow:0 18px 60px rgba(0,0,0,0.12);border-radius:12px;padding:12px;overflow:auto;display:none;z-index:999}
+#floatOrder{position:fixed;left:0;right:0;bottom:0;background:#000;color:#fff;padding:14px;text-align:center;font-weight:900;cursor:pointer;z-index:1000}
+
+footer{margin-top:30px;padding:18px;text-align:center;color:var(--muted)}
+
+/* responsive */
+@media (max-width:1000px){
+  .product-grid{grid-template-columns:repeat(2,1fr)}
+  .summary{width:100%}
+  .hero-image{width:100%}
+}
+@media (max-width:600px){
+  h1{font-size:22px}
+  .product-grid{grid-template-columns:1fr}
+  header{flex-wrap:wrap;gap:8px;padding:10px}
+}
+</style>
 </head>
 <body>
 
-<header>
-  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAA..." alt="عسل">
-  <div class="logo">مناحل آل بوسعيدي</div>
-  <a href="tel:+213600000000" style="text-decoration:none; color:black; font-size:18px;">📞 اتصل بنا: 0600000000</a>
-  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAA..." alt="شهد">
-</header>
+<div class="container">
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <div class="mark">م</div>
+      <div class="text"><div class="title">مناحل آل بوسعيدي</div><div style="font-size:12px">عسل نقي وخلطات علاجية</div></div>
+    </div>
+    <div class="header-right">
+      <div style="background:rgba(255,255,255,0.12);padding:8px 10px;border-radius:8px;font-weight:800">🚚 توصيل لكل الولايات — الدفع عند الاستلام</div>
+      <a class="call-btn" href="tel:+213550123456">📞 اتصل الآن <strong>+213550123456</strong></a>
+    </div>
+  </header>
 
-<section class="hero">
-  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAA..." alt="خلطة العسل">
-  <h1>خلطة العسل الذهبية لتقوية المناعة وزيادة الشهية والنمو للأطفال ومنع النحافة</h1>
-  <h2>منتج طبيعي 100% من خيرات النحل: عسل، غذاء ملكات، عكبر، حبوب اللقاح</h2>
-</section>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-card">
+      <h1>خلطة تقوية المناعة وزيادة الشهية والنمو — للأطفال والكبار</h1>
+      <h2>مزيج طبيعي من عسل نقي، غذاء ملكات، حبوب لقاح وبروبوليس — نتائج مُشجعة ومذاق لذيذ</h2>
+      <div class="price-line">عرض الإطلاق: 1 عبوة — <strong>2800 د.ج</strong> | 2 عبوتين — <strong>5000 د.ج</strong> (توصيل مجاني) | 3 عبوات +1 مجاناً — <strong>8400 د.ج</strong></div>
 
-<section class="offers">
-  <h2>للطلب اختر العرض الذي يناسبك</h2>
-  <div class="card">
-    <h3>1 عبوة</h3>
-    <p>السعر: 2800 دج</p>
-    <div class="stars">★★★★★</div>
-    <button onclick="addToCart('خلطة المناعة - 1 عبوة',2800)">أضف إلى السلة</button>
-  </div>
-  <div class="card">
-    <h3>2 عبوتين</h3>
-    <p>السعر: 5000 دج (مع توصيل مجاني)</p>
-    <div class="stars">★★★★★</div>
-    <button onclick="addToCart('خلطة المناعة - 2 عبوات',5000)">أضف إلى السلة</button>
-  </div>
-  <div class="card">
-    <h3>3 عبوات + 1 مجانا</h3>
-    <p>السعر: 8400 دج (مع توصيل مجاني)</p>
-    <div class="stars">★★★★★</div>
-    <button onclick="addToCart('خلطة المناعة - 3+1 مجانا',8400)">أضف إلى السلة</button>
-  </div>
-</section>
+      <div style="margin-top:12px;font-weight:900;text-align:center">للطلب اختر العرض الذي يناسبك</div>
+      <div class="offers" role="tablist" aria-label="عروض">
+        <div class="offer-pill selected" data-key="one" onclick="uiChooseOffer('one')">1 عبوة — 2800 دج</div>
+        <div class="offer-pill" data-key="two" onclick="uiChooseOffer('two')">2 عبوتين — 5000 دج (مجاني)</div>
+        <div class="offer-pill" data-key="four" onclick="uiChooseOffer('four')">3 عب +1 مجاناً — 8400 دج (مجاني)</div>
+      </div>
 
-<section class="products">
-  <h2>منتجات أخرى</h2>
-  <div class="card">
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAA..." alt="عسل السدر">
-    <h3>عسل السدر</h3>
-    <div class="stars">★★★★★</div>
-    <button onclick="addToCart('عسل السدر',3500)">أضف إلى السلة</button>
-  </div>
-  <div class="card">
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAA..." alt="خلطة القدرة">
-    <h3>خلطة القدرة الجنسية</h3>
-    <div class="stars">★★★★★</div>
-    <button onclick="addToCart('خلطة القدرة الجنسية',4000)">أضف إلى السلة</button>
-  </div>
-</section>
+      <div class="cta-row">
+        <button class="btn primary" onclick="onBuyNow()">اشتري مباشرة</button>
+        <button class="btn ghost" id="addOfferBtn" onclick="onAddOffer()">أضف إلى السلة</button>
+      </div>
 
-<div class="cart-summary" id="cart">
-  <h3>🛒 ملخص السلة</h3>
-  <ul id="cart-items"></ul>
-  <p id="delivery"></p>
-  <p><strong>المجموع: <span id="total">0</span> دج</strong></p>
+      <div class="why" aria-label="لماذا">
+        <h3>لماذا طفلك في حاجة إلى هذا العسل؟</h3>
+        <p>ملعقة يومياً من خلطة مناحل آل بوسعيدي تمنح طفلك طاقة وحيوية، تفتح الشهية، تدعم النمو الطبيعي، وتحسّن التركيز والذاكرة. تحتوي الخلطة على مضادات أكسدة وفيتامينات طبيعية تزيد من مقاومة الأمراض الموسمية.</p>
+      </div>
+    </div>
+
+    <div class="hero-image">
+      <!-- خذنا صورة الطفل+عسل كـ SVG خفيف -->
+      <img alt="طفل يأكل عسل" src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600'%3E%3Crect width='100%25' height='100%25' rx='12' fill='%23fff5e1'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Tahoma' font-size='28' fill='%23b8860b'%3Eصورة المنتج%3C/text%3E%3C/svg%3E"/>
+    </div>
+  </section>
+
+  <!-- Upsells -->
+  <section>
+    <h3 style="color:var(--gold);text-align:center;margin-top:20px">منتجات مكمّلة — أضفها لسلة مشترياتك</h3>
+    <div id="upsellGrid" class="product-grid" aria-live="polite"></div>
+  </section>
+
+  <!-- Checkout -->
+  <section class="checkout">
+    <div class="order-form">
+      <h3 style="margin-top:0">طلب المنتج</h3>
+      <form id="orderForm" onsubmit="return submitOrder(event)">
+        <label>الاسم الكامل</label>
+        <input id="custName" name="name" type="text" required>
+
+        <label>رقم الهاتف</label>
+        <input id="custPhone" name="phone" type="tel" required placeholder="مثال: 0550123456">
+
+        <label>الولاية</label>
+        <select id="wilaya" name="wilaya" required onchange="recalculate()">
+          <option value="">اختر ولايتك</option>
+        </select>
+
+        <label>العنوان (شارع، رقم)</label>
+        <input id="address" name="address" type="text" required>
+
+        <label>ملاحظات</label>
+        <textarea id="notes" name="notes" rows="3"></textarea>
+
+        <input type="hidden" id="itemsInput" name="items">
+        <input type="hidden" id="subtotalInput" name="subtotal">
+        <input type="hidden" id="shippingInput" name="shipping">
+        <input type="hidden" id="totalInput" name="total">
+
+        <div style="margin-top:12px">
+          <button class="btn primary" type="submit">✅ تأكيد الطلب</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="summary">
+      <h3 style="margin-top:0">🛒 ملخص السلة</h3>
+      <div id="cartItemsSummary" class="small">السلة فارغة</div>
+      <div class="row"><div class="small">المجموع الفرعي</div><div id="subtotal">0 د.ج</div></div>
+      <div class="row"><div class="small">تكلفة التوصيل</div><div id="shipping">اختر الولاية</div></div>
+      <hr style="border:none;border-top:1px dashed #f0d9b3;margin:10px 0"/>
+      <div class="row" style="font-weight:900"><div>المجموع الكلي</div><div id="total">0 د.ج</div></div>
+
+      <div style="margin-top:12px">
+        <button class="btn ghost" onclick="toggleCartBox()">عرض السلة</button>
+      </div>
+
+      <div style="margin-top:12px;font-size:13px;color:var(--muted)">
+        🔁 <strong>سياسة الإرجاع:</strong> يمكنك إرجاع المنتج في حالة التلف أو خلل التغليف خلال 7 أيام — نستبدل المنتج أو نُرجع المبلغ حسب الحالة.
+        <div style="margin-top:8px">🏢 © شركة مناحل آل بوسعيدي</div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    للاستفسار: <a href="tel:+213550123456">+213 550 123 456</a> — التوصيل إلى كل الولايات
+  </footer>
 </div>
 
-<form id="orderForm">
-  <input type="text" name="name" placeholder="الاسم الكامل" required>
-  <input type="tel" name="phone" placeholder="رقم الهاتف" required>
-  <select name="wilaya" id="wilaya" required></select>
-  <input type="text" name="address" placeholder="العنوان بالتفصيل" required>
-  <input type="hidden" name="order" id="orderField">
-  <input type="hidden" name="total" id="totalField">
-  <button type="submit">تأكيد الطلب</button>
-</form>
-
-<footer>
-  <p>سياسة الإرجاع: يمكنك إرجاع المنتج في حالة التلف أو عدم الرضا</p>
-  <p>حقوق النشر © 2025 - شركة مناحل آل بوسعيدي</p>
-</footer>
-
-<div class="fixed-order" onclick="scrollToForm()">اطلب الآن</div>
+<!-- cart box & float -->
+<div id="cartBox"></div>
+<div id="floatOrder" onclick="scrollToCheckout()">اطلب الآن</div>
 
 <script>
-  const deliveryPrices = {
-    "أدرار":600,"الشلف":400,"الأغواط":500,"أم البواقي":400,"باتنة":400,"بجاية":350,"بسكرة":400,"بشار":600,"البليدة":300,"البويرة":350,
-    "تمنراست":800,"تبسة":400,"تلمسان":400,"تيارت":400,"تيزي وزو":350,"الجزائر":300,"الجلفة":400,"جيجل":350,"سطيف":350,"سعيدة":400,
-    "سكيكدة":350,"سيدي بلعباس":400,"عنابة":350,"قالمة":350,"قسنطينة":350,"المدية":350,"مستغانم":400,"المسيلة":400,"معسكر":400,"ورقلة":600,
-    "وهران":400,"البيض":500,"إليزي":800,"برج بوعريريج":350,"بومرداس":300,"الطارف":350,"تندوف":900,"تيسمسيلت":400,"الوادي":500,"خنشلة":400,
-    "سوق أهراس":400,"تيبازة":300,"ميلة":350,"عين الدفلى":400,"النعامة":500,"عين تموشنت":400,"غرداية":600,"غليزان":400
+/* -------------------------
+   ضع هنا رابط Google Web App بعد نشر Code.gs كـ Web App
+   مثال: "https://script.google.com/macros/s/AKfycb.../exec"
+   ------------------------- */
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyjvqBhvwvva6HNQnKQOqWzAQEqGCO1JDQxD5VOMkxuzWLJspMoRC8bGYpk0RBdCaaS8w/exec";
+
+/* Products list (offers + upsells) */
+const PRODUCTS = [
+  {id:'main_one',title:'خلطة المناعة — 1 عبوة',price:2800,qty:1,freeShipping:false},
+  {id:'main_two',title:'خلطة المناعة — 2 عبوتين',price:5000,qty:2,freeShipping:true},
+  {id:'main_four',title:'خلطة المناعة — 3 عبوات +1 مجاناً',price:8400,qty:4,freeShipping:true},
+
+  {id:'sidr',title:'عسل السدر (500غ)',price:3500,qty:1,imgText:'عسل السدر'},
+  {id:'azhar',title:'عسل الأزهار (500غ)',price:3000,qty:1,imgText:'عسل الأزهار'},
+  {id:'jibi',title:'العسل الجبلي (500غ)',price:4000,qty:1,imgText:'العسل الجبلي'},
+  {id:'fat',title:'خلطة التسمين الطبيعي',price:5000,qty:1,imgText:'خلطة التسمين'},
+  {id:'sex',title:'خلطة القدرة الجنسية',price:6000,qty:1,imgText:'خلطة القدرة'},
+  {id:'bedwet',title:'خلطة التبول اللاارادي',price:6500,qty:1,imgText:'خلطة التبول'},
+  {id:'resp',title:'خلطة الجهاز التنفسي والسعال',price:5500,qty:1,imgText:'خلطة الجهاز التنفسي'}
+];
+
+/* ====== Shipping prices for 58 wilayas (تقديرية حسب البعد عن العاصمة) ====== */
+const shippingPrices = {
+ "أدرار":800,"الشلف":400,"الأغواط":600,"أم البواقي":500,"باتنة":600,"بجاية":400,"بسكرة":600,"بشار":900,"البليدة":300,"البويرة":400,
+ "تمنراست":1000,"تبسة":600,"تلمسان":500,"تيارت":500,"تيزي وزو":400,"الجزائر":300,"الجلفة":500,"جيجل":400,"سطيف":500,"سعيدة":600,
+ "سكيكدة":500,"سيدي بلعباس":500,"عنابة":500,"قالمة":500,"قسنطينة":500,"المدية":350,"مستغانم":450,"المسيلة":500,"معسكر":500,"ورقلة":900,
+ "وهران":400,"البيض":700,"إليزي":1000,"برج بوعريريج":450,"بومرداس":350,"الطارف":600,"تندوف":1100,"تيسمسيلت":500,"الوادي":800,"خنشلة":600,
+ "سوق أهراس":650,"تيبازة":320,"ميلة":500,"عين الدفلى":480,"النعامة":800,"عين تموشنت":450,"غرداية":900,"غليزان":500,"تيميمون":950,"برج باجي مختار":1200,
+ "أولاد جلال":900,"بني عباس":800,"عين صالح":1200,"عين قزام":1200,"تقرت":1000,"جانت":1200,"المغير":1000,"المنيعة":900,"تيبازة2":320
+};
+
+/* Note: shippingPrices includes all main 58 wilayas; remove duplicate keys if any. 
+   You can edit prices easily. */
+
+/* ====== State ====== */
+let cart = [];
+let selectedOffer = 'main_one';
+
+/* ====== Util ====== */
+function format(num){ return (num||0).toLocaleString() + " د.ج"; }
+function findProduct(id){ return PRODUCTS.find(p=>p.id===id); }
+function createDataImg(text,w=400,h=260){
+  return "data:image/svg+xml;utf8," + encodeURIComponent(
+    `<svg xmlns='http://www.w3.org/2000/svg' width='${w}' height='${h}'><rect rx='12' width='100%' height='100%' fill='%23fff5e1'/><text x='50%' y='50%' text-anchor='middle' dominant-baseline='middle' font-family='Tahoma' font-size='20' fill='%23b8860b'>${text}</text></svg>`
+  );
+}
+
+/* ====== render upsells ====== */
+function renderUpsells(){
+  const grid = document.getElementById('upsellGrid');
+  grid.innerHTML = '';
+  PRODUCTS.filter(p=>!p.id.startsWith('main')).forEach(p=>{
+    const el = document.createElement('div');
+    el.className = 'prod card';
+    el.innerHTML = `
+      <img src="${createDataImg(p.imgText||p.title)}" alt="${p.title}">
+      <h4>${p.title}</h4>
+      <div class="stars">★★★★★</div>
+      <div style="font-weight:900;margin-top:6px">${p.price.toLocaleString()} د.ج</div>
+      <button id="btn-${p.id}">أضف إلى السلة</button>
+    `;
+    grid.appendChild(el);
+    document.getElementById('btn-'+p.id).addEventListener('click', function(){
+      addToCart(p.id);
+      this.style.background = '#00a86b';
+      setTimeout(()=> this.style.background = '',700);
+    });
+  });
+}
+renderUpsells();
+
+/* ====== populate wilayas select ====== */
+function populateWilayas(){
+  const sel = document.getElementById('wilaya');
+  const keys = Object.keys(shippingPrices).sort((a,b)=>a.localeCompare(b,'ar'));
+  keys.forEach(w=>{
+    const opt = document.createElement('option');
+    opt.value = w;
+    opt.textContent = w + " — " + (shippingPrices[w] ? shippingPrices[w] + " دج" : "");
+    sel.appendChild(opt);
+  });
+}
+populateWilayas();
+
+/* ====== Offers UI ====== */
+function uiChooseOffer(key){
+  selectedOffer = (key==='two')? 'main_two' : (key==='four')? 'main_four' : 'main_one';
+  document.querySelectorAll('.offer-pill').forEach(el=>el.classList.remove('selected'));
+  document.querySelectorAll('.offer-pill').forEach(el=>{
+    if(el.dataset.key===key) el.classList.add('selected');
+  });
+}
+
+/* ====== Cart functions ====== */
+function addToCart(id){
+  const p = findProduct(id);
+  if(!p) return;
+  const existing = cart.find(x=>x.id===id);
+  if(existing) existing.qty += p.qty || 1;
+  else cart.push({id:p.id,title:p.title,price:p.price,qty:p.qty||1,freeShipping:!!p.freeShipping});
+  saveCart(); renderCart(); showCartBox();
+}
+function removeFromCart(i){
+  if(i>=0 && i<cart.length) cart.splice(i,1);
+  saveCart(); renderCart();
+}
+function clearCart(){ cart=[]; saveCart(); renderCart(); }
+
+function saveCart(){ localStorage.setItem('manahil_cart', JSON.stringify(cart)); }
+function loadCart(){ try{ cart = JSON.parse(localStorage.getItem('manahil_cart')||'[]')||[]; }catch(e){cart=[];} renderCart(); }
+
+/* ====== render cart & totals ====== */
+function renderCart(){
+  const summary = document.getElementById('cartItemsSummary');
+  if(cart.length===0){
+    summary.innerHTML = "<div class='small'>السلة فارغة</div>";
+  } else {
+    summary.innerHTML = cart.map((it,i)=>{
+      return `<div style="margin-bottom:10px"><strong>${it.title}</strong> — ${format(it.price)} × ${it.qty} <button style="margin-left:8px;background:#e74c3c;border:none;color:#fff;padding:6px;border-radius:8px;cursor:pointer" onclick="removeFromCart(${i})">حذف</button></div>`;
+    }).join('');
+  }
+  const subtotal = cart.reduce((s,i)=>s + (i.price*(i.qty||1)), 0);
+  document.getElementById('subtotal').innerText = format(subtotal);
+  recalculate();
+}
+
+/* ====== shipping & recalc ====== */
+function recalculate(){
+  const wilaya = document.getElementById('wilaya').value;
+  const subtotal = cart.reduce((s,i)=>s + (i.price*(i.qty||1)), 0);
+  const totalPacks = cart.reduce((s,i)=>s + (i.qty||1), 0);
+  const freeByItem = cart.some(i=>i.freeShipping);
+  const freeByQty = totalPacks > 1;
+  const freeBySubtotal = subtotal >= 5000;
+  let shipping = 0;
+  if(!freeByItem && !freeByQty && !freeBySubtotal){
+    shipping = (wilaya && shippingPrices[wilaya])? shippingPrices[wilaya] : 0;
+  } else {
+    shipping = 0;
+  }
+  document.getElementById('shipping').innerText = shipping? format(shipping) : 'مجاني';
+  document.getElementById('total').innerText = format(subtotal + shipping);
+  document.getElementById('subtotalInput').value = subtotal;
+  document.getElementById('shippingInput').value = shipping;
+  document.getElementById('totalInput').value = subtotal + shipping;
+  document.getElementById('itemsInput').value = JSON.stringify(cart);
+}
+
+/* ====== cart box ====== */
+function showCartBox(){
+  const el = document.getElementById('cartBox');
+  el.style.display = 'block';
+  el.innerHTML = '<h4 style="margin:6px 0">سلة مشترياتك</h4>' + (cart.length ? cart.map((it,i)=>`<div style="margin-bottom:8px"><strong>${it.title}</strong><div class="small">${format(it.price)} × ${it.qty} <button onclick="removeFromCart(${i})" style="margin-left:8px;padding:6px;border-radius:6px;background:#e74c3c;color:#fff;border:none">حذف</button></div></div>`).join('') : '<div class="small">السلة فارغة</div>') + '<div style="text-align:center;margin-top:8px"><button onclick="hideCartBox()" style="padding:8px;border-radius:8px;border:none;background:#eee;cursor:pointer">إغلاق</button></div>';
+}
+function hideCartBox(){ document.getElementById('cartBox').style.display='none'; }
+function toggleCartBox(){ const b=document.getElementById('cartBox'); if(b.style.display==='block') hideCartBox(); else showCartBox(); }
+function scrollToCheckout(){ document.getElementById('orderForm').scrollIntoView({behavior:'smooth',block:'center'}); }
+
+/* ====== offers actions ====== */
+function onAddOffer(){
+  addToCart(selectedOffer);
+  const btn = document.getElementById('addOfferBtn');
+  btn.style.background = '#00a86b';
+  setTimeout(()=>btn.style.background='',700);
+}
+function onBuyNow(){
+  cart = [];
+  const p = findProduct(selectedOffer);
+  if(p) cart.push({id:p.id,title:p.title,price:p.price,qty:p.qty||1,freeShipping:!!p.freeShipping});
+  saveCart(); renderCart();
+  scrollToCheckout();
+  setTimeout(()=>document.getElementById('custName').focus(),300);
+}
+
+/* ====== submit order ====== */
+async function submitOrder(e){
+  if(e && e.preventDefault) e.preventDefault();
+
+  const name = document.getElementById('custName').value.trim();
+  const phone = document.getElementById('custPhone').value.trim();
+  const wilaya = document.getElementById('wilaya').value;
+  const address = document.getElementById('address').value.trim();
+  const notes = document.getElementById('notes').value.trim();
+
+  if(!name || !phone || !wilaya){ alert('رجاءً أكمل الاسم، الهاتف والولاية'); return false; }
+  if(cart.length===0){ alert('السلة فارغة. أضف منتجاً أو اختر عرضاً.'); return false; }
+
+  recalculate();
+  const payload = {
+    timestamp: new Date().toISOString(),
+    name, phone, wilaya, address, notes,
+    items: cart,
+    subtotal: parseInt(document.getElementById('subtotalInput').value||0,10),
+    shipping: parseInt(document.getElementById('shippingInput').value||0,10),
+    total: parseInt(document.getElementById('totalInput').value||0,10)
   };
 
-  const cart = [];
-  function addToCart(product, price) {
-    cart.push({product, price});
-    renderCart();
-  }
-  function removeFromCart(i) {
-    cart.splice(i,1);
-    renderCart();
-  }
-  function renderCart(){
-    let list = document.getElementById("cart-items");
-    list.innerHTML="";
-    let total=0;
-    cart.forEach((item,i)=>{
-      total+=item.price;
-      list.innerHTML+=`<li>${item.product} - ${item.price} دج <button onclick="removeFromCart(${i})">❌</button></li>`;
+  try{
+    const res = await fetch(SCRIPT_URL, {
+      method: 'POST',
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify(payload)
     });
-    let w=document.getElementById("wilaya").value;
-    let delivery=cart.length>1?0:(deliveryPrices[w]||400);
-    document.getElementById("delivery").innerText="سعر التوصيل: "+delivery+" دج";
-    document.getElementById("total").innerText=total+delivery;
-    document.getElementById("orderField").value=cart.map(c=>c.product).join(", ");
-    document.getElementById("totalField").value=total+delivery;
-  }
-  function fillWilayas(){
-    let w=document.getElementById("wilaya");
-    for(let wilaya in deliveryPrices){
-      w.innerHTML+=`<option value="${wilaya}">${wilaya}</option>`;
+    const data = await res.json().catch(()=>null);
+    if(!res.ok || (data && data.status==='error')){
+      throw new Error((data && data.message) ? data.message : 'حدث خطأ أثناء إرسال الطلب');
     }
+    // نجاح
+    clearCart();
+    window.location.href = 'thankyou.html';
+  } catch(err){
+    console.error(err);
+    alert('حصل خطأ أثناء إرسال الطلب: ' + err.message + '\nتأكد من أنك نشرت Google Apps Script كـ Web App ووضع رابط الـ SCRIPT_URL صحيح.');
   }
-  fillWilayas();
-  document.getElementById("wilaya").addEventListener("change",renderCart);
 
-  document.getElementById("orderForm").addEventListener("submit",function(e){
-    e.preventDefault();
-    fetch("https://script.google.com/macros/s/AKfycbxwbrUpvsWcbPdMNeSGmioHRxlKlpWY2DGu7k3_IdYSSepUfkfwSPTKqfPNOPFiVV3hxA/exec",{
-      method:"POST",
-      body:new FormData(this)
-    }).then(()=>{window.location="thankyou.html";});
-  });
+  return false;
+}
 
-  function scrollToForm(){
-    document.getElementById("orderForm").scrollIntoView({behavior:"smooth"});
-  }
+/* init */
+(function init(){
+  uiChooseOffer('one');
+  loadCart();
+  renderCart();
+  document.getElementById('floatOrder').addEventListener('click', scrollToCheckout);
+})();
 </script>
 
 </body>
