@@ -379,10 +379,10 @@ function onSubmit(e){
   const name = document.getElementById('name').value.trim();
   let phone = document.getElementById('phone').value.trim();
   phone = phone.replace(/\s|-/g,'');
-  if(!validatePhone(phone)){ alert('أدخل رقم هاتف جزائري صحيح. مثال: 0550123456 أو +213550123456'); document.getElementById('phone').focus(); return; }
+  if(!validatePhone(phone)){ alert('أدخل رقم هاتف جزائري صحيح.'); document.getElementById('phone').focus(); return; }
   const wilaya = document.getElementById('wilaya').value;
   if(!wilaya){ alert('اختر ولايتك'); return; }
-  if(!WEBAPP_URL || WEBAPP_URL.includes('PUT_YOUR_WEBAPP_URL_HERE')){ alert('ضع رابط Web App في الكود (WEBAPP_URL)'); return; }
+  if(!WEBAPP_URL || WEBAPP_URL.includes('https://script.google.com/macros/s/AKfycbz8tz7Yf9sLkVpnEj1jNc3zZToF8njsbDBwyr2oAZVtQIm8FH_ujlKsifPsRvGWubBLew/exec')){ alert('ضع رابط Web App في الكود (WEBAPP_URL)'); return; }
 
   // بناء البيانات
   const fd = new FormData();
@@ -427,6 +427,8 @@ document.addEventListener('DOMContentLoaded', init);
 </script>
 </body>
 </html>
+
+
 
 
 
