@@ -382,7 +382,7 @@ function onSubmit(e){
   if(!validatePhone(phone)){ alert('أدخل رقم هاتف جزائري صحيح.'); document.getElementById('phone').focus(); return; }
   const wilaya = document.getElementById('wilaya').value;
   if(!wilaya){ alert('اختر ولايتك'); return; }
-  if(!WEBAPP_URL || WEBAPP_URL.includes('https://script.google.com/macros/s/AKfycbz8tz7Yf9sLkVpnEj1jNc3zZToF8njsbDBwyr2oAZVtQIm8FH_ujlKsifPsRvGWubBLew/exec')){ alert('ضع رابط Web App في الكود (WEBAPP_URL)'); return; }
+  if(!WEBAPP_URL || WEBAPP_URL.includes('PUT YOUR WEBAPP_URL HERE')){ alert('ضع رابط Web App في الكود (WEBAPP_URL)'); return; }
 
   // بناء البيانات
   const fd = new FormData();
@@ -424,11 +424,14 @@ function onSubmit(e){
 }
 
 document.addEventListener('DOMContentLoaded', init);
+document.getElementById('orderform').addEventlistener('submit',function(e){e.preventDefault();  
 document.getElementById("confirmBtn").addEventListener("click", onSubmit);
 </script>
 
 </body>
 </html>
+
+
 
 
 
