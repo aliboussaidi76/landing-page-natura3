@@ -374,35 +374,42 @@ function validatePhone(phone){
 }
 
 /* إرسال الفورم */
-function onSubmit(e){
+async function onSubmit(e) {
   e.preventDefault();
-  const name = document.getElementById('name').value.trim();
-  let phone = document.getElementById('phone').value.trim();
-  phone = phone.replace(/\s|-/g,'');
-  if(!validatePhone(phone)){ alert('أدخل رقم هاتف جزائري صحيح.'); document.getElementById('phone').focus(); return; }
-  const wilaya = document.getElementById('wilaya').value;
-  if(!wilaya){ alert('اختر ولايتك'); return; }
-  if(!WEBAPP_URL || WEBAPP_URL.includes('PUT YOUR WEBAPP_URL HERE')){ alert('ضع رابط Web App في الكود (WEBAPP_URL)'); return; }
 
-  // بناء البيانات
-  const fd = new FormData();
-  fd.append('name', name);
-  fd.append('phone', phone);
-  fd.append('wilaya', wilaya);
-  fd.append('address', document.getElementById('address').value || '');
-  fd.append('offer', document.getElementById('offerSelect').value);
-  fd.append('price_items', document.getElementById('price_items').value);
-  fd.append('price_cart', document.getElementById('price_cart').value);
-  fd.append('price_shipping', document.getElementById('price_shipping').value);
-  fd.append('total', document.getElementById('total_price').value);
+  const fd = {
+    name: document.getElementById("name").value.trim(),
+    phone: document.getElementById("phone").value.trim(),
+    wilaya: document.getElementById("wilaya").value.trim(),
+    offer: document.getElementById("offer-select").value.trim(),
+    cart: JSON.stringify(cart || []),
+  };
 
-  // ارفاق السلة
-  cart.forEach(it => fd.append('cart[]', `${it.name} x${it.qty} (${it.price} دج)`));
-  // ارفاق upsells (لو احتجنا)
-  // (في هذه النسخة Upsells تضاف للسلة بواسطة addToCart)
+  try {
+    const response = await fetch(WEBAPP_URL, {
+      method: "POST",
+      mode: "cors",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(fd),
+    });
 
-  // ارسال
-  document.getElementById('confirmBtn').disabled = true;
+    const result = await response.json();
+    if (result.result === "success") {
+      window.location.href = "thankyou.html";
+    } else {
+      alert("⚠️ حدث خطأ أثناء الإرسال، يرجى المحاولة لاحقًا.");
+    }
+  } catch (error) {
+    console.error("❌ فشل الإرسال:", error);
+    alert("⚠️ فشل الإرسال! تحقق من رابط Web App في الكود.");
+  }
+}
+
+document
+  .getElementById("order-form")
+  .addEventListener("submit", onSubmit);
   fetch(WEBAPP_URL, { method:'POST', body: fd })
     .then(r => r.json())
     .then(res => {
@@ -430,6 +437,8 @@ document.getElementById("confirmBtn").addEventListener("click", onSubmit);
 
 </body>
 </html>
+
+
 
 
 
