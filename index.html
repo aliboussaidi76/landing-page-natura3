@@ -429,7 +429,80 @@ document
     })
     .finally(()=> document.getElementById('confirmBtn').disabled = false);
 }
+<script>
+document.addEventListener('DOMContentLoaded', function() {
 
+  // ======= عناصر افتراضية — غيّر الـ IDs هنا إن كانت مختلفة عندك =======
+  const orderNowBtn = document.querySelector('.btn.primary.one') || document.getElementById('orderNow') || document.querySelector('[data-scroll-to-form]');
+  const orderForm = document.getElementById('order-form') || document.getElementById('orderForm') || document.querySelector('form[id*="order"]');
+  const confirmBtn = document.getElementById('confirmBtn') || document.querySelector('.confirm-btn') || document.querySelector('button[type="submit"], button.confirm');
+
+  // فشل باك آب لو ما لقيش الفورم
+  if (!orderForm) {
+    console.warn('orderForm not found — تأكد من id الفورم (يفضل: id="order-form")');
+    return;
+  }
+
+  // --- Scroll to form (زر "اطلب الآن") ---
+  if (orderNowBtn) {
+    orderNowBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      orderForm.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      const first = orderForm.querySelector('input, select, textarea, button');
+      if (first) first.focus();
+    });
+  }
+
+  // --- ضمان وجود مستمع للإرسال على الفورم (يمنع إعادة التوجيه الافتراضي) ---
+  if (!orderForm.__customSubmitAttached) {
+    orderForm.addEventListener('submit', function(e) {
+      e.preventDefault(); // يمنع التوجيه الافتراضي إلى action أو إعادة تحميل الصفحة
+      // إذا دالة onSubmit معرفة نستدعيها، وإلا نستخدم إرسال افتراضي
+      if (typeof onSubmit === 'function') {
+        try { onSubmit(e); } catch(err) { console.error('خطأ داخل onSubmit:', err); }
+      } else {
+        // fallback بسيط: نجمع FormData ونرسله إلى WEBAPP_URL
+        const fd = new FormData(orderForm);
+        if (!window.WEBAPP_URL || !window.WEBAPP_URL.includes('https')) {
+          alert('❌ رابط WebApp غير مضبوط في الكود.');
+          return;
+        }
+        fetch(window.WEBAPP_URL, { method: 'POST', body: fd })
+          .then(r => {
+            if (r.ok) window.location.href = 'thankyou.html';
+            else alert('حدث خطأ في الإرسال، حاول لاحقاً.');
+          })
+          .catch(() => alert('فشل الاتصال، تحقق من WebApp ونشره.'));
+      }
+    });
+    orderForm.__customSubmitAttached = true;
+  }
+
+  // --- زر تأكيد الطلب: إذا كان خارج الفورم أو href يسبب انتقال، نمنعه ونطلق submit برمجياً ---
+  if (confirmBtn) {
+    confirmBtn.addEventListener('click', function(e) {
+      // إذا العنصر هو رابط (a) نمنع الانتقال
+      e.preventDefault();
+
+      // تعطيل مؤقت للزر لمنع الضغط المزدوج
+      confirmBtn.disabled = true;
+
+      // استدعاء submit بطريقة آمنة:
+      if (typeof orderForm.requestSubmit === 'function') {
+        orderForm.requestSubmit();
+      } else {
+        // نرسل حدث submit ليقوم المستمع الأعلى بمعالجته
+        const evt = new Event('submit', { bubbles: true, cancelable: true });
+        orderForm.dispatchEvent(evt);
+      }
+
+      // إعادة تفعيل زر بعد 2.5 ثانية كإجراء احتياطي (سيتعادَل أو يتم إلغاؤه داخل onSubmit)
+      setTimeout(() => { confirmBtn.disabled = false; }, 2500);
+    });
+  }
+
+});
+</script>
 document.addEventListener('DOMContentLoaded', init);
 document.getElementById('orderform').  
 document.getElementById("confirmBtn").addEventListener("click", onSubmit);
@@ -437,6 +510,8 @@ document.getElementById("confirmBtn").addEventListener("click", onSubmit);
 
 </body>
 </html>
+
+
 
 
 
