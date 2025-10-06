@@ -1,168 +1,23 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>شكراً لطلبك - مناحل آل البوسعيدي</title>
-  <meta name="description" content="تم استلام طلبك بنجاح! سيتصل بك فريقنا قريباً لتأكيد طلبك وتوصيله.">
-  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet" />
-  <style>
-    body {
-      font-family: 'Tajawal', sans-serif;
-      background: linear-gradient(to bottom, #fff8e1, #f1c27d);
-      color: #4e342e;
-      text-align: center;
-      padding: 40px 20px;
-      margin: 0;
-    }
-    .container {
-      background-color: #fffaf2;
-      padding: 30px;
-      border-radius: 20px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-      max-width: 420px;
-      margin: auto;
-      position: relative;
-    }
-    h1 {
-      color: #8b5e34;
-      margin-bottom: 10px;
-    }
-    p {
-      color: #5d4037;
-      font-size: 16px;
-      line-height: 1.7;
-    }
-    img {
-      width: 100px;
-      margin-bottom: 20px;
-    }
-    .btn {
-      display: block;
-      width: 100%;
-      padding: 14px;
-      margin-top: 15px;
-      border: none;
-      border-radius: 10px;
-      background-color: #8b5e34;
-      color: white;
-      font-size: 18px;
-      cursor: pointer;
-      text-decoration: none;
-      transition: background 0.3s;
-    }
-    .btn:hover {
-      background-color: #6d4c41;
-    }
-    .phone {
-      background-color: #388e3c;
-    }
-    .phone:hover {
-      background-color: #2e7d32;
-    }
-    .timer {
-      background: #fff3cd;
-      padding: 10px;
-      border-radius: 10px;
-      font-weight: bold;
-      color: #856404;
-      margin-top: 15px;
-      font-size: 17px;
-    }
-    .upsells {
-      margin-top: 30px;
-      text-align: right;
-    }
-    .upsell-item {
-      background-color: #fff3e0;
-      padding: 15px;
-      border-radius: 12px;
-      margin-bottom: 15px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    .upsell-item img {
-      width: 80px;
-      border-radius: 10px;
-    }
-    .upsell-info {
-      flex: 1;
-    }
-    .upsell-info h3 {
-      margin: 0;
-      font-size: 16px;
-      color: #6d4c41;
-    }
-    .upsell-info p {
-      font-size: 14px;
-      margin: 5px 0;
-    }
-    .upsell-info a {
-      background-color: #f9a825;
-      color: white;
-      padding: 6px 10px;
-      border-radius: 6px;
-      font-size: 14px;
-      text-decoration: none;
-    }
-    .upsell-info a:hover {
-      background-color: #f57f17;
-    }
-  </style>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>شكراً — تم استلام طلبك</title>
+<style>
+  body{margin:0;background:#0f1a12;color:#fff;font-family:Arial,Helvetica,sans-serif;display:flex;align-items:center;justify-content:center;height:100vh}
+  .box{background:linear-gradient(180deg,#16261a,#0f1910);padding:28px;border-radius:12px;text-align:center;max-width:720px;box-shadow:0 20px 50px rgba(0,0,0,0.6)}
+  h1{color:#d8a24a;margin:0 0 8px}
+  p{color:#bfc9be}
+  .btn{display:inline-block;margin-top:16px;padding:10px 16px;border-radius:8px;background:#2fb24a;color:#07101a;text-decoration:none;font-weight:700}
+</style>
 </head>
 <body>
-  <div class="container">
-    <img src="https://cdn-icons-png.flaticon.com/512/3909/3909444.png" alt="شكراً">
-    <h1>🎉 شكراً لطلبك!</h1>
-    <p>تم استلام طلبك بنجاح.<br> سيتواصل معك أحد مستشارينا لتأكيد التفاصيل والتوصيل في أقرب وقت.</p>
-
-    <div class="timer" id="countdown">
-      ⏰ العرض الخاص ينتهي خلال <span id="time">00:00:00</span>
-    </div>
-
-    <a href="index.html" class="btn">العودة إلى الصفحة الرئيسية</a>
-    <a href="tel:0662277555" class="btn phone">📞 اتصل بنا الآن</a>
-
-    <div class="upsells">
-      <h2>منتجات قد تهمك أيضاً 🍯</h2>
-      <div class="upsell-item">
-        <img src="https://cdn-icons-png.flaticon.com/512/1998/1998751.png" alt="عسل السدر">
-        <div class="upsell-info">
-          <h3>عسل السدر الجبلي</h3>
-          <p>غني بالمعادن ومفيد للجهاز التنفسي والمعدة.</p>
-          <a href="index.html">اطلب الآن</a>
-        </div>
-      </div>
-
-      <div class="upsell-item">
-        <img src="https://cdn-icons-png.flaticon.com/512/4064/4064230.png" alt="خلطة السعال">
-        <div class="upsell-info">
-          <h3>خلطة السعال والبلغم</h3>
-          <p>تركيبة طبيعية مهدئة للسعال ومقوية للمناعة.</p>
-          <a href="index.html">اطلب الآن</a>
-        </div>
-      </div>
-    </div>
+  <div class="box">
+    <h1>شكراً! طلبك تم استلامه</h1>
+    <p>سيتواصل معك فريقنا قريباً لتأكيد الطلب وترتيب التوصيل. شكراً لثقتك في مناحل وعسل آل البوسعيدي.</p>
+    <a class="btn" href="index.html">العودة للرئيسية</a>
   </div>
-
-  <script>
-    // 🕒 عداد تنازلي حتى منتصف الليل
-    function startCountdown() {
-      const now = new Date();
-      const midnight = new Date();
-      midnight.setHours(23, 59, 59, 999);
-      const remaining = midnight - now;
-
-      const hours = Math.floor((remaining / (1000 * 60 * 60)) % 24);
-      const minutes = Math.floor((remaining / (1000 * 60)) % 60);
-      const seconds = Math.floor((remaining / 1000) % 60);
-
-      document.getElementById("time").textContent = 
-        `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
-    }
-
-    setInterval(startCountdown, 1000);
-  </script>
 </body>
 </html>
+
+
