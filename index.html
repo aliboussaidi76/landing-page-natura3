@@ -135,381 +135,260 @@
         </section>
       </div>
 
-      <!-- RIGHT: FORM + summary -->
-      <aside>
-        <div class="card">
-          <h3 style="text-align:right">لطلب المنتج املأ النموذج</h3>
-          <form id="orderForm">
-            <label for="offerSelect">اختر العرض</label>
-            <select id="offerSelect" name="offer">
-              <option value="1">عبوة واحدة — 2800 دج</option>
-              <option value="2">عبوتين — 5600 دج (توصيل مجاني)</option>
-              <option value="3">3 عبوات + 1 مجانا — 8400 دج (توصيل مجاني)</option>
-            </select>
-
-            <label for="name">الاسم الكامل</label>
-            <input id="name" name="name" type="text" placeholder="الاسم الكامل" required>
-
-            <label for="phone">رقم الهاتف</label>
-            <input id="phone" name="phone" type="tel" placeholder="مثال: 0550123456 أو +213550123456" required>
-
-            <label for="wilaya">الولاية</label>
-            <select id="wilaya" name="wilaya" required>
-              <option value="">اختر ولايتك</option>
-              <option value="أدرار">01 - أدرار</option>
-              <option value="الشلف">02 - الشلف</option>
-              <option value="الأغواط">03 - الأغواط</option>
-              <option value="أم البواقي">04 - أم البواقي</option>
-              <option value="باتنة">05 - باتنة</option>
-              <option value="بجاية">06 - بجاية</option>
-              <option value="بسكرة">07 - بسكرة</option>
-              <option value="بشار">08 - بشار</option>
-              <option value="البليدة">09 - البليدة</option>
-              <option value="البويرة">10 - البويرة</option>
-              <option value="تمنراست">11 - تمنراست</option>
-              <option value="تبسة">12 - تبسة</option>
-              <option value="تلمسان">13 - تلمسان</option>
-              <option value="تيارت">14 - تيارت</option>
-              <option value="تيزي وزو">15 - تيزي وزو</option>
-              <option value="الجزائر">16 - الجزائر</option>
-              <option value="الجلفة">17 - الجلفة</option>
-              <option value="جيجل">18 - جيجل</option>
-              <option value="سطيف">19 - سطيف</option>
-              <option value="سعيدة">20 - سعيدة</option>
-              <option value="سكيكدة">21 - سكيكدة</option>
-              <option value="سيدي بلعباس">22 - سيدي بلعباس</option>
-              <option value="عنابة">23 - عنابة</option>
-              <option value="قالمة">24 - قالمة</option>
-              <option value="قسنطينة">25 - قسنطينة</option>
-              <option value="المدية">26 - المدية</option>
-              <option value="مستغانم">27 - مستغانم</option>
-              <option value="المسيلة">28 - المسيلة</option>
-              <option value="معسكر">29 - معسكر</option>
-              <option value="ورقلة">30 - ورقلة</option>
-              <option value="وهران">31 - وهران</option>
-              <option value="البيض">32 - البيض</option>
-              <option value="إليزي">33 - إليزي</option>
-              <option value="برج بوعريريج">34 - برج بوعريريج</option>
-              <option value="بومرداس">35 - بومرداس</option>
-              <option value="الطارف">36 - الطارف</option>
-              <option value="تندوف">37 - تندوف</option>
-              <option value="تيسمسيلت">38 - تيسمسيلت</option>
-              <option value="الوادي">39 - الوادي</option>
-              <option value="خنشلة">40 - خنشلة</option>
-              <option value="سوق أهراس">41 - سوق أهراس</option>
-              <option value="تيبازة">42 - تيبازة</option>
-              <option value="ميلة">43 - ميلة</option>
-              <option value="عين الدفلى">44 - عين الدفلى</option>
-              <option value="النعامة">45 - النعامة</option>
-              <option value="عين تموشنت">46 - عين تموشنت</option>
-              <option value="غرداية">47 - غرداية</option>
-              <option value="غليزان">48 - غليزان</option>
-              <option value="تيميمون">49 - تيميمون</option>
-              <option value="برج باجي مختار">50 - برج باجي مختار</option>
-              <option value="أولاد جلال">51 - أولاد جلال</option>
-              <option value="بني عباس">52 - بني عباس</option>
-              <option value="عين صالح">53 - عين صالح</option>
-              <option value="عين قزام">54 - عين قزام</option>
-              <option value="تقرت">55 - تقرت</option>
-              <option value="جانت">56 - جانت</option>
-              <option value="المغير">57 - المغير</option>
-              <option value="المنيعة">58 - المنيعة</option>
-            </select>
-
-            <label for="address">العنوان (تفصيل)</label>
-            <input id="address" name="address" type="text" placeholder="شارع، رقم، ملاحظة" required>
-
-            <div class="summary small" id="summaryBox">
-              <div><span>سعر العبوات</span><span id="ui_price_items">2800 دج</span></div>
-              <div><span>سعر الإضافات</span><span id="ui_price_cart">0 دج</span></div>
-              <div><span>سعر التوصيل</span><span id="ui_price_shipping">--</span></div>
-              <div class="total-row"><span>المجموع الكلي</span><span id="ui_total">2800 دج</span></div>
-            </div>
-
-            <input type="hidden" id="price_items" name="price_items" value="2800">
-            <input type="hidden" id="price_cart" name="price_cart" value="0">
-            <input type="hidden" id="price_shipping" name="price_shipping" value="0">
-            <input type="hidden" id="total_price" name="total" value="2800">
-
-            <div style="margin-top:10px">
-              <button id="confirmBtn" type="submit" class="btn-confirm">✅ تأكيد الطلب الآن</button>
-            </div>
-
-            <p id="msg" class="small" style="margin-top:8px;color:green"></p>
-          </form>
-
-          <div class="cart card" style="margin-top:12px">
-            <h4 style="text-align:right">سلة المشتريات</h4>
-            <div id="cartList" class="small">السلة فارغة</div>
-          </div>
-        </div>
-      </aside>
-    </div>
-
-    <footer id="contact">
-      <div style="padding:18px;text-align:center;color:#6b573f">
-        <div>التوصيل داخل الجزائر — الدفع عند الاستلام</div>
-        <div style="margin-top:8px">© 2025 مناحل وعسل آل البوسعيدي</div>
+     <!-- RIGHT: form + cart -->
+    <aside class="card" id="formCard">
+      <h3 style="margin-top:0">للطلب اكتب معلوماتك أسفله</h3>
+      <div class="field">
+        <label>العرض المختار</label>
+        <select id="offerSelect" aria-label="اختر العرض" onchange="offerSelectChanged()">
+          <option value="1">عبوة واحدة — 2800 دج</option>
+          <option value="2">عبوتين — 5600 دج (توصيل مجاني)</option>
+          <option value="3">3 عبوات + 1 هدية — 8400 دج (توصيل مجاني)</option>
+        </select>
       </div>
-    </footer>
+
+      <form id="orderForm">
+        <div class="field">
+          <label>الاسم الكامل</label>
+          <input id="name" name="name" type="text" placeholder="الاسم الكامل" required>
+        </div>
+
+        <div class="field">
+          <label>رقم الهاتف</label>
+          <input id="phone" name="phone" type="tel" placeholder="07XXXXXXXX" pattern="[0-9]{10}" required>
+        </div>
+
+        <div class="field">
+          <label>الولاية</label>
+          <select id="wilaya" name="wilaya" required>
+            <option value="">اختر ولايتك</option>
+            <option>الجزائر</option><option>البليدة</option><option>بومرداس</option><option>تيبازة</option>
+            <option>تيزي وزو</option><option>البويرة</option><option>المدية</option><option>عين الدفلى</option>
+            <option>الشلف</option><option>وهران</option><option>مستغانم</option><option>معسكر</option>
+            <option>غليزان</option><option>سيدي بلعباس</option><option>تلمسان</option><option>سعيدة</option>
+            <option>تيارت</option><option>تيسمسيلت</option><option>الجلفة</option><option>الأغواط</option>
+            <option>برج بوعريريج</option><option>سطيف</option><option>باتنة</option><option>قسنطينة</option>
+            <option>أم البواقي</option><option>قالمة</option><option>سوق أهراس</option><option>عنابة</option>
+            <option>الطارف</option><option>خنشلة</option><option>تبسة</option><option>المسيلة</option>
+            <option>بجاية</option><option>جيجل</option><option>ميلة</option><option>بسكرة</option>
+            <option>الوادي</option><option>ورقلة</option><option>غرداية</option><option>البيض</option>
+            <option>النعامة</option><option>أدرار</option><option>تمنراست</option><option>إيليزي</option>
+            <option>جانت</option><option>إن صالح</option><option>برج باجي مختار</option>
+          </select>
+        </div>
+
+        <!-- hidden fields -->
+        <input type="hidden" id="offerField" name="offer" value="عبوة واحدة — 2800">
+        <input type="hidden" id="price_items" name="price_items" value="2800">
+        <input type="hidden" id="price_cart" name="price_cart" value="0">
+        <input type="hidden" id="price_shipping" name="price_shipping" value="0">
+        <input type="hidden" id="total_price" name="total" value="2800">
+
+        <!-- summary -->
+        <div class="summary">
+          <div class="row"><div>سعر العبوات:</div><div id="ui_price_items">2800 دج</div></div>
+          <div class="row"><div>سعر السلة:</div><div id="ui_price_cart">0 دج</div></div>
+          <div class="row"><div>سعر التوصيل:</div><div id="ui_price_shipping">0 دج</div></div>
+          <div class="row total"><div>المجموع الكلي:</div><div id="ui_total">2800 دج</div></div>
+        </div>
+
+        <button type="submit" class="confirm">✅ تأكيد الطلب الآن</button>
+      </form>
+
+      <!-- cart -->
+      <div class="cart" id="cartBox">
+        <strong>سلة المشتريات</strong>
+        <div id="cartList" style="margin-top:8px;color:var(--muted)">السلة فارغة — أضف منتجات إضافية من الأسفل</div>
+      </div>
+
+      <!-- UPSSELLS -->
+      <div class="upsells">
+        <div class="upsell">
+          <img src="upsell-kids.jpg" alt="">
+          <div style="margin-top:8px;font-weight:700">خلطة التبول اللاارادي عند الأطفال</div>
+          <div class="small">3200 دج</div>
+          <button onclick="addToCart('خلطة التبول اللاارادي عند الاطفال',3200)">أضف للسلة</button>
+        </div>
+        <div class="upsell">
+          <img src="upsell-men.jpg" alt="">
+          <div style="margin-top:8px;font-weight:700">خلطة القوة الجنسية للرجال</div>
+          <div class="small">3500 دج</div>
+          <button onclick="addToCart('خلطة القوة الجنسية للرجال',3500)">أضف للسلة</button>
+        </div>
+        <div class="upsell">
+          <img src="upsell-weight.jpg" alt="">
+          <div style="margin-top:8px;font-weight:700">خلطة التسمين الطبيعي</div>
+          <div class="small">3000 دج</div>
+          <button onclick="addToCart('خلطة التسمين الطبيعي',3000)">أضف للسلة</button>
+        </div>
+        <div class="upsell">
+          <img src="upsell-cough.jpg" alt="">
+          <div style="margin-top:8px;font-weight:700">خلطة السعال والبلغم</div>
+          <div class="small">2800 دج</div>
+          <button onclick="addToCart('خلطة السعال والبلغم',2800)">أضف للسلة</button>
+        </div>
+        <div class="upsell">
+          <img src="upsell-flower.jpg" alt="">
+          <div style="margin-top:8px;font-weight:700">عسل الأزهار (250غ)</div>
+          <div class="small">2200 دج</div>
+          <button onclick="addToCart('عسل الازهار',2200)">أضف للسلة</button>
+        </div>
+        <div class="upsell">
+          <img src="upsell-sidr.jpg" alt="">
+          <div style="margin-top:8px;font-weight:700">عسل السدر (250غ)</div>
+          <div class="small">4200 دج</div>
+          <button onclick="addToCart('عسل السدر',4200)">أضف للسلة</button>
+        </div>
+      </div>
+
+    </aside>
   </div>
 
-  <!-- أزرار ثابتة -->
-  <a class="call-button" href="tel:+213662277555" title="اتصل الآن">📞</a>
-  <button class="sticky-order" onclick="scrollToForm()">🛒 أطلب الآن</button>
+  <div class="footer">
+    <div>سياسة الإرجاع: استرجاع خلال 7 أيام عند وجود تلف أو عدم مطابقة.</div>
+    <div style="margin-top:8px">© 2025 مناحل وعسل آل البوسعيدي — جميع الحقوق محفوظة</div>
+  </div>
+</div>
+
+<button class="sticky-order" onclick="goToName()">🛒 اطلب الآن</button>
 
 <script>
-/* ========== إعدادات (ضع هنا رابط Web App بعد نشره) ========== */
-const WEBAPP_URL = "https://script.google.com/macros/s/AKfycbw7g7v0c-oFyZ7P8rlBjs8JEEJVzvgY98dIaPE2QEspPU8g-YVcmqzEhH9uSLMLIpaO_A/exec"; // استبدل بالرابط .../exec
+/* ==== ضع رابط Web App هنا (رابط /exec من Google Apps Script) ==== */
+const WEBAPP_URL = "https://script.google.com/macros/s/AKfycbwgRZm4ppj_HRz-gaDf4UKg-9aN7bYots2xEGsoQPQ2eno_dK0NHsNIwGZg7wriI6YULQ/exec";
+/* ==== ثابت السعر وقائمة الشحن حسب الولاية ==== */
+const UNIT_PRICE = 2800;
+const shippingTable = { "الجزائر":400,"البليدة":400,"بومرداس":400,"تيبازة":400,"تيزي وزو":700,"البويرة":700,"المدية":700,"عين الدفلى":700,"الشلف":700,"وهران":800,"مستغانم":800,"معسكر":800,"غليزان":800,"سيدي بلعباس":800,"تلمسان":900,"سعيدة":900,"تيارت":900,"تيسمسيلت":900,"الجلفة":900,"الأغواط":900,"برج بوعريريج":900,"سطيف":900,"باتنة":900,"قسنطينة":1000,"أم البواقي":1000,"قالمة":1000,"سوق أهراس":1000,"عنابة":1000,"الطارف":1000,"خنشلة":1000,"تبسة":1000,"المسيلة":1000,"بجاية":1000,"جيجل":1000,"ميلة":1000,"بسكرة":1100,"الوادي":1100,"ورقلة":1100,"غرداية":1100,"البيض":1100,"النعامة":1300,"أدرار":1300,"تمنراست":1300,"إيليزي":1300,"جانت":1300,"إن صالح":1300,"برج باجي مختار":1300 };
 
-/* ===== عروض وأسعار و شحن ===== */
-const offers = [
-  {id:"1", title:"عبوة واحدة — 2800 دج", price:2800, units:1},
-  {id:"2", title:"عبوتين — 5600 دج", price:5600, units:2},
-  {id:"3", title:"3 عبوات + 1 مجاناً — 8400 دج", price:8400, units:4}
-];
+/* ==== حالة السلة والعروض ==== */
+let cart = [];
+const offerCards = document.querySelectorAll('.offer-card');
+const offerSelect = document.getElementById('offerSelect');
+const ui_price_items = document.getElementById('ui_price_items');
+const ui_price_cart = document.getElementById('ui_price_cart');
+const ui_price_shipping = document.getElementById('ui_price_shipping');
+const ui_total = document.getElementById('ui_total');
 
-// جدول أسعار التوصيل التقريبي (قابل للتعديل)
-const shippingTable = {
-  "أدرار":1500,"الشلف":600,"الأغواط":900,"أم البواقي":900,"باتنة":800,"بجاية":700,"بسكرة":900,"بشار":1300,"البليدة":500,"البويرة":700,
-  "تمنراست":1600,"تبسة":900,"تلمسان":800,"تيارت":700,"تيزي وزو":600,"الجزائر":400,"الجلفة":800,"جيجل":900,"سطيف":700,"سعيدة":800,
-  "سكيكدة":900,"سيدي بلعباس":700,"عنابة":900,"قالمة":900,"قسنطينة":800,"المدية":600,"مستغانم":700,"المسيلة":800,"معسكر":800,"ورقلة":1000,
-  "وهران":700,"البيض":1000,"إليزي":1600,"برج بوعريريج":700,"بومرداس":500,"الطارف":900,"تندوف":1600,"تيسمسيلت":700,"الوادي":1000,"خنشلة":900,
-  "سوق أهراس":900,"تيبازة":500,"ميلة":900,"عين الدفلى":700,"النعامة":1100,"عين تموشنت":800,"غرداية":1000,"غليزان":800,"تيميمون":1300,
-  "برج باجي مختار":1600,"أولاد جلال":900,"بني عباس":1200,"عين صالح":1500,"عين قزام":1600,"تقرت":1000,"جانت":1600,"المغير":1100,"المنيعة":1200
-};
-
-/* ===== سلة + اختيارات ===== */
-let selectedOffer = offers[0];
-let cart = []; // عناصر مضافة من upsells
-
-function init(){
-  renderOffers();
-  selectOffer("1");
-  document.getElementById('offerSelect').addEventListener('change', function(e){ selectOffer(e.target.value); });
-  document.getElementById('orderForm').addEventListener('submit', onSubmit);
+/* ===== functions ===== */
+function selectOfferCard(el){
+  offerCards.forEach(c=>c.classList.remove('active'));
+  el.classList.add('active');
+  const offer = el.getAttribute('data-offer');
+  const price = parseInt(el.getAttribute('data-price')) || UNIT_PRICE;
+  // Update select and hidden fields
+  document.getElementById('offerSelect').value = offer;
+  document.getElementById('offerField').value = (offer==='1' ? 'عبوة واحدة — 2800' : (offer==='2' ? 'عبوتين — 5600' : '3 عبوات + 1 — 8400'));
+  document.getElementById('price_items').value = price;
   computePrices();
-  renderCart();
+  document.getElementById('formCard').scrollIntoView({behavior:'smooth',block:'center'});
 }
 
-/* Render offer cards */
-function renderOffers(){
-  const cont = document.getElementById('offersContainer');
-  cont.innerHTML = '';
-  offers.forEach(o=>{
-    const el = document.createElement('div');
-    el.className = 'offer-card';
-    el.dataset.id = o.id;
-    el.innerHTML = `<div style="font-weight:800">${o.title}</div><div class="small">${o.price} دج</div>`;
-    el.addEventListener('click', ()=>{ selectOffer(o.id); document.getElementById('offerSelect').value = o.id; });
-    cont.appendChild(el);
-  });
-}
-
-/* اختيار عرض */
-function selectOffer(id){
-  selectedOffer = offers.find(x=>x.id==id) || offers[0];
-  document.querySelectorAll('.offer-card').forEach(c=>c.classList.remove('active'));
-  document.querySelector(`.offer-card[data-id="${id}"]`)?.classList.add('active');
-  document.getElementById('displayPrice').innerText = selectedOffer.price + ' دج';
-  document.getElementById('price_items').value = selectedOffer.price;
+function offerSelectChanged(){
+  const v = document.getElementById('offerSelect').value;
+  // map select values to price & active card
+  const map = { "1":2800, "2":5600, "3":8400 };
+  const price = map[v] || UNIT_PRICE;
+  document.getElementById('price_items').value = price;
+  // sync cards
+  offerCards.forEach(c => { if(c.getAttribute('data-offer')===v) c.classList.add('active'); else c.classList.remove('active'); });
+  document.getElementById('offerField').value = (v==='1' ? 'عبوة واحدة — 2800' : (v==='2' ? 'عبوتين — 5600' : '3 عبوات + 1 — 8400'));
   computePrices();
 }
 
-/* إضافة إلى السلة */
 function addToCart(name, price){
   const idx = cart.findIndex(i=>i.name===name);
-  if(idx>-1) cart[idx].qty++;
-  else cart.push({name,price,qty:1});
+  if(idx>-1) cart[idx].qty += 1; else cart.push({name, price, qty:1});
   renderCart(); computePrices();
 }
 
-/* رندر السلة */
-function renderCart(){
-  const el = document.getElementById('cartList');
-  if(!cart.length){ el.innerHTML = '<div class="small">السلة فارغة</div>'; document.getElementById('price_cart').value = 0; return; }
-  el.innerHTML = '';
-  cart.forEach((it,i)=>{
-    const row = document.createElement('div');
-    row.className = 'cart-item';
-    row.innerHTML = `<div style="text-align:right"><strong>${it.name}</strong><div class="small">${it.price} دج × ${it.qty}</div></div>
-      <div class="cart-controls"><button onclick="changeQty(${i},-1)">−</button> <button onclick="changeQty(${i},1)">+</button> <button onclick="removeFromCart(${i})">حذف</button></div>`;
-    el.appendChild(row);
-  });
-  document.getElementById('price_cart').value = cart.reduce((s,i)=>s + i.price*i.qty,0);
-}
-
-/* تغيير كمية */
 function changeQty(i,delta){ cart[i].qty = Math.max(1, cart[i].qty + delta); renderCart(); computePrices(); }
 function removeFromCart(i){ cart.splice(i,1); renderCart(); computePrices(); }
 
+function renderCart(){
+  const el = document.getElementById('cartList');
+  if(!cart.length){ el.innerHTML = '<div class="small">السلة فارغة — أضف منتجات إضافية</div>'; document.getElementById('price_cart').value = 0; ui_price_cart.textContent = '0 دج'; return; }
+  el.innerHTML = '';
+  cart.forEach((it, idx)=>{
+    const row = document.createElement('div'); row.style.display='flex'; row.style.justifyContent='space-between'; row.style.alignItems='center'; row.style.marginBottom='8px';
+    row.innerHTML = `<div><strong>${it.name}</strong><div class="small">${it.price} دج × ${it.qty}</div></div>
+      <div style="display:flex;gap:8px;align-items:center">
+        <button onclick="changeQty(${idx},-1)">−</button>
+        <button onclick="changeQty(${idx},1)">+</button>
+        <button onclick="removeFromCart(${idx})" style="background:#ff6b6b;color:#fff;border-radius:6px;padding:6px 8px;border:0">حذف</button>
+      </div>`;
+    el.appendChild(row);
+  });
+}
+
 /* حساب الأسعار */
 function computePrices(){
-  const itemsPrice = Number(document.getElementById('price_items').value) || selectedOffer.price;
-  const cartSum = cart.reduce((s,i)=>s + i.price*i.qty,0);
+  const offerText = document.getElementById('offerField').value || 'عبوة واحدة — 2800';
+  const priceItems = parseInt(document.getElementById('price_items').value) || UNIT_PRICE;
+  const cartSum = cart.reduce((s,i)=> s + i.price * i.qty, 0);
   const wilaya = document.getElementById('wilaya').value;
-  let shipping = shippingTable[wilaya] || 800;
-  // شحن مجاني للعروض 2 و 3
-  if(selectedOffer.id === "2" || selectedOffer.id === "3") shipping = 0;
-  const total = itemsPrice + cartSum + shipping;
-  document.getElementById('ui_price_items').innerText = itemsPrice + ' دج';
-  document.getElementById('ui_price_cart').innerText = cartSum + ' دج';
-  document.getElementById('ui_price_shipping').innerText = (shipping===0 ? 'مجاني' : shipping + ' دج');
-  document.getElementById('ui_total').innerText = total + ' دج';
+  let shipping = shippingTable[wilaya] || 0;
+  // قواعد: عروض 2 و 3 شحن مجاني
+  if(offerText.includes('عبوتين') || offerText.includes('3 عبوات')) shipping = 0;
+  const total = priceItems + cartSum + shipping;
+  ui_price_items.textContent = priceItems + ' دج';
+  ui_price_cart.textContent = cartSum + ' دج';
+  ui_price_shipping.textContent = (shipping===0 ? 'مجاني' : shipping + ' دج');
+  ui_total.textContent = total + ' دج';
+  // hidden inputs
+  document.getElementById('price_items').value = priceItems;
   document.getElementById('price_cart').value = cartSum;
   document.getElementById('price_shipping').value = shipping;
   document.getElementById('total_price').value = total;
+  return {priceItems, cartSum, shipping, total};
 }
 
-/* تمرير إلى الفورم */
-function scrollToForm(){
-  document.getElementById('name')?.scrollIntoView({behavior:'smooth', block:'center'});
-  document.getElementById('name')?.focus();
-}
+/* انتقال إلى الخانة الاسم */
+function goToName(){ document.getElementById('name').scrollIntoView({behavior:'smooth',block:'center'}); document.getElementById('name').focus(); }
 
-/* تحقق هاتف جزائري */
-function validatePhone(phone){
-  const cleaned = (phone||'').replace(/\s|-/g,'');
-  return /^(?:\+213|0)(?:5|6|7)\d{8}$/.test(cleaned);
-}
-
-/* إرسال الفورم */
-async function onSubmit(e) {
-  e.preventDefault();
-
-  const fd = {
-    name: document.getElementById("name").value.trim(),
-    phone: document.getElementById("phone").value.trim(),
-    wilaya: document.getElementById("wilaya").value.trim(),
-    offer: document.getElementById("offer-select").value.trim(),
-    cart: JSON.stringify(cart || []),
-  };
-
-  try {
-    const response = await fetch(WEBAPP_URL, {
-      method: "POST",
-      mode: "cors",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(fd),
-    });
-
-    const result = await response.json();
-    if (result.result === "success") {
-      window.location.href = "thankyou.html";
-    } else {
-      alert("⚠️ حدث خطأ أثناء الإرسال، يرجى المحاولة لاحقًا.");
-    }
-  } catch (error) {
-    console.error("❌ فشل الإرسال:", error);
-    alert("⚠️ فشل الإرسال! تحقق من رابط Web App في الكود.");
-  }
-}
-
-document
-  .getElementById("order-form")
-  .addEventListener("submit", onSubmit);
-  fetch(WEBAPP_URL, { method:'POST', body: fd })
-    .then(r => r.json())
-    .then(res => {
-      if(res && res.result === 'success'){
-        document.getElementById('msg').innerText = '✅ تم إرسال الطلب بنجاح. سنتواصل معك قريباً.';
-        document.getElementById('orderForm').reset();
-        cart = []; renderCart(); computePrices();
-        setTimeout(()=> window.location.href = 'thankyou.html', 900);
-      }else{
-        console.error('response error', res);
-        alert('حدث خطأ أثناء الإرسال. تأكد من إعداد Web App.');
-      }
-    })
-    .catch(err=>{
-      console.error(err);
-      alert('فشل الإرسال — تحقق من نشر Web App وصلاحيات الوصول (Anyone).');
-    })
-    .finally(()=> document.getElementById('confirmBtn').disabled = false);
-}
-
-document.addEventListener('DOMContentLoaded', function() {
-
-  // ======= عناصر افتراضية — غيّر الـ IDs هنا إن كانت مختلفة عندك =======
-  const orderNowBtn = document.querySelector('.btn.primary.one') || document.getElementById('orderNow') || document.querySelector('[data-scroll-to-form]');
-  const orderForm = document.getElementById('order-form') || document.getElementById('orderForm') || document.querySelector('form[id*="order"]');
-  const confirmBtn = document.getElementById('confirmBtn') || document.querySelector('.confirm-btn') || document.querySelector('button[type="submit"], button.confirm');
-
-  // فشل باك آب لو ما لقيش الفورم
-  if (!orderForm) {
-    console.warn('orderForm not found — تأكد من id الفورم (يفضل: id="order-form")');
-    return;
-  }
-
-  // --- Scroll to form (زر "اطلب الآن") ---
-  if (orderNowBtn) {
-    orderNowBtn.addEventListener('click', function(e) {
-      e.preventDefault();
-      orderForm.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      const first = orderForm.querySelector('input, select, textarea, button');
-      if (first) first.focus();
-    });
-  }
-
-  // --- ضمان وجود مستمع للإرسال على الفورم (يمنع إعادة التوجيه الافتراضي) ---
-  if (!orderForm.__customSubmitAttached) {
-    orderForm.addEventListener('submit', function(e) {
-      e.preventDefault(); // يمنع التوجيه الافتراضي إلى action أو إعادة تحميل الصفحة
-      // إذا دالة onSubmit معرفة نستدعيها، وإلا نستخدم إرسال افتراضي
-      if (typeof onSubmit === 'function') {
-        try { onSubmit(e); } catch(err) { console.error('خطأ داخل onSubmit:', err); }
-      } else {
-        // fallback بسيط: نجمع FormData ونرسله إلى WEBAPP_URL
-        const fd = new FormData(orderForm);
-        if (!window.WEBAPP_URL || !window.WEBAPP_URL.includes('https')) {
-          alert('❌ رابط WebApp غير مضبوط في الكود.');
-          return;
-        }
-        fetch(window.WEBAPP_URL, { method: 'POST', body: fd })
-          .then(r => {
-            if (r.ok) window.location.href = 'thankyou.html';
-            else alert('حدث خطأ في الإرسال، حاول لاحقاً.');
-          })
-          .catch(() => alert('فشل الاتصال، تحقق من WebApp ونشره.'));
-      }
-    });
-    orderForm.__customSubmitAttached = true;
-  }
-
-  // --- زر تأكيد الطلب: إذا كان خارج الفورم أو href يسبب انتقال، نمنعه ونطلق submit برمجياً ---
-  if (confirmBtn) {
-    confirmBtn.addEventListener('click', function(e) {
-      // إذا العنصر هو رابط (a) نمنع الانتقال
-      e.preventDefault();
-
-      // تعطيل مؤقت للزر لمنع الضغط المزدوج
-      confirmBtn.disabled = true;
-
-      // استدعاء submit بطريقة آمنة:
-      if (typeof orderForm.requestSubmit === 'function') {
-        orderForm.requestSubmit();
-      } else {
-        // نرسل حدث submit ليقوم المستمع الأعلى بمعالجته
-        const evt = new Event('submit', { bubbles: true, cancelable: true });
-        orderForm.dispatchEvent(evt);
-      }
-
-      // إعادة تفعيل زر بعد 2.5 ثانية كإجراء احتياطي (سيتعادَل أو يتم إلغاؤه داخل onSubmit)
-      setTimeout(() => { confirmBtn.disabled = false; }, 2500);
-    });
-  }
-
+/* init hidden inputs if not present */
+document.addEventListener('DOMContentLoaded', function(){
+  if(!document.getElementById('offerField')){ const inp=document.createElement('input'); inp.type='hidden'; inp.id='offerField'; inp.name='offer'; inp.value='عبوة واحدة — 2800'; document.getElementById('orderForm').appendChild(inp); }
+  if(!document.getElementById('price_items')){ const x=document.createElement('input'); x.type='hidden'; x.id='price_items'; x.name='price_items'; x.value=2800; document.getElementById('orderForm').appendChild(x); }
+  if(!document.getElementById('price_cart')){ const x=document.createElement('input'); x.type='hidden'; x.id='price_cart'; x.name='price_cart'; x.value=0; document.getElementById('orderForm').appendChild(x); }
+  if(!document.getElementById('price_shipping')){ const x=document.createElement('input'); x.type='hidden'; x.id='price_shipping'; x.name='price_shipping'; x.value=0; document.getElementById('orderForm').appendChild(x); }
+  if(!document.getElementById('total_price')){ const x=document.createElement('input'); x.type='hidden'; x.id='total_price'; x.name='total'; x.value=2800; document.getElementById('orderForm').appendChild(x); }
+  computePrices();
 });
 
-document.addEventListener('DOMContentLoaded', init);
-document.getElementById('orderform').  
-document.getElementById("confirmBtn").addEventListener("click", onSubmit);
+/* إرسال الفورم عبر fetch إلى Google Apps Script */
+document.getElementById('orderForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  // validate phone
+  const phone = document.getElementById('phone').value.trim();
+  if(!/^[0-9]{10}$/.test(phone)){ alert('رجاءً أدخل رقم هاتف صالح مكوّن من 10 أرقام'); document.getElementById('phone').focus(); return; }
+  // build FormData
+  const fd = new FormData();
+  fd.append('name', document.getElementById('name').value.trim());
+  fd.append('phone', phone);
+  fd.append('wilaya', document.getElementById('wilaya').value);
+  fd.append('offer', document.getElementById('offerField').value);
+  fd.append('price_items', document.getElementById('price_items').value);
+  fd.append('price_cart', document.getElementById('price_cart').value);
+  fd.append('price_shipping', document.getElementById('price_shipping').value);
+  fd.append('total', document.getElementById('total_price').value);
+  // include cart items as upsell[]
+  cart.forEach(item => fd.append('upsell[]', `${item.name} x${item.qty} (${item.price} دج)`));
+  // send
+  if(!WEBAPP_URL || WEBAPP_URL.includes("PUT_YOUR_WEBAPP_URL_HERE")){ alert('خطأ: لم تقم بإعداد رابط Web App. افتح الكود وعيّن WEBAPP_URL.'); return; }
+  fetch(WEBAPP_URL, { method: 'POST', body: fd })
+    .then(r => r.json())
+    .then(res => {
+      if(res.result === 'success'){ cart=[]; renderCart(); computePrices(); window.location.href = "thankyou.html"; }
+      else { alert('خطأ في الإرسال: ' + (res.message||'')); }
+    })
+    .catch(err => { console.error(err); alert('حدث خطأ أثناء الإرسال. تأكد من رابط Web App وأنه منشور (Who has access = Tout le monde).'); });
+});
 </script>
-
 </body>
 </html>
+
+
+
+
 
 
 
